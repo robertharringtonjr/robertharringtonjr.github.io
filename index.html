@@ -30,10 +30,32 @@
         background-size: 18px 18px, 100% 100%;
     }
 
-    .hero {
-        text-align: center;
-        margin-bottom: 30px;
-    }
+   .hero {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 35px 0 20px 0;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -70px 0 auto 0;
+    height: 330px;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 620px auto;
+    opacity: 0.055;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
 
     .site-logo {
         width: 220px;
