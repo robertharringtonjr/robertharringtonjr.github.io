@@ -5,161 +5,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Harrington Jr.</title>
 
-    <style>
-        :root {
-            --gold: #b08d57;
-            --soft-gold: #d8c197;
-            --ink: #222;
-            --muted: #555;
-            --paper: #fbfaf7;
-            --line: #d8d2c6;
-            --soft-panel: #f3efe7;
-        }
+  <style>
+    :root {
+        --gold: #b08d57;
+        --soft-gold: #d8c197;
+        --ink: #222;
+        --muted: #555;
+        --paper: #fbfaf7;
+        --line: #d8d2c6;
+        --soft-panel: #f3efe7;
+    }
 
-        body {
-            font-family: Georgia, serif;
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 40px 25px;
-            line-height: 1.7;
-            color: var(--ink);
-            background-color: var(--paper);
-            background-image:
-                radial-gradient(rgba(176, 141, 87, 0.045) 0.6px, transparent 0.6px),
-                linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45));
-            background-size: 18px 18px, 100% 100%;
-        }
+    body {
+        font-family: Georgia, serif;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 40px 25px;
+        line-height: 1.7;
+        color: var(--ink);
+        background-color: var(--paper);
+        background-image:
+            radial-gradient(rgba(176, 141, 87, 0.055) 0.7px, transparent 0.7px),
+            linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+        background-size: 18px 18px, 100% 100%;
+    }
 
-        .hero {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    .hero {
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
-        .site-logo {
-            width: 220px;
-            max-width: 80%;
-            height: auto;
-            margin: 0 auto 25px auto;
-            display: block;
-        }
+    .site-logo {
+        width: 220px;
+        max-width: 80%;
+        height: auto;
+        margin: 0 auto 25px auto;
+        display: block;
+    }
 
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+        color: var(--muted);
+        margin-top: 10px;
+    }
+
+    .motto,
+    .center-motto {
+        font-style: italic;
+        color: var(--gold);
+    }
+
+    .center-motto {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    nav {
+        text-align: center;
+        margin: 35px 0 55px 0;
+        padding: 14px 0;
+        border-top: 1px solid var(--soft-gold);
+        border-bottom: 1px solid var(--soft-gold);
+        font-size: 0.9rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    nav a {
+        margin: 0 18px;
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: none;
+    }
+
+    nav a:hover {
+        color: var(--gold);
+    }
+
+    section:not(:first-of-type)::before {
+        content: "────────  ✦  ────────";
+        display: block;
+        text-align: center;
+        color: var(--gold);
+        font-size: 1.2rem;
+        margin: 55px auto 20px auto;
+        letter-spacing: 0.08em;
+    }
+
+    h2 {
+        margin-top: 25px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 30px;
+        font-size: 1.35rem;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(176,141,87,0.35);
+    }
+
+    a:hover {
+        color: #8f6f3d;
+        border-bottom-color: #8f6f3d;
+    }
+
+    .book-section {
+        display: flex;
+        gap: 32px;
+        align-items: flex-start;
+        margin-top: 22px;
+    }
+
+    .book-cover {
+        width: 175px;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid var(--soft-gold);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        flex-shrink: 0;
+    }
+
+    .book-section a {
+        border-bottom: none;
+    }
+
+    .publication-details h3:first-child {
+        margin-top: 0;
+    }
+
+    .development {
+        border-top: 1px solid var(--soft-gold);
+        margin-top: 24px;
+        padding-top: 16px;
+    }
+
+    .contact {
+        background: var(--soft-panel);
+        padding: 24px;
+        border-radius: 8px;
+        border: 1px solid var(--soft-gold);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .contact-icon {
+        color: var(--gold);
+        font-size: 1.45rem;
+        line-height: 1;
+        min-width: 28px;
+        text-align: center;
+    }
+
+    .contact p {
+        margin: 0;
+    }
+
+    @media (max-width: 700px) {
         h1 {
-            font-size: 3rem;
-            margin-bottom: 0;
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-            color: var(--muted);
-            margin-top: 10px;
-        }
-
-        .motto {
-            font-style: italic;
-            margin-top: 10px;
-            color: var(--gold);
-        }
-
-        nav {
-            text-align: center;
-            margin: 35px 0 60px 0;
-            padding: 14px 0;
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-            font-size: 0.9rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        nav a {
-            margin: 0 18px;
-            color: var(--ink);
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        section {
-            position: relative;
-        }
-
-        section:not(:first-of-type)::before {
-            content: "✦";
-            display: block;
-            text-align: center;
-            color: var(--gold);
-            font-size: 1rem;
-            margin: 45px auto 10px auto;
-            letter-spacing: 0.2em;
-        }
-
-        h2 {
-            margin-top: 35px;
-            border-bottom: 1px solid var(--line);
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            margin-top: 30px;
-            font-size: 1.35rem;
-        }
-
-        a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+            font-size: 2.3rem;
         }
 
         .book-section {
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-            margin-top: 20px;
+            flex-direction: column;
         }
 
-        .book-cover {
-            width: 160px;
-            max-width: 100%;
-            height: auto;
-            border: 1px solid var(--soft-gold);
-            flex-shrink: 0;
-        }
-
-        .center-motto {
-            text-align: center;
-            margin-top: 25px;
-            font-style: italic;
-            color: var(--gold);
+        nav a {
+            display: inline-block;
+            margin: 6px 8px;
         }
 
         .contact {
-            background: var(--soft-panel);
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid var(--soft-gold);
+            grid-template-columns: 1fr;
         }
-
-        @media (max-width: 700px) {
-            h1 {
-                font-size: 2.3rem;
-            }
-
-            .book-section {
-                flex-direction: column;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 6px 8px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body id="home">
@@ -213,41 +249,43 @@
         </p>
     </section>
 
-    <section id="publications">
-        <h2>Publications</h2>
+   <section id="publications">
+    <h2>Publications</h2>
 
-        <div class="book-section">
-            <a href="https://a.co/d/0islOqeh" target="_blank">
-                <img src="FRONT.png" alt="The Weight of Not Knowing book cover" class="book-cover">
-            </a>
+    <div class="book-section">
+        <a href="https://a.co/d/0islOqeh" target="_blank">
+            <img src="FRONT.png" alt="The Weight of Not Knowing book cover" class="book-cover">
+        </a>
 
-            <div>
-                <h3>The Weight of Not Knowing</h3>
+        <div class="publication-details">
+            <h3>The Weight of Not Knowing</h3>
 
-                <p><em>A Collection of Meditations on Faith, Identity, and Existence</em></p>
+            <p><em>A Collection of Meditations on Faith, Identity, and Existence</em></p>
+
+            <p>
+                Rather than offering answers, this work invites readers to wrestle with uncertainty, limitation, purpose, and trust. Through reflection and inquiry, it explores what it means to move forward when clarity is incomplete and certainty remains out of reach.
+            </p>
+
+            <p>
+                Available on <a href="https://a.co/d/0islOqeh" target="_blank">Amazon</a>.
+            </p>
+
+            <div class="development">
+                <h3>Works in Development</h3>
 
                 <p>
-                    Rather than offering answers, this work invites readers to wrestle with uncertainty, limitation, purpose, and trust. Through reflection and inquiry, it explores what it means to move forward when clarity is incomplete and certainty remains out of reach.
+                    <strong>A Fractured Humanity</strong><br>
+                    An exploration of understanding, conflict, forgiveness, and the fractures that shape human relationships and human experience.
                 </p>
 
                 <p>
-                    Available on <a href="https://a.co/d/0islOqeh" target="_blank">Amazon</a>.
+                    <strong>A Boulder in a Stream</strong><br>
+                    A reflective literary work examining memory, environment, formation, and the subtle currents that shape a life over time.
                 </p>
             </div>
         </div>
-
-        <h3>Works in Development</h3>
-
-        <p>
-            <strong>A Fractured Humanity</strong><br>
-            An exploration of understanding, conflict, forgiveness, and the fractures that shape human relationships and human experience.
-        </p>
-
-        <p>
-            <strong>A Boulder in a Stream</strong><br>
-            A reflective literary work examining memory, environment, formation, and the subtle currents that shape a life over time.
-        </p>
-    </section>
+    </div>
+</section>
 
     <section id="harringtonedutainment">
         <h2>HarringtonEduTainment</h2>
@@ -263,17 +301,26 @@
         </p>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
+   <section id="contact">
+    <h2>Contact</h2>
 
-        <div class="contact">
+    <div class="contact">
+        <div class="contact-item">
+            <div class="contact-icon">✉</div>
             <p><strong>Email</strong><br>harringtonmediation@yahoo.com</p>
+        </div>
 
+        <div class="contact-item">
+            <div class="contact-icon">☎</div>
             <p><strong>Phone</strong><br>443-680-5576</p>
+        </div>
 
+        <div class="contact-item">
+            <div class="contact-icon">◎</div>
             <p><strong>Website</strong><br>robertharringtonjr.com</p>
         </div>
-    </section>
+    </div>
+</section>
 
 </body>
 </html>
