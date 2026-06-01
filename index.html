@@ -21,18 +21,12 @@
             margin-bottom: 30px;
         }
 
-        .logo-placeholder {
-            width: 140px;
-            height: 140px;
+        .site-logo {
+            width: 220px;
+            max-width: 80%;
+            height: auto;
             margin: 0 auto 25px auto;
-            border: 1px solid #ccc;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            color: #777;
-            text-align: center;
+            display: block;
         }
 
         h1 {
@@ -90,32 +84,12 @@
             margin-top: 20px;
         }
 
-        .book-cover-placeholder {
-            width: 150px;
-            height: 225px;
-            background: #eee;
-            border: 1px solid #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #777;
-            font-size: 0.85rem;
-            text-align: center;
+        .book-cover {
+            width: 160px;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
             flex-shrink: 0;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 16px;
-            border: 1px solid #222;
-            text-decoration: none;
-            color: #222;
-        }
-
-        .button:hover {
-            background: #222;
-            color: #fff;
         }
 
         .center-motto {
@@ -150,9 +124,7 @@
 <body id="home">
 
     <header class="hero">
-        <div class="logo-placeholder">
-            Logo<br>Placeholder
-        </div>
+        <img src="logo.png" alt="Robert Harrington Jr. bridge and compass logo" class="site-logo">
 
         <h1>Robert Harrington, Jr.</h1>
 
@@ -204,9 +176,9 @@
         <h2>Publications</h2>
 
         <div class="book-section">
-            <div class="book-cover-placeholder">
-                Book Cover<br>Placeholder
-            </div>
+            <a href="https://a.co/d/0islOqeh" target="_blank">
+                <img src="FRONT.png" alt="The Weight of Not Knowing book cover" class="book-cover">
+            </a>
 
             <div>
                 <h3>The Weight of Not Knowing</h3>
