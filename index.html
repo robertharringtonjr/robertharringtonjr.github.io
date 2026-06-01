@@ -30,45 +30,24 @@
         background-size: 18px 18px, 100% 100%;
     }
 
-    .hero {
-        text-align: center;
-        margin-bottom: 30px;
-        position: relative;
-        padding: 45px 0 45px 0;
-        overflow: hidden;
-    }
+   .hero {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 55px 0 45px 0;
+    border-top: 1px solid var(--soft-gold);
+    border-bottom: 1px solid var(--soft-gold);
+    background:
+        radial-gradient(circle at center, rgba(176,141,87,0.08), transparent 55%);
+}
 
-    .hero::before {
-        content: "";
-        position: absolute;
-        top: -170px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 1250px;
-        height: 520px;
-        background-image: url("hero-watermark.png");
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: 1100px auto;
-        opacity: 0.18;
-        filter: contrast(1.35) saturate(1.15);
-        mix-blend-mode: multiply;
-        pointer-events: none;
-        z-index: 0;
-    }
-
-    .hero > * {
-        position: relative;
-        z-index: 1;
-    }
-
-    .site-logo {
-        width: 300px;
-        max-width: 80%;
-        height: auto;
-        margin: 0 auto 25px auto;
-        display: block;
-    }
+.site-logo {
+    width: 300px;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto 25px auto;
+    display: block;
+}
 
     h1 {
         font-size: 3rem;
