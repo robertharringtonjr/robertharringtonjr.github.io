@@ -318,7 +318,59 @@ details p {
             grid-template-columns: 1fr;
         }
     }
-</style>
+.floating-contact {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.floating-main-button {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--soft-gold);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.floating-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--soft-panel);
+  border: 1px solid var(--soft-gold);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+.floating-contact:hover .floating-menu,
+.floating-contact:focus-within .floating-menu {
+  display: flex;
+}
+
+.floating-menu a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 8px 12px;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+.floating-menu a:hover {
+  background: var(--soft-gold);
+  color: var(--paper);
+  border-radius: 6px;
+}
+ </style>
 </head>
 
 <body id="home">
@@ -638,6 +690,13 @@ details p {
 
     </div>
 </section>
+<div class="floating-contact">
+    <button class="floating-main-button">Start Here</button>
 
-</body>
+    <div class="floating-menu">
+        <a href="#contact">Contact Robert</a>
+        <a href="services.html">Mediation Services</a>
+        <a href="#stay-connected">Stay Connected</a>
+    </div>
+</div></body>
 </html>
