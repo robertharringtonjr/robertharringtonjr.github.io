@@ -7,7 +7,6 @@
 <title>Mediation Services & Conflict Resolution | Robert Harrington Jr.</title>
 
 <style>
-
 :root {
   --gold: #8a806f;
   --soft-gold: #c8bca8;
@@ -28,20 +27,37 @@ body {
   background-color: var(--paper);
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 10px;
+body::before {
+  content: "";
+  position: fixed;
+  top: 390px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 1000px;
+  background-image: url("../compass-watermark.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.subtitle {
-  text-align: center;
-  color: var(--muted);
-  margin-bottom: 50px;
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 25px;
+  max-width: 120px;
 }
 
 .return-home {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .return-home a {
@@ -50,21 +66,199 @@ h1 {
   font-weight: bold;
 }
 
-.intro-panel {
-  border: 1px solid var(--line);
-  padding: 30px;
-  border-radius: 8px;
-  background: var(--soft-panel);
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
 }
 
-</style>
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
 
+.secondary-intro {
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+section {
+  margin: 55px 0;
+}
+
+h2 {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+
+.panel {
+  background: var(--soft-panel);
+  border: 1px solid var(--soft-gold);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.request-button-container {
+  text-align: center;
+  margin: 40px 0 60px;
+}
+
+.request-button {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--paper);
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.request-button:hover {
+  opacity: 0.9;
+}
+
+ul {
+  padding-left: 24px;
+}
+
+details {
+  background: var(--soft-panel);
+  border: 1px solid var(--soft-gold);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+.section-divider {
+  text-align: center;
+  margin: 70px 0 45px;
+  color: var(--gold);
+  letter-spacing: 4px;
+}
+
+.philosophy-line {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+form {
+  background: var(--soft-panel);
+  border: 1px solid var(--soft-gold);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.consent-box {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  margin: 24px 0;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.checkbox-row input {
+  width: auto;
+  margin-top: 7px;
+}
+
+button {
+  background: var(--gold);
+  color: var(--paper);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.floating-request {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 999;
+}
+
+.floating-request a {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--soft-gold);
+  border-radius: 999px;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  .floating-request {
+    right: 24px;
+    bottom: 24px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <div class="return-home">
   <a href="/">← Return to Homepage</a>
 </div>
+
+<img src="../logo.png" alt="Robert Harrington Jr. bridge and compass logo" class="logo">
 
 <h1>Mediation Services & Conflict Resolution</h1>
 
@@ -72,16 +266,369 @@ h1 {
 Request information regarding mediation services, conflict resolution support, and professional collaboration.
 </p>
 
-<div class="intro-panel">
-
-<p>
+<p class="secondary-intro">
 Learn more about mediation services, the mediation process, and common questions below.
 </p>
 
-<p>
-Mediation provides an opportunity for individuals, families, organizations, and communities to engage conflict in a structured and constructive manner. Whether you are seeking information regarding mediation services, exploring whether mediation may be appropriate for your situation, or looking for conflict resolution support, this page is intended to provide an overview of the process and answer commonly asked questions.
-</p>
+<section class="panel">
+  <p>
+    Mediation provides an opportunity for individuals, families, organizations, and communities to engage conflict in a structured and constructive manner. Whether you are seeking information regarding mediation services, exploring whether mediation may be appropriate for your situation, or looking for conflict resolution support, this page is intended to provide an overview of the process and answer commonly asked questions.
+  </p>
+</section>
 
+<div class="request-button-container">
+  <a href="#inquiry-form" class="request-button">Request Information</a>
+</div>
+
+<section>
+  <h2>Who May Benefit From Mediation?</h2>
+  <div class="panel">
+    <p>
+      Mediation may be appropriate for individuals, families, organizations, and communities seeking a structured conversation around conflict, communication, decision-making, or unresolved concerns.
+    </p>
+
+    <ul>
+      <li>Family and co-parenting conflicts</li>
+      <li>Workplace disagreements</li>
+      <li>Community disputes</li>
+      <li>Interpersonal conflicts</li>
+      <li>Organizational disagreements</li>
+      <li>Professional collaboration concerns</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>When Mediation May Not Be Appropriate</h2>
+  <div class="panel">
+    <p>
+      Mediation is voluntary and may not be suitable in every circumstance. Situations involving immediate safety concerns, coercion, unwillingness to participate, or the need for additional legal, therapeutic, or protective support may require alternative approaches or additional services.
+    </p>
+
+    <p>
+      Each inquiry is considered individually. The purpose of the inquiry process is to determine whether mediation may be appropriate and what next steps may be helpful.
+    </p>
+  </div>
+</section>
+<section>
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>What is mediation?</summary>
+    <p>
+      Mediation is a voluntary process in which a neutral third party helps participants engage in constructive conversation regarding a conflict, disagreement, or important decision.
+    </p>
+
+    <p>
+      Unlike a judge, arbitrator, or decision-maker, the mediator does not determine who is right or wrong and does not impose outcomes. Participants remain responsible for their own decisions throughout the process.
+    </p>
+  </details>
+
+  <details>
+    <summary>Who may benefit from mediation?</summary>
+    <p>
+      Mediation may benefit individuals, families, organizations, and communities seeking a structured conversation around conflict, communication challenges, decision-making, or unresolved concerns.
+    </p>
+
+    <p>
+      The process can be valuable even when participants disagree significantly, provided they are willing to engage in conversation.
+    </p>
+  </details>
+
+  <details>
+    <summary>Is mediation confidential?</summary>
+    <p>
+      Yes. Mediation is generally confidential. It is important to understand, however, that confidentiality primarily applies from the mediator to the participants.
+    </p>
+
+    <p>
+      Participants may choose to discuss their own experiences outside of mediation. The mediator, however, is expected to maintain confidentiality regarding information learned during the mediation process except where disclosure may be required by law or necessary to address serious safety concerns.
+    </p>
+
+    <p>
+      Additional questions regarding confidentiality can be discussed during the intake process and may vary depending on the nature of the mediation.
+    </p>
+  </details>
+
+  <details>
+    <summary>Do I need an attorney to participate?</summary>
+    <p>
+      No. Participants do not need an attorney to participate in mediation.
+    </p>
+
+    <p>
+      Attorneys are welcome at any stage of the process, and participants may consult legal counsel before, during, or after mediation if they choose.
+    </p>
+
+    <p>
+      Mediation is not legal representation and does not replace independent legal advice.
+    </p>
+  </details>
+
+  <details>
+    <summary>What happens during mediation?</summary>
+    <p>
+      Mediation typically begins with an introduction to the process and an opportunity for participants to describe the situation from their own perspectives.
+    </p>
+
+    <p>
+      The mediator facilitates conversation, encourages direct communication, and helps participants explore concerns, interests, misunderstandings, and possible paths forward.
+    </p>
+
+    <p>
+      Participants remain responsible for determining what is discussed and whether any agreements are reached.
+    </p>
+  </details>
+
+  <details>
+    <summary>How long does mediation take?</summary>
+    <p>
+      The length of mediation depends on the complexity of the conflict, the number of participants involved, and the goals of the participants.
+    </p>
+
+    <p>
+      Some matters may be addressed in a single session, while others may require multiple meetings over time.
+    </p>
+  </details>
+
+  <details>
+    <summary>What types of conflicts can be mediated?</summary>
+    <p>
+      Many different types of conflicts may be appropriate for mediation, including family disputes, co-parenting concerns, workplace disagreements, organizational conflicts, community disputes, interpersonal disagreements, and professional collaboration concerns.
+    </p>
+
+    <p>
+      Whether mediation is appropriate depends on the circumstances of the situation and the willingness of participants to engage in the process.
+    </p>
+  </details>
+
+  <details>
+    <summary>How do I get started?</summary>
+    <p>
+      The first step is to submit an inquiry form describing your situation and the type of support you are seeking.
+    </p>
+
+    <p>
+      After reviewing the inquiry, you can expect a response regarding potential next steps, scheduling, additional information, or referral options if mediation does not appear appropriate.
+    </p>
+  </details>
+</section>
+
+<div class="section-divider">
+◆ ◆ ◆
+</div>
+
+<section>
+  <h2>Mediation Philosophy</h2>
+
+  <div class="panel">
+
+    <p class="philosophy-line">
+      Understanding Precedes Resolution
+    </p>
+
+    <p>
+      Conflict often develops in environments where people feel unheard, misunderstood, dismissed, or uncertain. In many situations, participants become increasingly focused on defending positions rather than understanding experiences.
+    </p>
+
+    <p>
+      My approach to mediation is rooted in the belief that meaningful understanding often creates opportunities for movement that persuasion alone cannot achieve.
+    </p>
+
+    <p>
+      Rather than beginning with the assumption that every conflict must be settled, the process encourages participants to communicate more clearly, recognize perspectives more fully, and make informed decisions regarding their own situation.
+    </p>
+
+    <p>
+      While agreements may occur, the deeper objective is to create a space where participants can engage conflict with greater clarity, empowerment, recognition, and respect.
+    </p>
+
+  </div>
+</section>
+
+<section>
+  <h2>Professional Background</h2>
+
+  <div class="panel">
+
+    <p>
+      Robert Harrington Jr. is a mediator, author, educator, military veteran, and creator of HarringtonEduTainment.
+    </p>
+
+    <p>
+      Professional mediation training includes:
+    </p>
+
+    <ul>
+      <li>40-Hour Relational and Transformative Mediation Training</li>
+      <li>20-Hour Advanced Family Mediation Training</li>
+      <li>Community Mediation Volunteer Service</li>
+      <li>Civil and Family Mediation Observation Experience</li>
+    </ul>
+
+    <p>
+      Services are provided through a commitment to neutrality, participant self-determination, constructive dialogue, and conflict engagement grounded in dignity and respect.
+    </p>
+
+  </div>
+</section>
+
+<section>
+  <h2>What Happens Next?</h2>
+
+  <div class="panel">
+
+    <ol>
+      <li>Submit the inquiry form below.</li>
+      <li>You will receive a response within approximately 1–3 business days.</li>
+      <li>An introductory conversation may be scheduled to discuss the situation and determine whether mediation may be appropriate.</li>
+      <li>Additional information regarding process, scheduling, referrals, or next steps will be provided as needed.</li>
+    </ol>
+
+  </div>
+</section>
+
+<section id="inquiry-form">
+
+  <h2>Request Mediation Information</h2>
+
+  <form
+    action="https://formspree.io/f/mlgkannq"
+    method="POST"
+  >
+
+    <p>
+      Complete the form below to request information regarding mediation services, conflict resolution support, or professional collaboration.
+    </p>
+
+    <br>
+
+    <label for="first-name">First Name</label>
+    <input
+      type="text"
+      id="first-name"
+      name="First Name"
+      required
+    >
+
+    <br><br>
+
+    <label for="last-name">Last Name</label>
+    <input
+      type="text"
+      id="last-name"
+      name="Last Name"
+      required
+    >
+
+    <br><br>
+
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      id="email"
+      name="Email"
+      required
+    >
+
+    <br><br>
+
+    <label for="phone">Phone Number (Optional)</label>
+    <input
+      type="tel"
+      id="phone"
+      name="Phone Number"
+    >
+
+    <br><br>
+
+    <label for="inquiry-type">Inquiry Type</label>
+
+    <select
+      id="inquiry-type"
+      name="Inquiry Type"
+      required
+    >
+      <option value="">Select One</option>
+      <option>Mediation Services</option>
+      <option>Conflict Resolution Support</option>
+      <option>Professional Collaboration</option>
+      <option>General Question</option>
+    </select>
+
+    <br><br>
+
+    <label for="message">
+      Brief Description of Your Inquiry
+    </label>
+
+    <textarea
+      id="message"
+      name="Message"
+      rows="7"
+      required
+    ></textarea>
+
+    <div class="consent-box">
+
+      <div class="checkbox-row">
+
+        <input
+          type="checkbox"
+          id="consent"
+          required
+        >
+
+        <label for="consent">
+
+          I understand that submission of this form does not establish a mediation relationship and does not guarantee that mediation services will be appropriate for my situation. Information submitted through this form will be handled with discretion and reviewed for purposes of responding to this inquiry.
+
+        </label>
+
+      </div>
+
+    </div>
+
+    <button type="submit">
+      Submit Inquiry
+    </button>
+
+  </form>
+
+</section>
+
+<section>
+
+  <h2>Privacy & Confidentiality Notice</h2>
+
+  <div class="panel">
+
+    <p>
+      Information submitted through this inquiry form is intended solely for the purpose of responding to requests for information regarding mediation services, conflict resolution support, or professional collaboration.
+    </p>
+
+    <p>
+      Submission of an inquiry does not establish a mediation relationship, create legal representation, or guarantee acceptance of a matter for mediation.
+    </p>
+
+    <p>
+      While inquiries are handled with discretion, individuals should avoid submitting highly sensitive, confidential, medical, financial, or legally privileged information through this form.
+    </p>
+
+  </div>
+
+</section>
+
+<div class="request-button-container">
+  <a href="#inquiry-form" class="request-button">
+    Request Information
+  </a>
+</div>
+
+<div class="floating-request">
+  <a href="#inquiry-form">
+    Request Information
+  </a>
 </div>
 
 </body>
