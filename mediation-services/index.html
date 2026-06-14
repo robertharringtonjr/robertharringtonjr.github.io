@@ -52,7 +52,7 @@ body > * {
 .logo {
   display: block;
   margin: 0 auto 25px;
-  max-width: 165px;
+  max-width: 185px;
 }
 
 .return-home {
@@ -488,14 +488,17 @@ Learn more about mediation services, the mediation process, and common questions
   <h2>Request Mediation Information</h2>
 
   <form
-    action="https://formspree.io/f/mlgkannq"
-    method="POST"
-  >
+  id="mediation-form"
+  action="https://formspree.io/f/mlgkannq"
+  method="POST"
+>
 
     <p>
       Complete the form below to request information regarding mediation services, conflict resolution support, or professional collaboration.
     </p>
-
+<p id="mediation-success-message" style="display:none; color: var(--gold); font-weight: bold;">
+  Your inquiry has been received. Thank you for reaching out.
+</p>
     <br>
 
     <label for="first-name">First Name</label>
@@ -620,6 +623,37 @@ Learn more about mediation services, the mediation process, and common questions
   </a>
 </div>
 
+<script>
+const mediationForm = document.getElementById("mediation-form");
+const mediationSuccessMessage = document.getElementById("mediation-success-message");
+
+if (mediationForm) {
+  mediationForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(mediationForm);
+
+    try {
+      const response = await fetch(mediationForm.action, {
+        method: mediationForm.method,
+        body: formData,
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (response.ok) {
+        mediationForm.reset();
+        mediationSuccessMessage.style.display = "block";
+      } else {
+        alert("There was a problem submitting the form. Please try again or contact Robert directly.");
+      }
+    } catch (error) {
+      alert("There was a problem submitting the form. Please try again or contact Robert directly.");
+    }
+  });
+}
+</script>
 
 </body>
 </html>
