@@ -220,8 +220,49 @@ details p {
         margin-top: 24px;
         padding-top: 16px;
     }
+.stay-connected-form {
+  background: var(--soft-panel);
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--soft-gold);
+}
 
-    .contact {
+.stay-connected-form label {
+  font-weight: bold;
+}
+
+.stay-connected-form input,
+.stay-connected-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.stay-connected-form textarea {
+  resize: vertical;
+}
+
+.stay-connected-form button {
+  background: var(--gold);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.stay-connected-form button:hover {
+  background: var(--ink);
+}
+     .contact {
         background: var(--soft-panel);
         padding: 24px;
         border-radius: 8px;
@@ -298,6 +339,7 @@ details p {
     <a href="#philosophy">Philosophy</a>
     <a href="#training">Training</a>
     <a href="#publications">Publications</a>
+    <a href="#stay-connected">Stay Connected</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -498,6 +540,58 @@ details p {
         </p>
     </section>
 
+<section id="stay-connected">
+
+    <h2>Stay Connected</h2>
+
+    <p>
+        Receive occasional updates, reflections, and announcements from Robert Harrington Jr.
+    </p>
+
+    <form class="stay-connected-form" action="https://formspree.io/f/xjgdjvdy" method="POST">
+
+        <p>
+            <label>First Name *</label><br>
+            <input type="text" name="first_name" required>
+        </p>
+
+        <p>
+            <label>Last Name *</label><br>
+            <input type="text" name="last_name" required>
+        </p>
+
+        <p>
+            <label>Email Address *</label><br>
+            <input type="email" name="email" required>
+        </p>
+
+        <p>
+            <label>Phone Number (Optional)</label><br>
+            <input type="tel" name="phone">
+        </p>
+
+        <p>
+            <label>Message (Optional)</label><br>
+            <textarea name="message" rows="4"></textarea>
+        </p>
+
+        <p>
+            <label>
+                <input type="checkbox" name="newsletter_consent" value="YES">
+                I would like to receive occasional updates, reflections, and announcements by email.
+            </label>
+        </p>
+
+        <p style="font-size: 0.9em;">
+            Your information will only be used to respond to your inquiry and, if selected, provide occasional updates, reflections, and announcements. Your information will not be sold or shared. You may request removal from the mailing list at any time.
+        </p>
+
+        <button type="submit">Stay Connected</button>
+
+    </form>
+
+</section>
+    
  <section id="contact">
     <h2>Contact</h2>
 
