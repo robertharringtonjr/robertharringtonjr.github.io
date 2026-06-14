@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Harrington Jr.</title>
 
- <style>
+<style>
     :root {
         --gold: #8a806f;
         --soft-gold: #c8bca8;
@@ -16,55 +16,56 @@
         --soft-panel: #f8f8f8;
     }
 
-body {
-    font-family: Georgia, serif;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 40px 25px;
-    line-height: 1.7;
-    color: var(--ink);
-    background-color: var(--paper);
-    position: relative;
-}
-body::before {
-    content: "";
-    position: fixed;
-    top: 390px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1000px;
-    height: 1000px;
-    background-image: url("compass-watermark.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    opacity: 0.14;
-    pointer-events: none;
-    z-index: 0;
-}
+    body {
+        font-family: Georgia, serif;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 40px 25px;
+        line-height: 1.7;
+        color: var(--ink);
+        background-color: var(--paper);
+        position: relative;
+    }
 
-body > * {
-    position: relative;
-    z-index: 1;
-}
-   .hero {
-    text-align: center;
-    margin-bottom: 30px;
-    position: relative;
-    padding: 55px 0 45px 0;
-    border-top: 1px solid var(--soft-gold);
-    border-bottom: 1px solid var(--soft-gold);
-    background:
-        radial-gradient(circle at center, rgba(176,141,87,0.08), transparent 55%);
-}
+    body::before {
+        content: "";
+        position: fixed;
+        top: 390px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1000px;
+        height: 1000px;
+        background-image: url("compass-watermark.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        opacity: 0.14;
+        pointer-events: none;
+        z-index: 0;
+    }
 
-.site-logo {
-    width: 240px;
-    max-width: 80%;
-    height: auto;
-    margin: 0 auto 25px auto;
-    display: block;
-}
+    body > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero {
+        text-align: center;
+        margin-bottom: 30px;
+        position: relative;
+        padding: 55px 0 45px 0;
+        border-top: 1px solid var(--soft-gold);
+        border-bottom: 1px solid var(--soft-gold);
+        background: radial-gradient(circle at center, rgba(176,141,87,0.08), transparent 55%);
+    }
+
+    .site-logo {
+        width: 240px;
+        max-width: 80%;
+        height: auto;
+        margin: 0 auto 25px auto;
+        display: block;
+    }
 
     h1 {
         font-size: 3rem;
@@ -125,56 +126,7 @@ body > * {
         border-bottom: 1px solid var(--line);
         padding-bottom: 10px;
     }
-     details {
-    background: var(--soft-panel);
-    border: 1px solid var(--soft-gold);
-    border-radius: 8px;
-    padding: 16px 18px;
-    margin: 16px 0;
-}
 
-summary {
-    cursor: pointer;
-    font-weight: bold;
-    color: var(--ink);
-}
-
-details p {
-    margin-bottom: 0;
-}
-
-.credential-image {
-    width: 100%;
-    max-width: 850px;
-    height: auto;
-    display: block;
-    margin: 18px auto 0 auto;
-    border: 1px solid var(--line);
-}
-.about-profile {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    margin-top: 24px;
-}
-
-.profile-photo {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid var(--soft-gold);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-    flex-shrink: 0;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text p:first-child {
-    margin-top: 0;
-}
     h3 {
         margin-top: 30px;
         font-size: 1.35rem;
@@ -191,15 +143,67 @@ details p {
         border-bottom-color: #8f6f3d;
     }
 
-    .book-section {
+    details {
+        background: var(--soft-panel);
+        border: 1px solid var(--soft-gold);
+        border-radius: 8px;
+        padding: 16px 18px;
+        margin: 16px 0;
+    }
+
+    summary {
+        cursor: pointer;
+        font-weight: bold;
+        color: var(--ink);
+    }
+
+    details p {
+        margin-bottom: 0;
+    }
+
+    .credential-image {
+        width: 100%;
+        max-width: 850px;
+        height: auto;
+        display: block;
+        margin: 18px auto 0 auto;
+        border: 1px solid var(--line);
+    }
+
+    .about-profile {
         display: flex;
+        align-items: center;
         gap: 32px;
+        margin-top: 24px;
+    }
+
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid var(--soft-gold);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        flex-shrink: 0;
+    }
+
+    .about-text {
+        flex: 1;
+    }
+
+    .about-text p:first-child {
+        margin-top: 0;
+    }
+
+        .book-section {
+        display: flex;
+        gap: 36px;
         align-items: flex-start;
         margin-top: 22px;
     }
 
     .book-cover {
-        width: 175px;
+        width: 225px;
         max-width: 100%;
         height: auto;
         border: 1px solid var(--soft-gold);
@@ -207,12 +211,26 @@ details p {
         flex-shrink: 0;
     }
 
-    .book-section a {
-        border-bottom: none;
+    .book-buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 18px;
     }
 
-    .publication-details h3:first-child {
-        margin-top: 0;
+    .book-button {
+        display: inline-block;
+        background: var(--gold);
+        color: white !important;
+        padding: 10px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        border: none !important;
+        font-weight: bold;
+    }
+
+    .book-button:hover {
+        background: var(--ink);
     }
 
     .development {
@@ -220,49 +238,71 @@ details p {
         margin-top: 24px;
         padding-top: 16px;
     }
-.stay-connected-form {
-  background: var(--soft-panel);
-  padding: 24px;
-  border-radius: 8px;
-  border: 1px solid var(--soft-gold);
-}
 
-.stay-connected-form label {
-  font-weight: bold;
-}
+    .youtube-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
 
-.stay-connected-form input,
-.stay-connected-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  font-family: Georgia, serif;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
+    .youtube-link img {
+        height: 52px;
+        width: auto;
+    }
 
-.stay-connected-form textarea {
-  resize: vertical;
-}
+    .stay-connected-form {
+        background: var(--soft-panel);
+        padding: 24px;
+        border-radius: 8px;
+        border: 1px solid var(--soft-gold);
+    }
 
-.stay-connected-form button {
-  background: var(--gold);
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  font-family: Georgia, serif;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
+    .stay-connected-form label {
+        font-weight: bold;
+    }
 
-.stay-connected-form button:hover {
-  background: var(--ink);
-}
-     .contact {
+    .stay-connected-form input,
+    .stay-connected-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        font-family: Georgia, serif;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .stay-connected-form textarea {
+        resize: vertical;
+    }
+
+    .stay-connected-form button {
+        background: var(--gold);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-family: Georgia, serif;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .stay-connected-form button:hover {
+        background: var(--ink);
+    }
+
+    .success-message {
+        display: none;
+        color: var(--gold);
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .contact {
         background: var(--soft-panel);
         padding: 24px;
         border-radius: 8px;
@@ -290,7 +330,61 @@ details p {
         margin: 0;
     }
 
+    .floating-contact {
+        position: fixed;
+        right: 70px;
+        bottom: 70px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .floating-main-button {
+        background: var(--ink);
+        color: var(--paper);
+        border: 1px solid var(--soft-gold);
+        border-radius: 999px;
+        padding: 12px 18px;
+        font-family: Georgia, serif;
+        font-size: 0.95rem;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    }
+
+    .floating-menu {
+        display: none;
+        flex-direction: column;
+        background: var(--soft-panel);
+        border: 1px solid var(--soft-gold);
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+    }
+
+    .floating-contact:hover .floating-menu,
+    .floating-contact:focus-within .floating-menu {
+        display: flex;
+    }
+
+    .floating-menu a {
+        color: var(--ink);
+        text-decoration: none;
+        padding: 8px 12px;
+        white-space: nowrap;
+        font-size: 0.95rem;
+    }
+
+    .floating-menu a:hover {
+        background: var(--soft-gold);
+        color: var(--paper);
+        border-radius: 6px;
+    }
+
     @media (max-width: 700px) {
+
         h1 {
             font-size: 2.3rem;
         }
@@ -302,96 +396,54 @@ details p {
         nav a {
             display: inline-block;
             margin: 6px 8px;
-       }     
-        .about-profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-}
+        }
 
-.profile-photo {
-    width: 200px;
-    height: 200px;
-}
-        
+        .about-profile {
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+        }
+
         .contact {
             grid-template-columns: 1fr;
         }
     }
-.floating-contact {
-  position: fixed;
-  right: 70px;
-  bottom: 70px;
-  z-index: 999;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-  gap: 10px;
-}
 
-.floating-main-button {
-  background: var(--ink);
-  color: var(--paper);
-  border: 1px solid var(--soft-gold);
-  border-radius: 999px;
-  padding: 12px 18px;
-  font-family: Georgia, serif;
-  font-size: 0.95rem;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-}
-
-.floating-menu {
-  display: none;
-  flex-direction: column;
-  background: var(--soft-panel);
-  border: 1px solid var(--soft-gold);
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
-}
-
-.floating-contact:hover .floating-menu,
-.floating-contact:focus-within .floating-menu {
-  display: flex;
-}
-
-.floating-menu a {
-  color: var(--ink);
-  text-decoration: none;
-  padding: 8px 12px;
-  white-space: nowrap;
-  font-size: 0.95rem;
-}
-
-.floating-menu a:hover {
-  background: var(--soft-gold);
-  color: var(--paper);
-  border-radius: 6px;
-}
- </style>
+</style>
 </head>
 
 <body id="home">
 
-    <header class="hero">
-        <img src="logo.png" alt="Robert Harrington Jr. bridge and compass logo" class="site-logo">
+<header class="hero">
 
-        <h1>Robert Harrington, Jr.</h1>
+    <img src="logo.png"
+         alt="Robert Harrington Jr. bridge and compass logo"
+         class="site-logo">
 
-        <p class="tagline">Mediator | Author | Educator</p>
+    <h1>Robert Harrington, Jr.</h1>
 
-        <p class="motto">Understanding Precedes Resolution</p>
-    </header>
+    <p class="tagline">
+        Mediator | Author | Educator
+    </p>
 
-    <nav>
+    <p class="motto">
+        Understanding Precedes Resolution
+    </p>
+
+</header>
+
+<nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#philosophy">Philosophy</a>
     <a href="#training">Training</a>
     <a href="#publications">Publications</a>
-    <a href="mediation-services/">Services</a>   
+    <a href="mediation-services/">Services</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -401,7 +453,9 @@ details p {
 
     <div class="about-profile">
 
-        <img src="portrait.jpg.png" alt="Robert Harrington Jr." class="profile-photo">
+        <img src="portrait.jpg.png"
+             alt="Robert Harrington Jr."
+             class="profile-photo">
 
         <div class="about-text">
 
@@ -419,11 +473,13 @@ details p {
 
 </section>
 
-   <section id="philosophy">
+<section id="philosophy">
+
     <h2>Mediation Philosophy</h2>
 
     <details open>
         <summary>Understanding Precedes Resolution</summary>
+
         <p>
             Conflict often brings people into conversation carrying frustration, fear, disappointment, hurt, and uncertainty. In many situations, communication has broken down long before mediation begins. People may feel unheard, misunderstood, dismissed, or unable to safely express what matters most to them.
         </p>
@@ -443,6 +499,7 @@ details p {
 
     <details>
         <summary>The Role of the Mediator</summary>
+
         <p>
             The mediator is not a judge, decision-maker, or advocate for either party.
         </p>
@@ -470,6 +527,7 @@ details p {
 
     <details>
         <summary>Recognition and Empowerment</summary>
+
         <p>
             Transformative mediation places particular value on recognition and empowerment.
         </p>
@@ -489,6 +547,7 @@ details p {
 
     <details>
         <summary>Vulnerability, Compassion, and Empathy</summary>
+
         <p>
             Many conflicts persist not simply because people disagree, but because they no longer feel safe enough to be vulnerable with one another.
         </p>
@@ -513,54 +572,85 @@ details p {
             Because while resolution may not always occur, understanding remains valuable.
         </p>
     </details>
+
 </section>
 
-    <section id="training">
+<section id="training">
+
     <h2>Training & Certifications</h2>
 
     <details>
         <summary>40-Hour Relational Transformative Mediation Training</summary>
-        <img src="40-hour-transformative-mediation.jpg.jpg" alt="40-Hour Relational Transformative Mediation Training Certificate" class="credential-image">
+        <img src="40-hour-transformative-mediation.jpg.jpg"
+             alt="40-Hour Relational Transformative Mediation Training Certificate"
+             class="credential-image">
     </details>
 
     <details>
         <summary>20-Hour Advanced Family Mediation Training</summary>
-        <img src="advanced-family-mediation.jpg.png" alt="20-Hour Advanced Family Mediation Training Certificate" class="credential-image">
+        <img src="advanced-family-mediation.jpg.png"
+             alt="20-Hour Advanced Family Mediation Training Certificate"
+             class="credential-image">
     </details>
 
     <details>
         <summary>Certificate of Appreciation — Contributing Classroom Facilitator</summary>
-        <img src="certificate-of-appreciation.jpg.png" alt="Certificate of Appreciation for Contributing Classroom Facilitator" class="credential-image">
+        <img src="certificate-of-appreciation.jpg.png"
+             alt="Certificate of Appreciation for Contributing Classroom Facilitator"
+             class="credential-image">
     </details>
 
     <details>
         <summary>Maryland Program for Mediator Excellence Continuing Education Transcript</summary>
-        <img src="mpme-transcript.jpg.jpg" alt="Maryland Program for Mediator Excellence Continuing Education Transcript" class="credential-image">
+        <img src="mpme-transcript.jpg.jpg"
+             alt="Maryland Program for Mediator Excellence Continuing Education Transcript"
+             class="credential-image">
     </details>
+
 </section>
-    
-   <section id="publications">
+
+<section id="publications">
+
     <h2>Publications</h2>
 
     <div class="book-section">
-        <a href="https://a.co/d/0islOqeh" target="_blank">
-            <img src="FRONT.png" alt="The Weight of Not Knowing book cover" class="book-cover">
+
+        <a href="https://a.co/d/0islOqeh" target="_blank" rel="noopener">
+            <img src="FRONT.png"
+                 alt="The Weight of Not Knowing book cover"
+                 class="book-cover">
         </a>
 
         <div class="publication-details">
+
             <h3>The Weight of Not Knowing</h3>
 
-            <p><em>A Collection of Meditations on Faith, Identity, and Existence</em></p>
+            <p>
+                <em>A Collection of Meditations on Faith, Identity, and Existence</em>
+            </p>
 
             <p>
                 Rather than offering answers, this work invites readers to wrestle with uncertainty, limitation, purpose, and trust. Through reflection and inquiry, it explores what it means to move forward when clarity is incomplete and certainty remains out of reach.
             </p>
 
-            <p>
-                Available on <a href="https://a.co/d/0islOqeh" target="_blank">Amazon</a>.
-            </p>
+            <div class="book-buttons">
+                <a href="https://a.co/d/0islOqeh"
+                   target="_blank"
+                   rel="noopener"
+                   class="book-button">
+                    View on Amazon
+                </a>
+
+                <a href="https://a.co/d/0islOqeh"
+                   target="_blank"
+                   rel="noopener"
+                   class="book-button">
+                    Paperback / Kindle
+                </a>
+            </div>
 
             <div class="development">
+
                 <h3>Works in Development</h3>
 
                 <p>
@@ -572,25 +662,37 @@ details p {
                     <strong>A Boulder in a Stream</strong><br>
                     A reflective literary work examining memory, environment, formation, and the subtle currents that shape a life over time.
                 </p>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
     <section id="harringtonedutainment">
-        <h2>HarringtonEduTainment</h2>
 
-        <p>
-            HarringtonEduTainment is an educational platform dedicated to exploring faith, identity, conflict, personal growth, and the human experience through thoughtful discussion and reflection.
-        </p>
+    <h2>HarringtonEduTainment</h2>
 
-        <p>
-           <a href="https://youtube.com/@Harringtonedutainment" target="_blank">
-    <img src="youtube logo.png" alt="YouTube" style="height:36px; vertical-align:middle; margin-right:10px;">
-    <strong>@HarringtonEduTainment</strong>
-</a>
-        </p>
-    </section>
+    <p>
+        HarringtonEduTainment is an educational platform dedicated to exploring faith, identity, conflict, personal growth, and the human experience through thoughtful discussion and reflection.
+    </p>
+
+    <p>
+        <a href="https://youtube.com/@Harringtonedutainment"
+           target="_blank"
+           rel="noopener"
+           class="youtube-link">
+
+            <img src="youtube logo.png" alt="YouTube">
+
+            <span>@HarringtonEduTainment</span>
+
+        </a>
+    </p>
+
+</section>
 
 <section id="stay-connected">
 
@@ -600,7 +702,16 @@ details p {
         Receive occasional updates, reflections, and announcements from Robert Harrington Jr.
     </p>
 
-    <form class="stay-connected-form" action="https://formspree.io/f/xjgdjvdy" method="POST">
+    <form
+        id="stay-connected-form"
+        class="stay-connected-form"
+        action="https://formspree.io/f/xjgdjvdy"
+        method="POST"
+    >
+
+        <p id="stay-connected-success" class="success-message">
+            Your message has been received. Thank you for connecting.
+        </p>
 
         <p>
             <label>First Name *</label><br>
@@ -629,22 +740,29 @@ details p {
 
         <p>
             <label>
-                <input type="checkbox" name="newsletter_consent" value="YES">
+                <input
+                    type="checkbox"
+                    name="newsletter_consent"
+                    value="YES"
+                >
                 I would like to receive occasional updates, reflections, and announcements by email.
             </label>
         </p>
 
-        <p style="font-size: 0.9em;">
+        <p style="font-size:0.9em;">
             Your information will only be used to respond to your inquiry and, if selected, provide occasional updates, reflections, and announcements. Your information will not be sold or shared. You may request removal from the mailing list at any time.
         </p>
 
-        <button type="submit">Stay Connected</button>
+        <button type="submit">
+            Stay Connected
+        </button>
 
     </form>
 
 </section>
-    
- <section id="contact">
+
+<section id="contact">
+
     <h2>Contact</h2>
 
     <div class="contact">
@@ -673,7 +791,9 @@ details p {
             <div class="contact-icon">◎</div>
             <p>
                 <strong>Website</strong><br>
-                <a href="https://robertharringtonjr.com" target="_blank" rel="noopener">
+                <a href="https://robertharringtonjr.com"
+                   target="_blank"
+                   rel="noopener">
                     robertharringtonjr.com
                 </a>
             </p>
@@ -683,21 +803,98 @@ details p {
             <div class="contact-icon">🔗</div>
             <p>
                 <strong>LinkedIn</strong><br>
-                <a href="https://www.linkedin.com/in/robert-harrington-jr-79192714b" target="_blank" rel="noopener">
+                <a href="https://www.linkedin.com/in/robert-harrington-jr-79192714b"
+                   target="_blank"
+                   rel="noopener">
                     LinkedIn Profile
                 </a>
             </p>
         </div>
 
     </div>
+
 </section>
+
 <div class="floating-contact">
-    <button class="floating-main-button">Connect</button>
+
+    <button class="floating-main-button">
+        Connect
+    </button>
 
     <div class="floating-menu">
         <a href="#contact">Contact Robert</a>
-        <a href="services.html">Mediation Services</a>
+        <a href="mediation-services/">Mediation Services</a>
         <a href="#stay-connected">Stay Connected</a>
     </div>
-</div></body>
+
+</div>
+
+<script>
+
+const stayConnectedForm =
+document.getElementById("stay-connected-form");
+
+const stayConnectedSuccess =
+document.getElementById("stay-connected-success");
+
+if (stayConnectedForm) {
+
+    stayConnectedForm.addEventListener(
+        "submit",
+        async function(event) {
+
+            event.preventDefault();
+
+            const formData =
+            new FormData(stayConnectedForm);
+
+            try {
+
+                const response =
+                await fetch(
+                    stayConnectedForm.action,
+                    {
+                        method: stayConnectedForm.method,
+                        body: formData,
+                        headers: {
+                            "Accept": "application/json"
+                        }
+                    }
+                );
+
+                if (response.ok) {
+
+                    stayConnectedForm.reset();
+
+                    stayConnectedSuccess.style.display =
+                    "block";
+
+                    stayConnectedSuccess.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+                } else {
+
+                    alert(
+                        "There was a problem submitting the form. Please try again."
+                    );
+
+                }
+
+            } catch (error) {
+
+                alert(
+                    "There was a problem submitting the form. Please try again."
+                );
+
+            }
+
+        }
+    );
+
+}
+
+</script>
+
+</body>
 </html>
