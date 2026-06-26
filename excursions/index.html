@@ -1,80 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harrington Excursions | Robert Harrington Jr.</title>
 
-    <title>Harrington Excursions</title>
+  <style>
+    :root {
+      --green: #163f24;
+      --navy: #0e2d3f;
+      --gold: #c7923f;
+      --cream: #f7f2e8;
+      --ivory: #fffaf0;
+      --text: #24313b;
+      --muted: #5e6a66;
+    }
 
-    <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        body{
-            margin:0;
-            font-family: Georgia, serif;
-            background:#f7f4ee;
-            color:#24313b;
-        }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-        header{
-            text-align:center;
-            padding:70px 25px;
-            background:white;
-        }
+    a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        h1{
-            font-size:56px;
-            margin-bottom:15px;
-            letter-spacing:2px;
-        }
+    nav {
+      background: var(--green);
+      color: white;
+      padding: 16px 24px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        h2{
-            color:#2e5b3c;
-            margin-top:0;
-            font-weight:normal;
-        }
+    nav a {
+      color: white;
+      margin: 0 14px;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
 
-        .container{
-            max-width:1000px;
-            margin:auto;
-            padding:60px 30px;
-        }
+    .hero {
+      background: linear-gradient(rgba(255,250,240,0.92), rgba(255,250,240,0.96));
+      text-align: center;
+      padding: 70px 24px 60px;
+      border-bottom: 6px solid var(--gold);
+    }
 
-        p{
-            font-size:20px;
-            line-height:1.8;
-        }
+    .hero img {
+      max-width: 330px;
+      width: 80%;
+      margin-bottom: 25px;
+    }
 
-    </style>
+    .hero h1 {
+      font-size: 52px;
+      margin: 0;
+      color: var(--green);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
+    .hero p {
+      max-width: 760px;
+      margin: 22px auto 0;
+      font-size: 22px;
+      color: var(--navy);
+    }
+
+    .tagline {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 15px;
+      margin-top: 15px;
+    }
+
+    section {
+      max-width: 1080px;
+      margin: auto;
+      padding: 60px 28px;
+    }
+
+    h2 {
+      color: var(--green);
+      font-size: 34px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: var(--ivory);
+      padding: 28px;
+      border-radius: 14px;
+      border: 1px solid #e2d6c0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--navy);
+      font-size: 23px;
+    }
+
+    .card p {
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .dark {
+      background: var(--navy);
+      color: white;
+      max-width: none;
+      padding: 65px 28px;
+    }
+
+    .dark .inner {
+      max-width: 1080px;
+      margin: auto;
+    }
+
+    .dark h2 {
+      color: white;
+    }
+
+    .dark p,
+    .dark li {
+      color: #f2eee5;
+      font-size: 18px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 60px 28px;
+    }
+
+    .cta h2 {
+      color: white;
+      border-color: var(--gold);
+    }
+
+    .cta p {
+      max-width: 760px;
+      margin: 18px auto;
+      color: white;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 24px;
+      background: var(--gold);
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: var(--gold);
+    }
+
+    @media (max-width: 700px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 19px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#categories">Excursions</a>
+    <a href="#newsletter">Stay Connected</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<h1>Harrington Excursions</h1>
+  <header class="hero">
+    <img src="../d8668858d960a8eac8557de0586f0be8a2e2681fae57d8bf9a5100c7b2e2a0f0.png" alt="Harrington Excursions Logo">
 
-<h2>
-Community • Discovery • Adventure
-</h2>
+    <h1>Harrington Excursions</h1>
 
-</header>
+    <div class="tagline">Explore. Connect. Belong.</div>
 
-<div class="container">
+    <p>
+      Community-building experiences designed to bring people together through exploration,
+      learning, recreation, reflection, and meaningful conversation.
+    </p>
+  </header>
 
-<p>
+  <section id="about">
+    <h2>What Is Harrington Excursions?</h2>
 
-Welcome to Harrington Excursions.
+    <p>
+      Harrington Excursions is a community initiative created to bring people together through
+      shared experiences. Whether we are walking a trail, visiting a museum, exploring a historic
+      site, attending a local event, fishing, volunteering, or gathering for meaningful discussion,
+      each excursion is designed to encourage curiosity, connection, and community engagement.
+    </p>
 
-This is a growing community built around shared experiences, meaningful conversations, lifelong learning, and discovering the world around us.
+    <p>
+      The purpose is simple: create welcoming opportunities for individuals, friends, families,
+      and community members to discover new places, learn something meaningful, and build
+      relationships through shared experiences.
+    </p>
+  </section>
 
-Whether we're hiking a trail, visiting a museum, exploring a historic site, fishing a local stream, attending a lecture, or simply enjoying a new place together, every excursion is designed to encourage curiosity, connection, and community.
+  <section>
+    <h2>What To Expect</h2>
 
-</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Welcoming Experiences</h3>
+        <p>
+          Excursions are designed to be approachable, relaxed, and open to people from different
+          backgrounds and experience levels.
+        </p>
+      </div>
 
-</div>
+      <div class="card">
+        <h3>Learning & Discovery</h3>
+        <p>
+          Each outing creates space to learn something new, discover new interests, and engage
+          with the world in a thoughtful way.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Community Engagement</h3>
+        <p>
+          The activity is the starting point. The deeper purpose is connection, conversation,
+          and building familiar faces over time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories" class="dark">
+    <div class="inner">
+      <h2>Excursion Categories</h2>
+
+      <p>
+        Harrington Excursions may include a wide variety of experiences, including:
+      </p>
+
+      <ul>
+        <li>Nature & Hiking</li>
+        <li>Fishing & Outdoor Recreation</li>
+        <li>Historical & Cultural Exploration</li>
+        <li>Museums & Educational Visits</li>
+        <li>Community Service & Volunteer Excursions</li>
+        <li>Family & Children's Activities</li>
+        <li>Book Discussions & Literary Gatherings</li>
+        <li>Wellness & Reflection Walks</li>
+        <li>Special Events, seasonal outings, guest speakers, festivals, and local discoveries</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Upcoming Excursions</h2>
+
+    <p>
+      Harrington Excursions is currently in development. Upcoming dates, locations, and event
+      details will be posted here once scheduled.
+    </p>
+
+    <p>
+      The initial rhythm will likely include approximately two excursions per month, depending on
+      season, weather, availability, and community interest.
+    </p>
+  </section>
+
+  <section id="newsletter" class="cta">
+    <h2>Stay Connected</h2>
+
+    <p>
+      Join the Harrington newsletter to receive updates about upcoming excursions, community
+      events, book projects, reflections, and announcements.
+    </p>
+
+    <a class="button" href="../index.html#stay-connected">Join the Newsletter</a>
+  </section>
+
+  <section id="contact">
+    <h2>Suggest an Excursion</h2>
+
+    <p>
+      Have an idea for a walk, museum visit, community outing, volunteer opportunity, book
+      discussion, local attraction, or family-friendly activity?
+    </p>
+
+    <p>
+      Suggestions are welcome as Harrington Excursions continues to develop.
+    </p>
+
+    <p>
+      Email:
+      <a href="mailto:harringtonmediation@yahoo.com">harringtonmediation@yahoo.com</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      Harrington Excursions | A Robert Harrington Jr. Initiative
+    </p>
+
+    <p>
+      <a href="../index.html">Return to RobertHarringtonJr.com</a>
+    </p>
+  </footer>
 
 </body>
-
 </html>
