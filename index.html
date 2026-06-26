@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Harrington Jr.</title>
+
+<style>
+    :root {
+        --gold: #8a806f;
+        --soft-gold: #c8bca8;
+        --ink: #2b2b2b;
+        --muted: #5f5b54;
+        --paper: #ffffff;
+        --line: #d8d8d8;
+        --soft-panel: #f8f8f8;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 40px 25px;
+        line-height: 1.7;
+        color: var(--ink);
+        background-color: var(--paper);
+        position: relative;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 390px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1000px;
+        height: 1000px;
+        background-image: url("compass-watermark.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        opacity: 0.14;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    body > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero {
+        text-align: center;
+        margin-bottom: 30px;
+        position: relative;
+        padding: 55px 0 45px 0;
+        border-top: 1px solid var(--soft-gold);
+        border-bottom: 1px solid var(--soft-gold);
+        background: radial-gradient(circle at center, rgba(176,141,87,0.08), transparent 55%);
+    }
+
+    .site-logo {
+        width: 240px;
+        max-width: 80%;
+        height: auto;
+        margin: 0 auto 25px auto;
+        display: block;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+        color: var(--ink);
+        margin-top: 10px;
+    }
+
+    .motto,
+    .center-motto {
+        font-style: italic;
+        color: #7a5d2f;
+    }
+
+    .center-motto {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    nav {
+        text-align: center;
+        margin: 35px 0 55px 0;
+        padding: 14px 0;
+        border-top: 1px solid var(--soft-gold);
+        border-bottom: 1px solid var(--soft-gold);
+        font-size: 0.9rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    nav a {
+        margin: 0 18px;
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: none;
+    }
+
+    nav a:hover {
+        color: var(--gold);
+    }
+
+    section:not(:first-of-type)::before {
+        content: "────────  ✦  ────────";
+        display: block;
+        text-align: center;
+        color: var(--gold);
+        font-size: 1.2rem;
+        margin: 55px auto 20px auto;
+        letter-spacing: 0.08em;
+    }
+
+    h2 {
+        margin-top: 25px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 30px;
+        font-size: 1.35rem;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(176,141,87,0.35);
+    }
+
+    a:hover {
+        color: #8f6f3d;
+        border-bottom-color: #8f6f3d;
+    }
+
+    details {
+        background: var(--soft-panel);
+        border: 1px solid var(--soft-gold);
+        border-radius: 8px;
+        padding: 16px 18px;
+        margin: 16px 0;
+    }
+
+    summary {
+        cursor: pointer;
+        font-weight: bold;
+        color: var(--ink);
+    }
+
+    details p {
+        margin-bottom: 0;
+    }
+
+    .credential-image {
+        width: 100%;
+        max-width: 850px;
+        height: auto;
+        display: block;
+        margin: 18px auto 0 auto;
+        border: 1px solid var(--line);
+    }
+
+    .about-profile {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        margin-top: 24px;
+    }
+
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid var(--soft-gold);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        flex-shrink: 0;
+    }
+
+    .about-text {
+        flex: 1;
+    }
+
+    .about-text p:first-child {
+        margin-top: 0;
+    }
+
+        .book-section {
+        display: flex;
+        gap: 36px;
+        align-items: flex-start;
+        margin-top: 22px;
+    }
+
+    .book-cover {
+        width: 225px;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid var(--soft-gold);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        flex-shrink: 0;
+    }
+
+    .book-buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+    }
+
+    .book-button {
+        display: inline-block;
+        background: var(--gold);
+        color: white !important;
+        padding: 10px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        border: none !important;
+        font-weight: bold;
+    }
+
+    .book-button:hover {
+        background: var(--ink);
+    }
+
+    .development {
+        border-top: 1px solid var(--soft-gold);
+        margin-top: 24px;
+        padding-top: 16px;
+    }
+
+    .youtube-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .youtube-link img {
+        height: 52px;
+        width: auto;
+    }
+
+    .stay-connected-form {
+        background: var(--soft-panel);
+        padding: 24px;
+        border-radius: 8px;
+        border: 1px solid var(--soft-gold);
+    }
+
+    .stay-connected-form label {
+        font-weight: bold;
+    }
+
+    .stay-connected-form input,
+    .stay-connected-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        font-family: Georgia, serif;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .stay-connected-form textarea {
+        resize: vertical;
+    }
+
+    .stay-connected-form button {
+        background: var(--gold);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-family: Georgia, serif;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .stay-connected-form button:hover {
+        background: var(--ink);
+    }
+
+    .success-message {
+        display: none;
+        color: var(--gold);
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        background: var(--soft-panel);
+        padding: 24px;
+        border-radius: 8px;
+        border: 1px solid var(--soft-gold);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .contact-icon {
+        color: var(--gold);
+        font-size: 1.45rem;
+        line-height: 1;
+        min-width: 28px;
+        text-align: center;
+    }
+
+    .contact p {
+        margin: 0;
+    }
+
+    .floating-contact {
+        position: fixed;
+        right: 70px;
+        bottom: 70px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .floating-main-button {
+        background: var(--ink);
+        color: var(--paper);
+        border: 1px solid var(--soft-gold);
+        border-radius: 999px;
+        padding: 12px 18px;
+        font-family: Georgia, serif;
+        font-size: 0.95rem;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    }
+
+    .floating-menu {
+        display: none;
+        flex-direction: column;
+        background: var(--soft-panel);
+        border: 1px solid var(--soft-gold);
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+    }
+
+    .floating-contact:hover .floating-menu,
+    .floating-contact:focus-within .floating-menu {
+        display: flex;
+    }
+
+    .floating-menu a {
+        color: var(--ink);
+        text-decoration: none;
+        padding: 8px 12px;
+        white-space: nowrap;
+        font-size: 0.95rem;
+    }
+
+    .floating-menu a:hover {
+        background: var(--soft-gold);
+        color: var(--paper);
+        border-radius: 6px;
+    }
+
+    @media (max-width: 700px) {
+
+        h1 {
+            font-size: 2.3rem;
+        }
+
+        .book-section {
+            flex-direction: column;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 6px 8px;
+        }
+
+        .about-profile {
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+        }
+
+        .contact {
+            grid-template-columns: 1fr;
+        }
+    }
+
+</style>
+</head>
+
+<body id="home">
+
+<header class="hero">
+
+    <img src="logo.png"
+         alt="Robert Harrington Jr. bridge and compass logo"
+         class="site-logo">
+
+    <h1>Robert Harrington, Jr.</h1>
+
+    <p class="tagline">
+        Mediator | Author | Educator
+    </p>
+
+    <p class="motto">
+        Understanding Precedes Resolution
+    </p>
+
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#philosophy">Philosophy</a>
+    <a href="#training">Training</a>
+    <a href="#publications">Publications</a>
+    <a href="mediation-services/">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+    <section id="about">
+
+    <h2>About</h2>
+
+    <div class="about-profile">
+
+        <img src="portrait.jpg.png"
+             alt="Robert Harrington Jr."
+             class="profile-photo">
+
+        <div class="about-text">
+
+            <p>
+                Robert Harrington, Jr. is a mediator, author, educator, military veteran, and creator of HarringtonEduTainment. Based in Baltimore, Maryland, his work explores conflict, faith, identity, relationships, and the pursuit of understanding.
+            </p>
+
+            <p>
+                Through mediation, writing, and educational content, he encourages curiosity, dialogue, and the belief that understanding precedes resolution.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="philosophy">
+
+    <h2>Mediation Philosophy</h2>
+
+    <details open>
+        <summary>Understanding Precedes Resolution</summary>
+
+        <p>
+            Conflict often brings people into conversation carrying frustration, fear, disappointment, hurt, and uncertainty. In many situations, communication has broken down long before mediation begins. People may feel unheard, misunderstood, dismissed, or unable to safely express what matters most to them.
+        </p>
+
+        <p>
+            My approach to mediation is grounded in a simple belief: <strong>understanding precedes resolution.</strong>
+        </p>
+
+        <p>
+            This does not mean understanding guarantees agreement. Nor does it mean every conflict can or should be resolved. Rather, meaningful resolution is often difficult to achieve when understanding is absent.
+        </p>
+
+        <p>
+            For this reason, I view mediation primarily as a process of communication rather than a process of persuasion. While agreements may emerge through mediation, understanding possesses value even when agreement is never reached. At times, understanding itself becomes a meaningful outcome.
+        </p>
+    </details>
+
+    <details>
+        <summary>The Role of the Mediator</summary>
+
+        <p>
+            The mediator is not a judge, decision-maker, or advocate for either party.
+        </p>
+
+        <p>
+            Instead, the mediator provides a structured process within which parties can engage one another directly. While the mediator helps maintain a safe environment and a constructive process, the conversation ultimately belongs to the participants themselves.
+        </p>
+
+        <p>
+            The pace, tone, and manner of communication are not determined by the mediator's preferences, but by what allows the parties to engage authentically and effectively. At times, conversations may be calm and reflective. At other times, they may involve strong emotions, frustration, or disagreement.
+        </p>
+
+        <p>
+            The mediator's role is not to control the conversation, but to support a process that protects physical safety and self-determination while creating opportunities for meaningful dialogue. Self-determination remains central to mediation because lasting decisions depend upon the voluntary participation and decision-making of the parties themselves.
+        </p>
+
+        <p>
+            Part of this role involves helping illuminate what is already present within the discussion: recurring concerns, areas of misunderstanding, important themes, points of recognition, and sometimes what is not being expressed at all.
+        </p>
+
+        <p>
+            Through this process, parties are given the opportunity to examine conflict with greater clarity and to make informed decisions for themselves.
+        </p>
+    </details>
+
+    <details>
+        <summary>Recognition and Empowerment</summary>
+
+        <p>
+            Transformative mediation places particular value on recognition and empowerment.
+        </p>
+
+        <p>
+            Recognition involves seeing and acknowledging the experiences, perspectives, and humanity of another person. Recognition does not require agreement. It does not require compromise. It simply requires a willingness to consider that another person's experience may be real and meaningful to them.
+        </p>
+
+        <p>
+            Empowerment involves supporting individuals in their ability to make decisions, express themselves clearly, and participate meaningfully in difficult conversations. Conflict often leaves people feeling unheard, uncertain, reactive, or disconnected from their own sense of agency. A mediation process can help participants rediscover confidence in their ability to communicate and navigate challenges.
+        </p>
+
+        <p>
+            In many conflicts, the dynamics between participants become unbalanced. One party may feel unheard, dismissed, intimidated, or powerless. Through careful attention to communication and interaction, opportunities for recognition and empowerment can emerge, helping create conditions in which both parties are better able to participate in the conversation.
+        </p>
+    </details>
+
+    <details>
+        <summary>Vulnerability, Compassion, and Empathy</summary>
+
+        <p>
+            Many conflicts persist not simply because people disagree, but because they no longer feel safe enough to be vulnerable with one another.
+        </p>
+
+        <p>
+            When individuals feel threatened, dismissed, misunderstood, or emotionally guarded, communication often becomes defensive. Positions become rigid. Listening becomes more difficult. Curiosity gives way to certainty.
+        </p>
+
+        <p>
+            Compassion and empathy are often among the first casualties of conflict. People become focused on defending their own experiences and protecting themselves from further harm. As a result, opportunities for understanding can become increasingly limited.
+        </p>
+
+        <p>
+            Mediation provides a structured environment where difficult conversations can occur with greater safety and support. While a mediator cannot guarantee emotional comfort or agreement, the mediation process can create conditions in which participants are better able to speak honestly, listen openly, and engage one another more constructively.
+        </p>
+
+        <p>
+            When vulnerability becomes possible, compassion and empathy often become more accessible. And when compassion and empathy become possible, understanding becomes more likely.
+        </p>
+
+        <p>
+            Because while resolution may not always occur, understanding remains valuable.
+        </p>
+    </details>
+
+</section>
+
+<section id="training">
+
+    <h2>Training & Certifications</h2>
+
+    <details>
+        <summary>40-Hour Relational Transformative Mediation Training</summary>
+        <img src="40-hour-transformative-mediation.jpg.jpg"
+             alt="40-Hour Relational Transformative Mediation Training Certificate"
+             class="credential-image">
+    </details>
+
+    <details>
+        <summary>20-Hour Advanced Family Mediation Training</summary>
+        <img src="advanced-family-mediation.jpg.png"
+             alt="20-Hour Advanced Family Mediation Training Certificate"
+             class="credential-image">
+    </details>
+
+    <details>
+        <summary>Certificate of Appreciation — Contributing Classroom Facilitator</summary>
+        <img src="certificate-of-appreciation.jpg.png"
+             alt="Certificate of Appreciation for Contributing Classroom Facilitator"
+             class="credential-image">
+    </details>
+
+    <details>
+        <summary>Maryland Program for Mediator Excellence Continuing Education Transcript</summary>
+        <img src="mpme-transcript.jpg.jpg"
+             alt="Maryland Program for Mediator Excellence Continuing Education Transcript"
+             class="credential-image">
+    </details>
+
+</section>
+
+<section id="publications">
+
+    <h2>Publications</h2>
+
+    <div class="book-section">
+
+        <a href="https://a.co/d/0islOqeh" target="_blank" rel="noopener">
+            <img src="FRONT.png"
+                 alt="The Weight of Not Knowing book cover"
+                 class="book-cover">
+        </a>
+
+        <div class="publication-details">
+
+            <h3>The Weight of Not Knowing</h3>
+
+            <p>
+                <em>A Collection of Meditations on Faith, Identity, and Existence</em>
+            </p>
+
+            <p>
+                Rather than offering answers, this work invites readers to wrestle with uncertainty, limitation, purpose, and trust. Through reflection and inquiry, it explores what it means to move forward when clarity is incomplete and certainty remains out of reach.
+            </p>
+
+            <div class="book-buttons">
+                <a href="https://a.co/d/0islOqeh"
+                   target="_blank"
+                   rel="noopener"
+                   class="book-button">
+                    View on Amazon
+                </a>
+
+                <a href="https://a.co/d/0islOqeh"
+                   target="_blank"
+                   rel="noopener"
+                   class="book-button">
+                    Paperback / Kindle
+                </a>
+            </div>
+
+            <div class="development">
+
+                <h3>Works in Development</h3>
+
+                <p>
+                    <strong>A Fractured Humanity</strong><br>
+                    An exploration of understanding, conflict, forgiveness, and the fractures that shape human relationships and human experience.
+                </p>
+
+                <p>
+                    <strong>A Boulder in a Stream</strong><br>
+                    A reflective literary work examining memory, environment, formation, and the subtle currents that shape a life over time.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="harringtonedutainment">
+
+    <h2>HarringtonEduTainment</h2>
+
+    <p>
+        HarringtonEduTainment is an educational platform dedicated to exploring faith, identity, conflict, personal growth, and the human experience through thoughtful discussion and reflection.
+    </p>
+
+    <p>
+        <a href="https://youtube.com/@Harringtonedutainment"
+           target="_blank"
+           rel="noopener"
+           class="youtube-link">
+
+            <img src="youtube logo.png" alt="YouTube">
+
+            <span>@HarringtonEduTainment</span>
+
+        </a>
+    </p>
+
+</section>
+
+<div class="divider">────── ✦ ──────</div>
+
+<section id="harrington-excursions">
+  <h2>Harrington Excursions</h2>
+
+  <p>
+    Harrington Excursions is a community-building initiative that brings people together through
+    exploration, recreation, learning, reflection, and meaningful shared experiences.
+  </p>
+
+  <p>
+    From nature walks and museums to book discussions, fishing, cultural outings, and local
+    discoveries, each excursion is designed to encourage curiosity, connection, and community.
+  </p>
+
+  <p>
+    <a href="excursions/" class="button">Explore Harrington Excursions</a>
+  </p>
+</section>    
+<section id="stay-connected">
+
+    <h2>Stay Connected</h2>
+
+    <p>
+        Receive occasional updates, reflections, and announcements from Robert Harrington Jr.
+    </p>
+
+    <form
+        id="stay-connected-form"
+        class="stay-connected-form"
+        action="https://formspree.io/f/xjgdjvdy"
+        method="POST"
+    >
+
+        <p id="stay-connected-success" class="success-message">
+            Your message has been received. Thank you for connecting.
+        </p>
+
+        <p>
+            <label>First Name *</label><br>
+            <input type="text" name="first_name" required>
+        </p>
+
+        <p>
+            <label>Last Name *</label><br>
+            <input type="text" name="last_name" required>
+        </p>
+
+        <p>
+            <label>Email Address *</label><br>
+            <input type="email" name="email" required>
+        </p>
+
+        <p>
+            <label>Phone Number (Optional)</label><br>
+            <input type="tel" name="phone">
+        </p>
+
+        <p>
+            <label>Message (Optional)</label><br>
+            <textarea name="message" rows="4"></textarea>
+        </p>
+
+        <p>
+            <label>
+                <input
+                    type="checkbox"
+                    name="newsletter_consent"
+                    value="YES"
+                >
+                I would like to receive occasional updates, reflections, and announcements by email.
+            </label>
+        </p>
+
+        <p style="font-size:0.9em;">
+            Your information will only be used to respond to your inquiry and, if selected, provide occasional updates, reflections, and announcements. Your information will not be sold or shared. You may request removal from the mailing list at any time.
+        </p>
+
+        <button type="submit">
+            Stay Connected
+        </button>
+
+    </form>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="contact">
+
+        <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <p>
+                <strong>Email</strong><br>
+                <a href="mailto:harringtonmediation@yahoo.com">
+                    harringtonmediation@yahoo.com
+                </a>
+            </p>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">☎</div>
+            <p>
+                <strong>Phone</strong><br>
+                <a href="tel:4436805576">
+                    443-680-5576
+                </a>
+            </p>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">◎</div>
+            <p>
+                <strong>Website</strong><br>
+                <a href="https://robertharringtonjr.com"
+                   target="_blank"
+                   rel="noopener">
+                    robertharringtonjr.com
+                </a>
+            </p>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">🔗</div>
+            <p>
+                <strong>LinkedIn</strong><br>
+                <a href="https://www.linkedin.com/in/robert-harrington-jr-79192714b"
+                   target="_blank"
+                   rel="noopener">
+                    LinkedIn Profile
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="floating-contact">
+
+    <button class="floating-main-button">
+        Connect
+    </button>
+
+    <div class="floating-menu">
+        <a href="#contact">Contact Robert</a>
+        <a href="mediation-services/">Mediation Services</a>
+        <a href="#stay-connected">Stay Connected</a>
+    </div>
+
+</div>
+
+<script>
+
+const stayConnectedForm =
+document.getElementById("stay-connected-form");
+
+const stayConnectedSuccess =
+document.getElementById("stay-connected-success");
+
+if (stayConnectedForm) {
+
+    stayConnectedForm.addEventListener(
+        "submit",
+        async function(event) {
+
+            event.preventDefault();
+
+            const formData =
+            new FormData(stayConnectedForm);
+
+            try {
+
+                const response =
+                await fetch(
+                    stayConnectedForm.action,
+                    {
+                        method: stayConnectedForm.method,
+                        body: formData,
+                        headers: {
+                            "Accept": "application/json"
+                        }
+                    }
+                );
+
+                if (response.ok) {
+
+                    stayConnectedForm.reset();
+
+                    stayConnectedSuccess.style.display =
+                    "block";
+
+                    stayConnectedSuccess.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+                } else {
+
+                    alert(
+                        "There was a problem submitting the form. Please try again."
+                    );
+
+                }
+
+            } catch (error) {
+
+                alert(
+                    "There was a problem submitting the form. Please try again."
+                );
+
+            }
+
+        }
+    );
+
+}
+
+</script>
+
+</body>
+</html>
