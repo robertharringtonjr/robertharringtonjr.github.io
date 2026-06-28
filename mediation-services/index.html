@@ -867,10 +867,47 @@ if (mediationForm) {
   );
 
 }
+const sharePageLink = document.getElementById("share-page-link");
 
-</script>
+if (sharePageLink) {
+    sharePageLink.addEventListener("click", async function(event) {
+        event.preventDefault();
 
-<div class="return-home">
+        const shareData = {
+            title: "Harrington Mediation LLC",
+            text: "Professional Mediation Services by Robert Harrington Jr.",
+            url: window.location.href
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (error) {
+                console.log("Share cancelled or unavailable.");
+            }
+        } else {
+            await navigator.clipboard.writeText(window.location.href);
+            alert("Page link copied.");
+        }
+    });
+}</script>
+  
+<section class="share-page">
+    <h2>Share This Page</h2>
+
+    <p>
+        If you know someone who could benefit from learning more about mediation services,
+        feel free to share this page.
+    </p>
+
+    <p class="share-link">
+        <a href="#" id="share-page-link">
+            🔗 Share This Page
+        </a>
+    </p>
+</section>
+  
+  <div class="return-home">
   <a href="/">← Return to Homepage</a>
 </div>  
 </body>
