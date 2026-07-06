@@ -105,6 +105,45 @@ h2 {
   font-size: 1.05rem;
 }
 
+/* ===============================
+   Services Hub
+================================= */
+
+.service-hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.service-hub-card {
+    display: block;
+    background: var(--soft-panel);
+    border: 1px solid var(--soft-gold);
+    border-radius: 10px;
+    padding: 24px;
+    color: var(--ink);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-hub-card strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.service-hub-card span {
+    display: block;
+    line-height: 1.6;
+    color: var(--ink);
+}
+
+.service-hub-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.12);
+}  
 .request-button-container {
   text-align: center;
   margin: 40px 0 60px;
