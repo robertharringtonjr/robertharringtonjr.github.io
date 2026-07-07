@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Learning Library | Harrington Mediation</title>
+
+<style>
+:root {
+  --gold: #8a806f;
+  --soft-gold: #c8bca8;
+  --ink: #2b2b2b;
+  --muted: #5f5b54;
+  --paper: #ffffff;
+  --line: #d8d8d8;
+  --soft-panel: #f8f8f8;
+}
+
+body {
+  font-family: Georgia, serif;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 25px;
+  line-height: 1.7;
+  color: var(--ink);
+  background-color: var(--paper);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 390px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 1000px;
+  background-image: url("../compass-watermark.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 25px;
+  max-width: 185px;
+}
+
+.return-home {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.return-home a,
+.library-card a,
+.bottom-nav a {
+  color: var(--gold);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 35px;
+  font-size: 1.1rem;
+}
+
+section {
+  margin: 55px 0;
+}
+
+h2 {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+
+.panel {
+  background: var(--soft-panel);
+  border: 1px solid var(--soft-gold);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.category-pill {
+  border: 1px solid var(--soft-gold);
+  border-radius: 999px;
+  padding: 10px 14px;
+  text-align: center;
+  background: #fff;
+  color: var(--ink);
+}
+
+.library-list {
+  display: grid;
+  gap: 22px;
+}
+
+.library-card {
+  background: var(--soft-panel);
+  border: 1px solid var(--soft-gold);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.article-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.coming-soon {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.bottom-nav {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="return-home">
+  <a href="/">← Return to Homepage</a>
+</div>
+
+<img src="../logo.png" alt="Robert Harrington Jr. bridge and compass logo" class="logo">
+
+<h1>Learning Library</h1>
+
+<p class="subtitle">
+Educational articles and reflections from Harrington Mediation.
+</p>
+
+<section id="intro">
+  <div class="panel">
+    <p>
+      The Harrington Mediation Learning Library offers educational articles and reflections designed to help readers better understand conflict, communication, mediation, and the human dynamics that shape difficult conversations.
+    </p>
+
+    <p>
+      This library will continue to grow as new articles, reflections, and downloadable resources are added.
+    </p>
+  </div>
+</section>
+
+<section id="categories">
+  <h2>Categories</h2>
+
+  <div class="category-grid">
+    <div class="category-pill">Mediation</div>
+    <div class="category-pill">Communication</div>
+    <div class="category-pill">Listening</div>
+    <div class="category-pill">Conflict Coaching</div>
+    <div class="category-pill">Family Conflict</div>
+    <div class="category-pill">Workplace Conflict</div>
+    <div class="category-pill">Relationships</div>
+    <div class="category-pill">Perspective</div>
+    <div class="category-pill">Accessibility</div>
+    <div class="category-pill">Organizational Conflict</div>
+  </div>
+</section>
+
+<section id="articles">
+  <h2>Articles & Reflections</h2>
+
+  <div class="library-list">
+
+    <div class="library-card">
+      <div class="article-meta">Article #001 · Accessibility · Coming Soon</div>
+      <h3>Accessibility in Mediation Includes Neurodiversity</h3>
+      <p>
+        This article will explore how accessibility in mediation extends beyond physical access and includes differences in communication, processing, attention, anxiety, and neurodiversity.
+      </p>
+      <p class="coming-soon">Article page coming soon.</p>
+    </div>
+
+    <div class="library-card">
+      <div class="article-meta">Article #002 · Communication · Coming Soon</div>
+      <h3>Positions vs. Interests</h3>
+      <p>
+        A reflection on the difference between what people demand during conflict and what they may actually need, value, or fear beneath the surface.
+      </p>
+      <p class="coming-soon">Article page coming soon.</p>
+    </div>
+
+    <div class="library-card">
+      <div class="article-meta">Article #003 · Listening · Coming Soon</div>
+      <h3>Listening Before Responding</h3>
+      <p>
+        A reflection on how listening can change the direction of conflict before resolution is even possible.
+      </p>
+      <p class="coming-soon">Article page coming soon.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="bottom-navigation">
+  <h2>Continue Exploring</h2>
+
+  <div class="panel bottom-nav">
+    <p>
+      <a href="../Conflict-coaching/">← Return to Conflict Coaching</a>
+    </p>
+
+    <p>
+      <a href="../mediation-services/">← Return to Mediation Services</a>
+    </p>
+
+    <p>
+      <a href="/">← Return to Homepage</a>
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
