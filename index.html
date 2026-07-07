@@ -110,7 +110,54 @@
     nav a:hover {
         color: var(--gold);
     }
+/* Universal Hamburger Menu */
 
+.universal-menu {
+  text-align: center;
+  margin: 18px 0 35px 0;
+}
+
+.menu-toggle {
+  background: var(--gold);
+  color: var(--paper);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-panel {
+  display: none;
+  max-width: 420px;
+  margin: 16px auto 0 auto;
+  background: var(--soft-panel);
+  border: 1px solid var(--soft-gold);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.menu-panel.open {
+  display: block;
+}
+
+.menu-panel a {
+  display: block;
+  padding: 10px 8px;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.menu-panel a:last-child {
+  border-bottom: none;
+}
+
+.menu-panel a:hover {
+  color: var(--gold);
+}
     section:not(:first-of-type)::before {
         content: "────────  ✦  ────────";
         display: block;
@@ -458,7 +505,26 @@
     <a href="notary/">Notary</a>
     <a href="#contact">Contact</a>
 </nav>
+<div class="universal-menu">
 
+    <button class="menu-toggle" id="menu-toggle">
+        ☰ Menu
+    </button>
+
+    <div class="menu-panel" id="menu-panel">
+        <a href="/">Home</a>
+        <a href="/mediation-services/">Mediation Services</a>
+        <a href="/Conflict-coaching/">Conflict Coaching</a>
+        <a href="/organizations/">Organizations & Businesses</a>
+        <a href="/notary/">Maryland Notary</a>
+        <a href="/learning-library/">Learning Library</a>
+        <a href="/excursions/">Harrington Excursions</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</div>
+    
     <section id="about">
 
     <h2>About</h2>
@@ -995,7 +1061,14 @@ if (sharePageLink) {
     }
   });
   }
-    </script>
+    const menuToggle = document.getElementById("menu-toggle");
+const menuPanel = document.getElementById("menu-panel");
+
+if (menuToggle && menuPanel) {
+    menuToggle.addEventListener("click", function () {
+        menuPanel.classList.toggle("open");
+    });
+}    </script>
 
 </body>
 </html>
