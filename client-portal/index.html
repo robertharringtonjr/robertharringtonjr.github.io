@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Client Portal | Harrington Mediation</title>
+
+<style>
+:root {
+    --gold: #8a806f;
+    --soft-gold: #c8bca8;
+    --ink: #2b2b2b;
+    --muted: #5f5b54;
+    --paper: #ffffff;
+    --line: #d8d8d8;
+    --soft-panel: #f8f8f8;
+}
+
+body {
+    font-family: Georgia, serif;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 25px;
+    line-height: 1.7;
+    color: var(--ink);
+    background-color: var(--paper);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 390px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 1000px;
+    background-image: url("../compass-watermark.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 25px;
+    max-width: 185px;
+}
+
+.return-home {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.return-home a,
+.portal-card a,
+.bottom-nav a {
+    color: var(--gold);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.universal-menu {
+    text-align: center;
+    margin: 18px 0 35px 0;
+}
+
+.menu-toggle {
+    background: var(--gold);
+    color: var(--paper);
+    border: none;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-panel {
+    display: none;
+    max-width: 420px;
+    margin: 16px auto 0 auto;
+    background: var(--soft-panel);
+    border: 1px solid var(--soft-gold);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: left;
+}
+
+.menu-panel.open {
+    display: block;
+}
+
+.menu-panel a {
+    display: block;
+    padding: 10px 8px;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+}
+
+.menu-panel a:last-child {
+    border-bottom: none;
+}
+
+.menu-panel a:hover {
+    color: var(--gold);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 35px;
+    font-size: 1.1rem;
+}
+
+section {
+    margin: 55px 0;
+}
+
+h2 {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+}
+
+.panel,
+.portal-card {
+    background: var(--soft-panel);
+    border: 1px solid var(--soft-gold);
+    border-radius: 8px;
+    padding: 28px;
+}
+
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.portal-card h3 {
+    margin-top: 0;
+}
+
+.button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--paper) !important;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.coming-soon {
+    color: var(--muted);
+    font-style: italic;
+}
+
+.bottom-nav {
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="return-home">
+    <a href="/">← Return to Homepage</a>
+</div>
+
+<div class="universal-menu">
+
+    <button class="menu-toggle" id="menu-toggle">
+        ☰ Menu
+    </button>
+
+    <div class="menu-panel" id="menu-panel">
+        <a href="/">Home</a>
+        <a href="/mediation-services/">Mediation Services</a>
+        <a href="/Conflict-coaching/">Conflict Coaching</a>
+        <a href="/organizations/">Organizations &amp; Businesses</a>
+        <a href="/notary/">Maryland Notary</a>
+        <a href="/learning-library/">Learning Library</a>
+        <a href="/client-portal/">Client Portal</a>
+        <a href="/excursions/">Harrington Excursions</a>
+        <a href="/#publications">Publications</a>
+        <a href="/#contact">Contact</a>
+    </div>
+
+</div>
+
+<img src="../logo.png" alt="Robert Harrington Jr. bridge and compass logo" class="logo">
+
+<h1>Client Portal</h1>
+
+<p class="subtitle">
+Guided intake, documents, scheduling, and client resources for Harrington Mediation.
+</p>
+
+<section id="before-you-begin">
+    <h2>Before You Begin</h2>
+
+    <div class="panel">
+        <p>
+            This Client Portal is designed to help clients, participants, organizations, and community partners access the appropriate documents and next steps for Harrington Mediation services.
+        </p>
+
+        <p>
+            Please select the section that matches the service you are seeking. Complete only the documents you have been instructed to complete, or begin with the appropriate intake section if you are preparing to request services.
+        </p>
+
+        <p>
+            A personal consultation is still required before services begin.
+        </p>
+    </div>
+</section>
+
+<section id="portal-navigation">
+    <h2>Select Your Service</h2>
+
+    <div class="portal-grid">
+
+        <div class="portal-card">
+            <h3>Conflict Coaching</h3>
+            <p>One-on-one support for difficult conversations and conflict preparation.</p>
+            <a href="#conflict-coaching" class="button">Go to Conflict Coaching</a>
+        </div>
+
+        <div class="portal-card">
+            <h3>Mediation</h3>
+            <p>Participant-centered mediation documents and intake materials.</p>
+            <a href="#mediation" class="button">Go to Mediation</a>
+        </div>
+
+        <div class="portal-card">
+            <h3>Organizations &amp; Businesses</h3>
+            <p>Documents for organizational inquiries, referrals, and collaboration.</p>
+            <a href="#organizations" class="button">Go to Organizations</a>
+        </div>
+
+        <div class="portal-card">
+            <h3>Maryland Notary</h3>
+            <p>Appointment and document information for notary services.</p>
+            <a href="#notary" class="button">Go to Notary</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="conflict-coaching">
+    <h2>Conflict Coaching Documents</h2>
+
+    <div class="panel">
+        <p>
+            Conflict Coaching documents are for individuals seeking one-on-one conflict support before mediation, during ongoing conflict, or while preparing for difficult conversations.
+        </p>
+
+        <div class="portal-card">
+            <h3>Conflict Coaching Intake Questionnaire</h3>
+            <p>
+                This intake questionnaire will eventually be completed online and submitted directly to Harrington Mediation.
+            </p>
+            <p class="coming-soon">
+                Interactive form setup in progress.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="mediation">
+    <h2>Mediation Documents</h2>
+
+    <div class="panel">
+        <p>
+            Mediation documents will support the intake, preparation, agreement, confidentiality, scheduling, and closing process for mediation participants.
+        </p>
+
+        <div class="portal-card">
+            <h3>Mediation Intake Documents</h3>
+            <p class="coming-soon">
+                Mediation intake forms will be added here as they are finalized.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="organizations">
+    <h2>Organizations &amp; Businesses Documents</h2>
+
+    <div class="panel">
+        <p>
+            This section will support organizational inquiries, referral collaboration, workplace conflict matters, nonprofit partnerships, and community-based services.
+        </p>
+
+        <div class="portal-card">
+            <h3>Organizational Inquiry Documents</h3>
+            <p class="coming-soon">
+                Organizational forms will be added here as they are finalized.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="notary">
+    <h2>Maryland Notary Documents</h2>
+
+    <div class="panel">
+        <p>
+            This section will support appointment requests, document information, and identification requirements for Maryland Notary Public services.
+        </p>
+
+        <div class="portal-card">
+            <h3>Notary Appointment Documents</h3>
+            <p class="coming-soon">
+                Notary request forms will be added here as they are finalized.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="scheduling">
+    <h2>Scheduling</h2>
+
+    <div class="panel">
+        <p>
+            Scheduling links will be added here as appointment types are finalized.
+        </p>
+
+        <div class="portal-grid">
+            <div class="portal-card">
+                <h3>Conflict Coaching Consultation</h3>
+                <p class="coming-soon">Calendly link coming soon.</p>
+            </div>
+
+            <div class="portal-card">
+                <h3>Mediation Consultation</h3>
+                <p class="coming-soon">Calendly link coming soon.</p>
+            </div>
+
+            <div class="portal-card">
+                <h3>Notary Appointment</h3>
+                <p class="coming-soon">Calendly link coming soon.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="payments">
+    <h2>Payments</h2>
+
+    <div class="panel">
+        <p>
+            Online payment options will be added after Harrington Mediation LLC, the business bank account, and the payment processor are finalized.
+        </p>
+
+        <p class="coming-soon">
+            Payment Center coming soon.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Questions Before Submitting?</h2>
+
+    <div class="panel">
+        <p>
+            If you are unsure which document to complete, please contact Robert Harrington Jr. before submitting information.
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:harringtonmediation@yahoo.com">harringtonmediation@yahoo.com</a>
+        </p>
+    </div>
+</section>
+
+<section id="bottom-navigation">
+    <h2>Continue Exploring</h2>
+
+    <div class="panel bottom-nav">
+        <p><a href="/Conflict-coaching/">← Return to Conflict Coaching</a></p>
+        <p><a href="/mediation-services/">← Return to Mediation Services</a></p>
+        <p><a href="/">← Return to Homepage</a></p>
+    </div>
+</section>
+
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const menuPanel = document.getElementById("menu-panel");
+
+if (menuToggle && menuPanel) {
+    menuToggle.addEventListener("click", function () {
+        menuPanel.classList.toggle("open");
+    });
+}
+</script>
+
+</body>
+</html>
