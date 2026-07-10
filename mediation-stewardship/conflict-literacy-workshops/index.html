@@ -561,7 +561,7 @@
 
         <a
             href="/mediation-stewardship/"
-            class="project-home"
+            class="project-home project-nav-link"
         >
             Project Home
         </a>
@@ -569,6 +569,7 @@
         <button
             class="menu-toggle"
             id="menu-toggle"
+            type="button"
             aria-expanded="false"
             aria-controls="project-menu"
         >
@@ -580,42 +581,52 @@
             id="project-menu"
         >
 
-            <a href="/mediation-stewardship/mission/">
+            <a
+                href="/mediation-stewardship/mission/"
+                class="project-nav-link"
+            >
                 Mission
             </a>
 
             <a
                 href="/mediation-stewardship/conflict-literacy-workshops/"
-                aria-current="page"
+                class="project-nav-link"
             >
                 Conflict Literacy Workshops
             </a>
 
-            <a href="/mediation-stewardship/youth/">
+            <a
+                href="/mediation-stewardship/youth-initiative/"
+                class="project-nav-link"
+            >
                 Youth Initiative
             </a>
 
-            <a href="/mediation-stewardship/conflict-support/">
+            <a
+                href="/mediation-stewardship/conflict-support-line/"
+                class="project-nav-link"
+            >
                 Conflict Support Line
             </a>
 
-            <a href="/mediation-stewardship/resources/">
-                Resources
+            <a
+                href="/mediation-stewardship/learning-and-resources/"
+                class="project-nav-link"
+            >
+                Learning &amp; Resources
             </a>
 
-            <a href="/mediation-stewardship/events/">
-                Events
+            <a
+                href="/mediation-stewardship/partners-and-sponsors/"
+                class="project-nav-link"
+            >
+                Partners &amp; Sponsors
             </a>
 
-            <a href="/mediation-stewardship/partners/">
-                Partners
-            </a>
-
-            <a href="/mediation-stewardship/support/">
-                Support
-            </a>
-
-            <a href="/mediation-stewardship/stay-connected/">
+            <a
+                href="/mediation-stewardship/stay-connected/"
+                class="project-nav-link"
+            >
                 Stay Connected
             </a>
 
@@ -1150,7 +1161,6 @@
 </footer>
 
 <script>
-
     const menuToggle =
         document.getElementById("menu-toggle");
 
@@ -1158,24 +1168,37 @@
         document.getElementById("project-menu");
 
     if (menuToggle && projectMenu) {
+        menuToggle.addEventListener("click", function () {
+            const isOpen =
+                projectMenu.classList.toggle("open");
 
-        menuToggle.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    projectMenu.classList.toggle("open");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
-
-            }
-        );
-
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+        });
     }
 
+    const normalizePath = function (path) {
+        return path.replace(/\/+$/, "") || "/";
+    };
+
+    const currentPath =
+        normalizePath(window.location.pathname);
+
+    const projectLinks =
+        document.querySelectorAll(".project-nav-link");
+
+    projectLinks.forEach(function (link) {
+        const linkPath =
+            normalizePath(new URL(link.href).pathname);
+
+        if (linkPath === currentPath) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
 </script>
 
 </body>
