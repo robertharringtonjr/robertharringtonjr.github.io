@@ -1,0 +1,2236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="The Mediation Stewardship Project is a public education initiative of Harrington Mediation dedicated to making conflict literacy, active listening, and constructive communication practical skills for everyday life."
+    >
+
+    <title>
+        Mediation Stewardship Project | Harrington Mediation
+    </title>
+
+    <style>
+        :root {
+            --gold: #8a806f;
+            --soft-gold: #c8bca8;
+            --dark-gold: #6f6658;
+            --ink: #292929;
+            --muted: #625f59;
+            --paper: #ffffff;
+            --cream: #f7f4ee;
+            --soft-panel: #f8f7f4;
+            --line: #d9d4ca;
+            --navy: #17324d;
+            --green: #3f654f;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 36px 22px 60px;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 300px;
+            left: 50%;
+            width: 950px;
+            height: 950px;
+            transform: translateX(-50%);
+            background-image: url("../compass-watermark.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0.06;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-shell {
+            width: min(100%, 1080px);
+            margin: 0 auto;
+        }
+
+        a {
+            color: var(--dark-gold);
+        }
+
+        .return-home {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .return-home a {
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .return-home a:hover {
+            text-decoration: underline;
+        }
+
+        /* Universal Menu */
+
+        .universal-menu {
+            text-align: center;
+            margin: 16px 0 32px;
+        }
+
+        .menu-toggle {
+            background: var(--gold);
+            color: var(--paper);
+            border: none;
+            border-radius: 999px;
+            padding: 12px 25px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 0.98rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .menu-toggle:hover {
+            background: var(--dark-gold);
+        }
+
+        .menu-panel {
+            display: none;
+            max-width: 440px;
+            margin: 16px auto 0;
+            padding: 16px;
+            text-align: left;
+            background: var(--soft-panel);
+            border: 1px solid var(--soft-gold);
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+        }
+
+        .menu-panel.open {
+            display: block;
+        }
+
+        .menu-panel a {
+            display: block;
+            padding: 10px 8px;
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .menu-panel a:last-child {
+            border-bottom: none;
+        }
+
+        .menu-panel a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 36px 28px;
+            text-align: center;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(247, 244, 238, 0.98),
+                    rgba(255, 255, 255, 0.98)
+                );
+            border: 1px solid var(--soft-gold);
+            border-radius: 18px;
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-logo {
+            display: block;
+            width: min(100%, 430px);
+            max-height: 300px;
+            margin: 0 auto 24px;
+            object-fit: contain;
+        }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            color: var(--green);
+            font-size: 0.92rem;
+            font-weight: bold;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--navy);
+            font-size: clamp(2.25rem, 6vw, 4.5rem);
+            line-height: 1.08;
+        }
+
+        .hero-subtitle {
+            max-width: 800px;
+            margin: 20px auto 0;
+            color: var(--muted);
+            font-size: 1.25rem;
+        }
+
+        .philosophy-line {
+            margin-top: 20px;
+            color: var(--gold);
+            font-size: 1.12rem;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .hero-actions,
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            color: var(--paper);
+            background: var(--gold);
+            border: 1px solid var(--gold);
+            border-radius: 999px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: var(--dark-gold);
+            border-color: var(--dark-gold);
+        }
+
+        .button.secondary {
+            color: var(--navy);
+            background: transparent;
+            border-color: var(--soft-gold);
+        }
+
+        .button.secondary:hover {
+            color: var(--paper);
+            background: var(--navy);
+            border-color: var(--navy);
+        }
+
+        /* Baltimore Peace Movement Feature */
+
+        .peace-movement-feature {
+            display: grid;
+            grid-template-columns: minmax(140px, 230px) 1fr;
+            gap: 28px;
+            align-items: center;
+            margin-top: 28px;
+            padding: 24px;
+            background: var(--navy);
+            color: var(--paper);
+            border-radius: 14px;
+        }
+
+        .peace-logo {
+            display: block;
+            width: 100%;
+            max-height: 180px;
+            object-fit: contain;
+            background: var(--paper);
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .peace-movement-feature h2 {
+            margin-top: 0;
+            color: var(--paper);
+            border: none;
+        }
+
+        .peace-movement-feature p {
+            margin-bottom: 0;
+        }
+
+        .relationship-note {
+            margin-top: 12px;
+            font-size: 0.92rem;
+            opacity: 0.88;
+        }
+
+        /* Page Navigation */
+
+        .page-navigation {
+            margin: 34px 0 0;
+            padding: 18px;
+            text-align: center;
+            background: var(--soft-panel);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+        }
+
+        .page-navigation p {
+            margin: 0 0 10px;
+            font-weight: bold;
+        }
+
+        .anchor-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 9px;
+        }
+
+        .anchor-links a {
+            display: inline-block;
+            padding: 8px 13px;
+            color: var(--ink);
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            text-decoration: none;
+        }
+
+        .anchor-links a:hover {
+            color: var(--paper);
+            background: var(--gold);
+            border-color: var(--gold);
+        }
+
+        /* General Sections */
+
+        section {
+            margin: 56px 0;
+            scroll-margin-top: 24px;
+        }
+
+        h2 {
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            color: var(--navy);
+            font-size: clamp(1.65rem, 4vw, 2.35rem);
+            border-bottom: 1px solid var(--line);
+        }
+
+        h3 {
+            color: var(--navy);
+        }
+
+        .panel {
+            padding: 28px;
+            background: rgba(248, 247, 244, 0.96);
+            border: 1px solid var(--soft-gold);
+            border-radius: 12px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .lead {
+            font-size: 1.14rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(235px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.97);
+            border: 1px solid var(--soft-gold);
+            border-radius: 12px;
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p:last-child,
+        .panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pillar-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            color: var(--paper);
+            background: var(--green);
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        .compact-list {
+            columns: 2;
+            column-gap: 38px;
+            padding-left: 22px;
+        }
+
+        .compact-list li {
+            margin-bottom: 9px;
+            break-inside: avoid;
+        }
+
+        /* Support Line */
+
+        .support-line {
+            background:
+                linear-gradient(
+                    140deg,
+                    rgba(23, 50, 77, 0.98),
+                    rgba(63, 101, 79, 0.98)
+                );
+            color: var(--paper);
+            border: none;
+        }
+
+        .support-line h2,
+        .support-line h3 {
+            color: var(--paper);
+            border-color: rgba(255, 255, 255, 0.28);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 11px;
+            color: var(--navy);
+            background: var(--paper);
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* Sponsor / Pricing */
+
+        .pricing-note {
+            padding: 18px;
+            background: var(--cream);
+            border-left: 4px solid var(--gold);
+        }
+
+        /* Stay Connected */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+        }
+
+        .contact-card {
+            padding: 24px;
+            text-align: center;
+            background: var(--paper);
+            border: 1px solid var(--soft-gold);
+            border-radius: 12px;
+        }
+
+        /* Footer Navigation */
+
+        .continue-exploring {
+            text-align: center;
+        }
+
+        .continue-exploring a {
+            display: block;
+            margin: 9px 0;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            text-align: center;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            font-size: 0.94rem;
+        }
+
+        @media (max-width: 760px) {
+            body {
+                padding: 24px 16px 44px;
+            }
+
+            .hero {
+                padding: 28px 20px;
+            }
+
+            .peace-movement-feature {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .peace-logo {
+                max-width: 220px;
+                margin: 0 auto;
+            }
+
+            .compact-list {
+                columns: 1;
+            }
+
+            .panel,
+            .card {
+                padding: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page-shell">
+
+    <div class="return-home">
+        <a href="/">
+            ← Return to Homepage
+        </a>
+    </div>
+
+    <div class="universal-menu">
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="menu-panel"
+        >
+            ☰ Menu
+        </button>
+
+        <div
+            class="menu-panel"
+            id="menu-panel"
+        >
+            <a href="/">Home</a>
+
+            <a href="/mediation-services/">
+                Mediation Services
+            </a>
+
+            <a href="/Conflict-coaching/">
+                Conflict Coaching
+            </a>
+
+            <a href="/organizations/">
+                Organizations &amp; Businesses
+            </a>
+
+            <a href="/notary/">
+                Maryland Notary
+            </a>
+
+            <a href="/learning-library/">
+                Learning Library
+            </a>
+
+            <a href="/client-portal/">
+                Client Portal
+            </a>
+
+            <a href="/mediation-stewardship/">
+                Mediation Stewardship
+            </a>
+
+            <a href="/excursions/">
+                Harrington Excursions
+            </a>
+
+            <a href="/#publications">
+                Publications
+            </a>
+
+            <a href="/#contact">
+                Contact
+            </a>
+        </div>
+
+    </div>
+
+    <header class="hero">
+
+        <!--
+        Upload the final project logo to this folder using:
+        mediation-stewardship-project-logo.png
+        -->
+
+        <img
+            src="mediation-stewardship-project-logo.png"
+            alt="Mediation Stewardship Project logo"
+            class="project-logo"
+        >
+
+        <p class="eyebrow">
+            An Initiative of Harrington Mediation
+        </p>
+
+        <h1>
+            Mediation Stewardship Project
+        </h1>
+
+        <p class="hero-subtitle">
+            Advancing conflict literacy by making active listening,
+            constructive communication, negotiation, and
+            mediation-informed skills practical tools for everyday life.
+        </p>
+
+        <p class="philosophy-line">
+            Understanding Precedes Resolution.
+        </p>
+
+        <div class="hero-actions">
+
+            <a
+                href="#mission"
+                class="button"
+            >
+                Explore the Mission
+            </a>
+
+            <a
+                href="#workshops"
+                class="button secondary"
+            >
+                Invite a Workshop
+            </a>
+
+            <a
+                href="#stay-connected"
+                class="button secondary"
+            >
+                Stay Connected
+            </a>
+
+        </div>
+
+    </header>
+
+    <section class="peace-movement-feature">
+
+        <!--
+        Upload the approved Baltimore Peace Movement logo
+        to this folder using:
+        baltimore-peace-movement-logo.png
+        -->
+
+        <img
+            src="baltimore-peace-movement-logo.png"
+            alt="Baltimore Peace Movement logo"
+            class="peace-logo"
+        >
+
+        <div>
+            <h2>
+                Supporting Peace Through Conflict Literacy
+            </h2>
+
+            <p>
+                The Mediation Stewardship Project was developed in
+                support of the broader vision of a more peaceful
+                Baltimore. It seeks to contribute practical
+                communication and conflict-resolution education to
+                community peacebuilding efforts, including the
+                Baltimore Peace Movement.
+            </p>
+
+            <p class="relationship-note">
+                The Mediation Stewardship Project is an independent
+                Harrington Mediation initiative created to support
+                community peace, constructive communication, and
+                collaborative conflict engagement.
+            </p>
+        </div>
+
+    </section>
+
+    <nav
+        class="page-navigation"
+        aria-label="Mediation Stewardship page navigation"
+    >
+        <p>
+            Explore the Project
+        </p>
+
+        <div class="anchor-links">
+            <a href="#mission">Mission</a>
+            <a href="#why-it-matters">Why It Matters</a>
+            <a href="#pillars">Project Pillars</a>
+            <a href="#workshops">Workshops</a>
+            <a href="#youth">Youth Initiative</a>
+            <a href="#support-line">Conflict Support Line</a>
+            <a href="#partners">Partners</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#resources">Resources</a>
+            <a href="#stay-connected">Stay Connected</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <section id="mission">
+
+            <h2>
+                Our Mission
+            </h2>
+
+            <div class="panel">
+
+                <p class="lead">
+                    The Mediation Stewardship Project exists to help
+                    individuals, families, schools, businesses, and
+                    communities recognize mediation as an everyday
+                    life skill rather than only a legal or court-based
+                    service.
+                </p>
+
+                <p>
+                    The project advances public conflict literacy by
+                    translating mediation principles into practical
+                    skills people can use in homes, classrooms,
+                    workplaces, neighborhoods, organizations, and
+                    ordinary conversations.
+                </p>
+
+                <p>
+                    The objective is not to train everyone to become a
+                    professional mediator. The objective is to help
+                    more people listen carefully, communicate
+                    constructively, recognize competing interests,
+                    navigate disagreement, and respond to conflict
+                    without unnecessarily damaging relationships.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section id="why-it-matters">
+
+            <h2>
+                Why Mediation Stewardship Matters
+            </h2>
+
+            <div class="grid">
+
+                <article class="card">
+                    <h3>
+                        The Hidden Mediator
+                    </h3>
+
+                    <p>
+                        People negotiate constantly—with themselves,
+                        their children, families, coworkers,
+                        neighbors, and communities. Many people
+                        already use mediation-informed skills without
+                        recognizing them.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>
+                        Mediation Has an Image Problem
+                    </h3>
+
+                    <p>
+                        The word mediation often evokes courts,
+                        attorneys, divorce, paperwork, and formal
+                        disputes. The project translates mediation
+                        into language people already understand:
+                        listening, working things out, hearing both
+                        sides, and finding common ground.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>
+                        Conflict Is Not Failure
+                    </h3>
+
+                    <p>
+                        Conflict reflects different experiences,
+                        needs, priorities, fears, and values. The
+                        central question is not whether conflict can
+                        be eliminated, but whether people can navigate
+                        it without destroying relationships.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>
+                        Stewardship, Not Recruitment
+                    </h3>
+
+                    <p>
+                        The project is not built around recruiting
+                        more mediators. It is built around cultivating
+                        communities that naturally value listening,
+                        communication, collaboration, and mediation.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="pillars">
+
+            <h2>
+                Project Pillars
+            </h2>
+
+            <div class="grid">
+
+                <article class="card">
+                    <span class="pillar-number">1</span>
+
+                    <h3>
+                        Public Education
+                    </h3>
+
+                    <p>
+                        Articles, presentations, media, and community
+                        conversations that make conflict literacy
+                        accessible and relevant.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="pillar-number">2</span>
+
+                    <h3>
+                        Community Workshops
+                    </h3>
+
+                    <p>
+                        Interactive workshops teaching practical
+                        communication, listening, negotiation, and
+                        conflict-navigation skills.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="pillar-number">3</span>
+
+                    <h3>
+                        Youth Development
+                    </h3>
+
+                    <p>
+                        Age-appropriate education for middle schools,
+                        high schools, colleges, youth programs, and
+                        emerging leaders.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="pillar-number">4</span>
+
+                    <h3>
+                        Conflict Support
+                    </h3>
+
+                    <p>
+                        A future support line and referral pathway for
+                        people seeking immediate guidance about a
+                        difficult conversation or conflict.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="pillar-number">5</span>
+
+                    <h3>
+                        Partnerships
+                    </h3>
+
+                    <p>
+                        Collaboration with schools, nonprofits,
+                        businesses, faith communities, civic
+                        initiatives, and neighborhood organizations.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="pillar-number">6</span>
+
+                    <h3>
+                        Research &amp; Evaluation
+                    </h3>
+
+                    <p>
+                        Participant feedback, program evaluation, and
+                        ongoing study of how conflict-literacy
+                        education affects communication and community
+                        engagement.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="workshops">
+
+            <h2>
+                Workshops &amp; Public Presentations
+            </h2>
+
+            <div class="panel">
+
+                <p>
+                    Mediation Stewardship workshops are educational
+                    experiences, not mediator-certification courses.
+                    Each workshop is designed to translate
+                    mediation-informed skills into practical tools
+                    participants can apply immediately.
+                </p>
+
+                <ul class="compact-list">
+                    <li>Active Listening in Everyday Life</li>
+                    <li>Preparing for Difficult Conversations</li>
+                    <li>Assertive Versus Aggressive Communication</li>
+                    <li>Recognizing Interests Beneath Positions</li>
+                    <li>Healthy Disagreement</li>
+                    <li>Perspective-Taking and Reflection</li>
+                    <li>Family and Co-Parenting Communication</li>
+                    <li>Workplace and Leadership Communication</li>
+                    <li>Neighborhood Conflict</li>
+                    <li>Conflict Literacy for Young Adults</li>
+                </ul>
+
+                <div class="pricing-note">
+                    <strong>Workshop Access and Pricing:</strong>
+                    Community workshops may be offered free to
+                    participants through partnerships, grants, or
+                    sponsorships. Private workshops for schools,
+                    businesses, churches, nonprofits, professional
+                    associations, and other organizations are
+                    developed and priced according to scope,
+                    audience, duration, and customization.
+                </div>
+
+                <div class="button-row">
+                    <a
+                        href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Workshop%20Inquiry"
+                        class="button"
+                    >
+                        Invite a Workshop
+                    </a>
+
+                    <a
+                        href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Speaking%20Inquiry"
+                        class="button secondary"
+                    >
+                        Request a Presentation
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="youth">
+
+            <h2>
+                Youth Conflict Literacy Initiative
+            </h2>
+
+            <div class="panel">
+
+                <p class="lead">
+                    Young people are routinely taught mathematics,
+                    science, history, and language. Far fewer are
+                    intentionally taught how to disagree, listen,
+                    apologize, negotiate, regulate emotions, or
+                    communicate across differences.
+                </p>
+
+                <p>
+                    The Youth Conflict Literacy Initiative will offer
+                    age-appropriate programming for middle schools,
+                    high schools, colleges, youth organizations, and
+                    leadership programs. Participants will not be
+                    trained as professional mediators. They will
+                    practice the foundational skills needed to
+                    navigate conflict competently throughout life.
+                </p>
+
+                <div class="grid">
+
+                    <article class="card">
+                        <h3>Middle Schools</h3>
+                        <p>
+                            Listening, emotional awareness, apology,
+                            peer conflict, and respectful
+                            disagreement.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>High Schools</h3>
+                        <p>
+                            Communication styles, difficult
+                            conversations, leadership, online
+                            conflict, and negotiation.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Colleges</h3>
+                        <p>
+                            Conflict literacy, collaboration,
+                            workplace preparation, campus dialogue,
+                            and emerging leadership.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            id="support-line"
+            class="panel support-line"
+        >
+
+            <h2>
+                Conflict Support Line
+            </h2>
+
+            <span class="status-badge">
+                In Development
+            </span>
+
+            <p class="lead">
+                The project envisions a Conflict Support Line for
+                people who need immediate guidance preparing for a
+                difficult conversation, understanding a conflict, or
+                identifying an appropriate next step.
+            </p>
+
+            <p>
+                The initial model may include scheduled callbacks,
+                brief conflict coaching, resource navigation, and
+                referrals to mediation or other appropriate services.
+                It will not function as emergency response, crisis
+                intervention, legal advice, or mental-health
+                treatment.
+            </p>
+
+            <p>
+                Operational standards, availability, referral
+                procedures, training requirements, safety protocols,
+                and sponsorship support will be established before
+                the line launches publicly.
+            </p>
+
+            <div class="button-row">
+                <a
+                    href="mailto:harringtonmediation@yahoo.com?subject=Conflict%20Support%20Line%20Interest"
+                    class="button"
+                >
+                    Support the Line's Development
+                </a>
+            </div>
+
+        </section>
+
+        <section id="partners">
+
+            <h2>
+                Community Partnerships
+            </h2>
+
+            <div class="panel">
+
+                <p>
+                    The Mediation Stewardship Project welcomes
+                    collaboration with organizations that share a
+                    commitment to healthier communication,
+                    constructive conflict engagement, youth
+                    development, and peaceful communities.
+                </p>
+
+                <div class="grid">
+
+                    <article class="card">
+                        <h3>Education</h3>
+                        <p>
+                            Schools, colleges, universities,
+                            after-school programs, and youth
+                            organizations.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Community</h3>
+                        <p>
+                            Libraries, neighborhood associations,
+                            housing organizations, nonprofits, and
+                            civic initiatives.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Faith Communities</h3>
+                        <p>
+                            Churches and faith-based organizations
+                            seeking practical communication and
+                            conflict-engagement education.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Professional Partners</h3>
+                        <p>
+                            Businesses, law firms, healthcare
+                            institutions, associations, and
+                            organizational leaders.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="button-row">
+                    <a
+                        href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Partnership"
+                        class="button"
+                    >
+                        Explore a Partnership
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="sponsors">
+
+            <h2>
+                Sponsors &amp; Sustainability
+            </h2>
+
+            <div class="panel">
+
+                <p>
+                    Sponsorship allows conflict-literacy education to
+                    reach people and communities that may not
+                    otherwise have access to workshops, materials, or
+                    conflict-support resources.
+                </p>
+
+                <p>
+                    Potential sponsorship opportunities include:
+                </p>
+
+                <ul class="compact-list">
+                    <li>Youth workshop sponsorship</li>
+                    <li>Community event underwriting</li>
+                    <li>Educational material production</li>
+                    <li>Conflict Support Line development</li>
+                    <li>Workshop scholarships</li>
+                    <li>School and nonprofit programming</li>
+                    <li>Research and program evaluation</li>
+                    <li>Public awareness campaigns</li>
+                </ul>
+
+                <p>
+                    A formal sponsorship packet, recognition
+                    framework, and contribution levels will be
+                    developed as the initiative advances.
+                </p>
+
+                <div class="button-row">
+                    <a
+                        href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Sponsorship"
+                        class="button"
+                    >
+                        Become a Sponsor
+                    </a>
+
+                    <a
+                        href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Funding%20Conversation"
+                        class="button secondary"
+                    >
+                        Discuss Funding
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="events">
+
+            <h2>
+                Events
+            </h2>
+
+            <div class="panel center">
+
+                <p>
+                    Community workshops, youth presentations,
+                    educational forums, and public events will be
+                    announced here as the project develops.
+                </p>
+
+                <p>
+                    Organizations interested in hosting an initial
+                    workshop or pilot event are invited to contact
+                    Harrington Mediation.
+                </p>
+
+                <a
+                    href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Event%20Inquiry"
+                    class="button"
+                >
+                    Propose an Event
+                </a>
+
+            </div>
+
+        </section>
+
+        <section id="resources">
+
+            <h2>
+                Educational Resources
+            </h2>
+
+            <div class="grid">
+
+                <article class="card">
+                    <h3>
+                        Learning Library
+                    </h3>
+
+                    <p>
+                        Explore articles and reflections about
+                        mediation, communication, conflict,
+                        listening, and human relationships.
+                    </p>
+
+                    <a href="/learning-library/">
+                        Browse the Learning Library →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>
+                        The Hidden Mediator
+                    </h3>
+
+                    <p>
+                        Explore the central idea that people already
+                        negotiate, listen, compromise, and navigate
+                        conflict every day.
+                    </p>
+
+                    <p>
+                        Expanded resource coming soon.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>
+                        Educational Media
+                    </h3>
+
+                    <p>
+                        Videos, presentations, workshop materials, and
+                        downloadable conflict-literacy resources will
+                        be added as they are developed.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="donate">
+
+            <h2>
+                Donate
+            </h2>
+
+            <div class="panel center">
+
+                <p>
+                    A public donation system will be established only
+                    after the appropriate organizational, financial,
+                    and payment-processing infrastructure has been
+                    completed.
+                </p>
+
+                <p>
+                    Individuals and organizations interested in
+                    supporting early project development may contact
+                    Harrington Mediation to discuss sponsorship,
+                    donated resources, event support, or partnership
+                    opportunities.
+                </p>
+
+                <a
+                    href="mailto:harringtonmediation@yahoo.com?subject=Supporting%20the%20Mediation%20Stewardship%20Project"
+                    class="button"
+                >
+                    Discuss Support
+                </a>
+
+            </div>
+
+        </section>
+
+        <section id="stay-connected">
+
+            <h2>
+                Stay Connected
+            </h2>
+
+            <div class="panel">
+
+                <p class="lead center">
+                    Help shape the future of the Mediation Stewardship
+                    Project.
+                </p>
+
+                <p class="center">
+                    Share an idea, invite a workshop, explore a
+                    partnership, support the Conflict Support Line, or
+                    request updates as the initiative develops.
+                </p>
+
+                <div class="contact-grid">
+
+                    <div class="contact-card">
+                        <h3>
+                            Receive Updates
+                        </h3>
+
+                        <p>
+                            Request project announcements, event
+                            notices, and new educational resources.
+                        </p>
+
+                        <a
+                            href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Updates"
+                            class="button"
+                        >
+                            Join the Interest List
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>
+                            Share an Idea
+                        </h3>
+
+                        <p>
+                            Contribute feedback about workshops,
+                            youth programming, community needs, or
+                            peacebuilding opportunities.
+                        </p>
+
+                        <a
+                            href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Idea"
+                            class="button"
+                        >
+                            Submit an Idea
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>
+                            Contact Harrington Mediation
+                        </h3>
+
+                        <p>
+                            Email Robert Harrington Jr. directly for
+                            project, partnership, and workshop
+                            inquiries.
+                        </p>
+
+                        <a
+                            href="mailto:harringtonmediation@yahoo.com"
+                            class="button"
+                        >
+                            Send an Email
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="continue-exploring">
+
+            <h2>
+                Continue Exploring
+            </h2>
+
+            <div class="panel continue-exploring">
+
+                <a href="/mediation-services/">
+                    Explore Mediation Services
+                </a>
+
+                <a href="/Conflict-coaching/">
+                    Explore Conflict Coaching
+                </a>
+
+                <a href="/learning-library/">
+                    Visit the Learning Library
+                </a>
+
+                <a href="/">
+                    Return to the Homepage
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            <strong>Mediation Stewardship Project</strong>
+        </p>
+
+        <p>
+            An initiative of Harrington Mediation
+        </p>
+
+        <p>
+            Robert Harrington Jr. |
+            443-680-5576 |
+            <a href="mailto:harringtonmediation@yahoo.com">
+                harringtonmediation@yahoo.com
+            </a>
+        </p>
+
+        <p>
+            Understanding Precedes Resolution.
+        </p>
+
+    </footer>
+
+</div>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuPanel = document.getElementById("menu-panel");
+
+    if (menuToggle && menuPanel) {
+        menuToggle.addEventListener("click", function () {
+            const isOpen = menuPanel.classList.toggle("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+        });
+    }
+</script>
+<section
+    id="partners"
+    class="content-section page-container"
+>
+
+    <div class="section-heading-centered">
+
+        <h2>
+            Community Partners
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p class="section-introduction">
+            Conflict literacy cannot be cultivated by one person or one
+            organization alone. The Mediation Stewardship Project welcomes
+            collaboration with institutions and community leaders committed
+            to healthier communication, youth development, peacebuilding,
+            and constructive conflict engagement.
+        </p>
+
+    </div>
+
+    <div class="partner-grid">
+
+        <article class="partner-card">
+
+            <h3>
+                Schools &amp; Colleges
+            </h3>
+
+            <p>
+                Middle schools, high schools, colleges, universities,
+                after-school programs, and student leadership organizations.
+            </p>
+
+        </article>
+
+        <article class="partner-card">
+
+            <h3>
+                Community Organizations
+            </h3>
+
+            <p>
+                Nonprofits, libraries, neighborhood associations, housing
+                organizations, community centers, and civic initiatives.
+            </p>
+
+        </article>
+
+        <article class="partner-card">
+
+            <h3>
+                Faith Communities
+            </h3>
+
+            <p>
+                Churches and faith-based organizations seeking practical
+                education in communication, leadership, listening, and
+                conflict engagement.
+            </p>
+
+        </article>
+
+        <article class="partner-card">
+
+            <h3>
+                Businesses &amp; Professionals
+            </h3>
+
+            <p>
+                Businesses, law firms, healthcare organizations, professional
+                associations, employers, and organizational leaders.
+            </p>
+
+        </article>
+
+        <article class="partner-card">
+
+            <h3>
+                Mediators &amp; Educators
+            </h3>
+
+            <p>
+                Mediators, conflict-resolution professionals, teachers,
+                facilitators, trainers, researchers, and community educators.
+            </p>
+
+        </article>
+
+        <article class="partner-card">
+
+            <h3>
+                Peacebuilding Initiatives
+            </h3>
+
+            <p>
+                Movements and organizations working to reduce violence,
+                strengthen neighborhoods, support dialogue, and promote
+                peaceful community participation.
+            </p>
+
+        </article>
+
+    </div>
+
+    <div class="button-row">
+
+        <a
+            href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Partnership%20Inquiry"
+            class="section-button"
+        >
+            Explore a Partnership
+        </a>
+
+    </div>
+
+</section>
+
+<section
+    id="sponsors"
+    class="content-section page-container"
+>
+
+    <div class="section-heading-centered">
+
+        <h2>
+            Sponsors &amp; Funding
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p class="section-introduction">
+            Sponsorship and community investment can help make workshops,
+            youth programming, educational materials, public events, and
+            conflict-support resources available to participants who might
+            not otherwise have access.
+        </p>
+
+    </div>
+
+    <div class="panel">
+
+        <div class="sponsor-grid">
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Workshop Sponsorship
+                </h3>
+
+                <p>
+                    Support free or reduced-cost workshops for schools,
+                    neighborhoods, nonprofits, churches, and community groups.
+                </p>
+
+            </article>
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Youth Programming
+                </h3>
+
+                <p>
+                    Underwrite conflict-literacy programming for students,
+                    youth organizations, and emerging community leaders.
+                </p>
+
+            </article>
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Educational Materials
+                </h3>
+
+                <p>
+                    Help produce guides, workbooks, videos, presentations,
+                    role-playing materials, and public education resources.
+                </p>
+
+            </article>
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Conflict Support Line
+                </h3>
+
+                <p>
+                    Contribute to the planning, technology, training,
+                    referral systems, and operating infrastructure needed
+                    for the future support line.
+                </p>
+
+            </article>
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Community Events
+                </h3>
+
+                <p>
+                    Sponsor forums, workshops, public conversations,
+                    educational campaigns, and peacebuilding events.
+                </p>
+
+            </article>
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Research &amp; Evaluation
+                </h3>
+
+                <p>
+                    Support outcome measurement, participant feedback,
+                    program improvement, and publication of project findings.
+                </p>
+
+            </article>
+
+        </div>
+
+        <div class="pricing-note">
+
+            <strong>Funding and sustainability:</strong>
+
+            The project may be supported through private workshops,
+            institutional contracts, grants, sponsorships, donations,
+            speaking engagements, educational products, and community
+            partnerships. A formal sponsorship prospectus and contribution
+            structure will be developed as the initiative expands.
+
+        </div>
+
+        <div class="button-row">
+
+            <a
+                href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Sponsorship%20Inquiry"
+                class="section-button"
+            >
+                Become a Sponsor
+            </a>
+
+            <a
+                href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Funding%20Conversation"
+                class="section-button"
+            >
+                Discuss Funding
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="events"
+    class="content-section page-container"
+>
+
+    <div class="section-heading-centered">
+
+        <h2>
+            Events
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p class="section-introduction">
+            Community workshops, youth presentations, public forums,
+            educational conversations, and collaborative peacebuilding
+            events will be announced here as programming develops.
+        </p>
+
+    </div>
+
+    <div class="event-list">
+
+        <article class="event-item">
+
+            <h3>
+                Pilot Workshops
+            </h3>
+
+            <p>
+                Initial workshops will introduce active listening,
+                communication styles, constructive disagreement, and
+                preparation for difficult conversations.
+            </p>
+
+        </article>
+
+        <article class="event-item">
+
+            <h3>
+                Community Conversations
+            </h3>
+
+            <p>
+                Public discussions will explore how mediation-informed
+                skills can strengthen families, organizations,
+                neighborhoods, schools, and civic life.
+            </p>
+
+        </article>
+
+        <article class="event-item">
+
+            <h3>
+                Youth Conflict-Literacy Events
+            </h3>
+
+            <p>
+                Future youth events may include interactive exercises,
+                realistic conflict scenarios, leadership development,
+                reflection, and collaborative problem-solving.
+            </p>
+
+        </article>
+
+    </div>
+
+    <div class="button-row">
+
+        <a
+            href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Event%20Proposal"
+            class="section-button"
+        >
+            Propose an Event
+        </a>
+
+    </div>
+
+</section>
+
+<section
+    id="resources"
+    class="content-section page-container"
+>
+
+    <div class="section-heading-centered">
+
+        <h2>
+            Educational Resources
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p class="section-introduction">
+            The project will develop a growing collection of public
+            resources that help people understand conflict and practice
+            mediation-informed skills outside formal workshops.
+        </p>
+
+    </div>
+
+    <div class="resource-list">
+
+        <article class="resource-item">
+
+            <h3>
+                Learning Library
+            </h3>
+
+            <p>
+                Explore articles and reflections about mediation,
+                communication, listening, self-determination, conflict,
+                relationships, and community understanding.
+            </p>
+
+            <p>
+                <a href="/learning-library/">
+                    Visit the Learning Library →
+                </a>
+            </p>
+
+        </article>
+
+        <article class="resource-item">
+
+            <h3>
+                The Hidden Mediator
+            </h3>
+
+            <p>
+                A developing educational series showing how people already
+                negotiate, listen, compromise, reflect, and navigate conflict
+                throughout everyday life.
+            </p>
+
+        </article>
+
+        <article class="resource-item">
+
+            <h3>
+                Workshop Materials
+            </h3>
+
+            <p>
+                Future materials may include participant workbooks,
+                communication exercises, discussion guides, reflection
+                questions, role-playing scenarios, and downloadable handouts.
+            </p>
+
+        </article>
+
+        <article class="resource-item">
+
+            <h3>
+                Educational Media
+            </h3>
+
+            <p>
+                Videos, audio discussions, social media education,
+                presentations, interviews, and other public learning
+                resources will be added as the initiative grows.
+            </p>
+
+        </article>
+
+        <article class="resource-item">
+
+            <h3>
+                The Harrington Review
+            </h3>
+
+            <p>
+                Essays and public reflections may further examine conflict,
+                mediation, communication, community life, leadership, and
+                the human experiences that shape disagreement.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section
+    id="donate"
+    class="content-section page-container"
+>
+
+    <div class="section-heading-centered">
+
+        <h2>
+            Support the Project
+        </h2>
+
+        <hr class="gold-rule">
+
+    </div>
+
+    <div class="donate-panel">
+
+        <p>
+            A public donation system will be established only after the
+            appropriate organizational, financial, legal, and
+            payment-processing infrastructure has been completed.
+        </p>
+
+        <p>
+            Individuals and organizations may currently support early
+            project development through sponsorship, workshop hosting,
+            donated resources, professional expertise, event collaboration,
+            or direct partnership conversations.
+        </p>
+
+        <p class="coming-soon">
+            Online donations are not yet available.
+        </p>
+
+        <a
+            href="mailto:harringtonmediation@yahoo.com?subject=Supporting%20the%20Mediation%20Stewardship%20Project"
+            class="section-button"
+        >
+            Discuss Project Support
+        </a>
+
+    </div>
+
+</section>
+
+<section
+    id="stay-connected"
+    class="stay-connected-section"
+>
+
+    <div class="page-container">
+
+        <div class="section-heading-centered">
+
+            <h2>
+                Stay Connected
+            </h2>
+
+            <hr class="gold-rule">
+
+            <p class="section-introduction">
+                Receive updates, share an idea, request a workshop,
+                discuss sponsorship, or help shape the future of the
+                Mediation Stewardship Project.
+            </p>
+
+        </div>
+
+        <form
+            class="stay-connected-form"
+            action="https://formspree.io/f/xjgdjvdy"
+            method="POST"
+        >
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="stewardship-first-name">
+                        First Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="stewardship-first-name"
+                        name="first_name"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="stewardship-last-name">
+                        Last Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="stewardship-last-name"
+                        name="last_name"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="stewardship-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="stewardship-email"
+                        name="email"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="stewardship-interest">
+                        Area of Interest
+                    </label>
+
+                    <select
+                        id="stewardship-interest"
+                        name="area_of_interest"
+                        required
+                    >
+                        <option value="">
+                            Please Select
+                        </option>
+
+                        <option value="Project Updates">
+                            Project Updates
+                        </option>
+
+                        <option value="Community Workshop">
+                            Community Workshop
+                        </option>
+
+                        <option value="Youth Initiative">
+                            Youth Initiative
+                        </option>
+
+                        <option value="Conflict Support Line">
+                            Conflict Support Line
+                        </option>
+
+                        <option value="Community Partnership">
+                            Community Partnership
+                        </option>
+
+                        <option value="Sponsorship">
+                            Sponsorship
+                        </option>
+
+                        <option value="Volunteer Interest">
+                            Volunteer Interest
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+                    </select>
+
+                </div>
+
+                <div class="form-group full-width">
+
+                    <label for="stewardship-message">
+                        Message, Idea, or Inquiry
+                    </label>
+
+                    <textarea
+                        id="stewardship-message"
+                        name="message"
+                        placeholder="Tell us how you would like to connect with the Mediation Stewardship Project."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="Mediation Stewardship Project Inquiry"
+            >
+
+            <button
+                type="submit"
+                class="form-submit"
+            >
+                Submit
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<section
+    class="continue-exploring page-container"
+>
+
+    <h2>
+        Continue Exploring
+    </h2>
+
+    <div class="panel">
+
+        <p>
+            Learn more about Harrington Mediation, conflict coaching,
+            educational resources, and other community initiatives.
+        </p>
+
+        <div class="continue-links">
+
+            <a
+                href="/mediation-services/"
+                class="section-button"
+            >
+                Mediation Services
+            </a>
+
+            <a
+                href="/Conflict-coaching/"
+                class="section-button"
+            >
+                Conflict Coaching
+            </a>
+
+            <a
+                href="/learning-library/"
+                class="section-button"
+            >
+                Learning Library
+            </a>
+
+            <a
+                href="/"
+                class="section-button"
+            >
+                Return to Homepage
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+    <p>
+        <strong>
+            Mediation Stewardship Project
+        </strong>
+    </p>
+
+    <p>
+        An educational and community initiative founded by
+        Harrington Mediation.
+    </p>
+
+    <p>
+        Understanding Precedes Resolution.
+    </p>
+
+    <p>
+        Robert Harrington Jr.
+        &nbsp;|&nbsp;
+        443-680-5576
+        &nbsp;|&nbsp;
+        <a href="mailto:harringtonmediation@yahoo.com">
+            harringtonmediation@yahoo.com
+        </a>
+    </p>
+
+</footer>
+
+<script>
+
+const menuToggle =
+document.getElementById("menu-toggle");
+
+const menuPanel =
+document.getElementById("menu-panel");
+
+if (menuToggle && menuPanel) {
+
+    menuToggle.addEventListener(
+        "click",
+        function () {
+
+            const isOpen =
+            menuPanel.classList.toggle("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+        }
+    );
+
+}
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
