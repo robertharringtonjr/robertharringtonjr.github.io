@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore partnership, sponsorship, referral, and community collaboration opportunities with the Mediation Stewardship Project."
+    >
+
+    <title>
+        Partners &amp; Sponsors | Mediation Stewardship Project
+    </title>
+
+    <style>
+
+        :root {
+            --navy: #17324d;
+            --deep-navy: #0f2438;
+            --green: #3f654f;
+            --gold: #9a8255;
+            --soft-gold: #d7c9ad;
+            --cream: #f7f3eb;
+            --paper: #ffffff;
+            --soft-panel: #f8f6f1;
+            --ink: #292929;
+            --muted: #625f58;
+            --line: #ddd5c7;
+            --shadow: 0 10px 28px rgba(23, 50, 77, 0.09);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: var(--green);
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--gold);
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        .page-container {
+            width: min(1080px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 20px;
+            z-index: 9999;
+            padding: 12px 18px;
+            border-radius: 6px;
+            background: var(--deep-navy);
+            color: var(--paper);
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 20px;
+        }
+
+        /* PROJECT NAVIGATION */
+
+        .project-navigation {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 5px 18px rgba(23, 50, 77, 0.06);
+        }
+
+        .navigation-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 14px 0;
+        }
+
+        .project-home {
+            color: var(--navy);
+            font-weight: bold;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .menu-toggle {
+            display: none;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 999px;
+            background: var(--gold);
+            color: var(--paper);
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .project-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 6px;
+        }
+
+        .project-menu a {
+            padding: 8px 10px;
+            border-radius: 999px;
+            color: var(--navy);
+            font-size: 0.88rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-menu a:hover,
+        .project-menu a:focus,
+        .project-menu a[aria-current="page"] {
+            background: var(--cream);
+            color: var(--green);
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 68px 0;
+            border-bottom: 5px solid var(--gold);
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(15, 36, 56, 0.98),
+                    rgba(63, 101, 79, 0.95)
+                );
+            color: var(--paper);
+        }
+
+        .hero-inner {
+            text-align: center;
+        }
+
+        .project-logo {
+            width: min(330px, 80vw);
+            margin: 0 auto 24px;
+            border-radius: 12px;
+        }
+
+        .eyebrow {
+            margin: 0 0 10px;
+            color: #f0dfba;
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: clamp(2.3rem, 6vw, 4.5rem);
+            line-height: 1.08;
+        }
+
+        .hero-subtitle {
+            max-width: 800px;
+            margin: 20px auto 0;
+            font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+        }
+
+        .hero-tagline {
+            margin: 18px 0 0;
+            color: #f0dfba;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .hero-actions,
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 21px;
+            border: 2px solid var(--gold);
+            border-radius: 999px;
+            background: var(--gold);
+            color: var(--paper);
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .button:hover,
+        .button:focus {
+            border-color: var(--paper);
+            background: var(--paper);
+            color: var(--deep-navy);
+        }
+
+        .button.secondary {
+            border-color: rgba(255, 255, 255, 0.78);
+            background: transparent;
+        }
+
+        /* CONTENT */
+
+        main {
+            padding-top: 18px;
+        }
+
+        .content-section {
+            margin: 62px auto;
+        }
+
+        .section-heading {
+            max-width: 820px;
+            margin: 0 auto 28px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            color: var(--navy);
+            font-size: clamp(1.8rem, 4vw, 2.55rem);
+            line-height: 1.2;
+        }
+
+        .section-heading p {
+            margin: 14px 0 0;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .gold-rule {
+            width: 82px;
+            height: 3px;
+            margin: 18px auto 0;
+            border: none;
+            background: var(--gold);
+        }
+
+        .panel {
+            padding: 30px;
+            border: 1px solid var(--soft-gold);
+            border-radius: 14px;
+            background: var(--soft-panel);
+            box-shadow: var(--shadow);
+        }
+
+        .panel p:first-child {
+            margin-top: 0;
+        }
+
+        .panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* PARTNER TYPES */
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            padding: 25px;
+            border: 1px solid var(--line);
+            border-top: 4px solid var(--green);
+            border-radius: 12px;
+            background: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: var(--navy);
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        /* PARTNERSHIP PATHS */
+
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .opportunity-list {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .opportunity-list li {
+            margin-bottom: 10px;
+        }
+
+        /* SPONSORSHIP */
+
+        .sponsor-section {
+            padding: 38px;
+            border-radius: 16px;
+            background: var(--deep-navy);
+            color: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+        .sponsor-section h2 {
+            margin-top: 0;
+            color: var(--paper);
+        }
+
+        .sponsor-section > p {
+            color: rgba(255, 255, 255, 0.84);
+        }
+
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 26px;
+        }
+
+        .sponsor-card {
+            padding: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .sponsor-card h3 {
+            margin: 0 0 9px;
+            color: #f0dfba;
+        }
+
+        .sponsor-card p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* CURRENT PARTNERS */
+
+        .partner-placeholder {
+            padding: 32px;
+            border: 2px dashed var(--soft-gold);
+            border-radius: 14px;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .partner-placeholder h3 {
+            margin: 0;
+            color: var(--navy);
+        }
+
+        .partner-placeholder p {
+            max-width: 730px;
+            margin: 12px auto 0;
+            color: var(--muted);
+        }
+
+        /* PROCESS */
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            counter-reset: partnership-step;
+        }
+
+        .step {
+            padding: 28px 22px 22px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--soft-panel);
+        }
+
+        .step::before {
+            counter-increment: partnership-step;
+            content: counter(partnership-step);
+            display: grid;
+            width: 38px;
+            height: 38px;
+            margin-bottom: 14px;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--paper);
+            font-weight: bold;
+        }
+
+        .step h3 {
+            margin: 0 0 8px;
+            color: var(--navy);
+        }
+
+        .step p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        /* CTA */
+
+        .contact-panel {
+            padding: 38px;
+            border: 1px solid var(--soft-gold);
+            border-radius: 16px;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .contact-panel h2 {
+            margin: 0;
+            color: var(--navy);
+        }
+
+        .contact-panel p {
+            max-width: 760px;
+            margin: 14px auto 0;
+            color: var(--muted);
+        }
+
+        .contact-panel .button {
+            border-color: var(--green);
+            background: var(--green);
+        }
+
+        .contact-panel .button:hover,
+        .contact-panel .button:focus {
+            border-color: var(--navy);
+            background: var(--navy);
+            color: var(--paper);
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 70px;
+            padding: 38px 20px;
+            border-top: 5px solid var(--gold);
+            background: var(--deep-navy);
+            color: rgba(255, 255, 255, 0.82);
+            text-align: center;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        footer a {
+            color: #f0dfba;
+        }
+
+        @media (max-width: 900px) {
+
+            .card-grid,
+            .sponsor-grid,
+            .steps {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .menu-toggle {
+                display: inline-block;
+            }
+
+            .navigation-inner {
+                flex-wrap: wrap;
+            }
+
+            .project-menu {
+                display: none;
+                width: 100%;
+                padding: 12px;
+                border: 1px solid var(--line);
+                border-radius: 12px;
+                background: var(--paper);
+                box-shadow: var(--shadow);
+            }
+
+            .project-menu.open {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .page-container {
+                width: min(100% - 30px, 1080px);
+            }
+
+            .navigation-inner {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .project-home {
+                text-align: center;
+            }
+
+            .menu-toggle {
+                width: 100%;
+            }
+
+            .project-menu.open,
+            .card-grid,
+            .two-column,
+            .sponsor-grid,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 52px 0;
+            }
+
+            .hero-actions,
+            .button-row {
+                flex-direction: column;
+                align-items: stretch;
+                max-width: 350px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .panel,
+            .sponsor-section,
+            .contact-panel {
+                padding: 24px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">
+    Skip to Main Content
+</a>
+
+<nav
+    class="project-navigation"
+    aria-label="Mediation Stewardship Project navigation"
+>
+
+    <div class="page-container navigation-inner">
+
+        <a
+            href="/mediation-stewardship/"
+            class="project-home"
+        >
+            Project Home
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="project-menu"
+        >
+            Explore the Project
+        </button>
+
+        <div
+            class="project-menu"
+            id="project-menu"
+        >
+
+            <a href="/mediation-stewardship/mission/">
+                Mission
+            </a>
+
+            <a href="/mediation-stewardship/conflict-literacy-workshops/">
+                Conflict Literacy Workshops
+            </a>
+
+            <a href="/mediation-stewardship/youth-initiative/">
+                Youth Initiative
+            </a>
+
+            <a href="/mediation-stewardship/conflict-support-line/">
+                Conflict Support Line
+            </a>
+
+            <a href="/mediation-stewardship/learning-and-resources/">
+                Learning &amp; Resources
+            </a>
+
+            <a
+                href="/mediation-stewardship/partners-and-sponsors/"
+                aria-current="page"
+            >
+                Partners &amp; Sponsors
+            </a>
+
+            <a href="/mediation-stewardship/stay-connected/">
+                Stay Connected
+            </a>
+
+            <a href="/client-portal/">
+                Client Portal
+            </a>
+
+            <a href="/">
+                Harrington Mediation
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<header class="hero">
+
+    <div class="page-container hero-inner">
+
+        <img
+            src="../mediation-stewardship-project-logo.png"
+            alt="Mediation Stewardship Project logo"
+            class="project-logo"
+        >
+
+        <p class="eyebrow">
+            Mediation Stewardship Project
+        </p>
+
+        <h1>
+            Partners &amp; Sponsors
+        </h1>
+
+        <p class="hero-subtitle">
+            Building a culture of conflict literacy requires schools,
+            organizations, community leaders, professionals, sponsors,
+            and peacebuilding partners working together.
+        </p>
+
+        <p class="hero-tagline">
+            Collaboration turns an idea into a public movement.
+        </p>
+
+        <div class="hero-actions">
+
+            <a
+                href="#partnerships"
+                class="button"
+            >
+                Explore Partnerships
+            </a>
+
+            <a
+                href="#sponsorship"
+                class="button secondary"
+            >
+                Explore Sponsorship
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main id="main-content">
+
+<section class="content-section page-container">
+
+    <div class="section-heading">
+
+        <h2>
+            Partnership Is Central to Stewardship
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p>
+            Conflict literacy cannot be cultivated by one person,
+            one organization, or one professional discipline alone.
+        </p>
+
+    </div>
+
+    <div class="panel">
+
+        <p>
+            The Mediation Stewardship Project welcomes collaboration with
+            institutions and community leaders committed to communication,
+            education, youth development, peacebuilding, leadership, and
+            constructive conflict engagement.
+        </p>
+
+        <p>
+            Partnerships may involve workshops, youth programming,
+            public education, referrals, shared events, research,
+            outreach, resource development, sponsorship, or other forms
+            of mission-aligned collaboration.
+        </p>
+
+    </div>
+
+</section>
+
+<section
+    id="partnerships"
+    class="content-section page-container"
+>
+
+    <div class="section-heading">
+
+        <h2>
+            Potential Community Partners
+        </h2>
+
+        <hr class="gold-rule">
+
+    </div>
+
+    <div class="card-grid">
+
+        <article class="card">
+
+            <h3>
+                Schools &amp; Colleges
+            </h3>
+
+            <p>
+                Middle schools, high schools, colleges, universities,
+                student organizations, and after-school programs.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <h3>
+                Nonprofit Organizations
+            </h3>
+
+            <p>
+                Community organizations, youth programs, housing providers,
+                family-serving agencies, and neighborhood initiatives.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <h3>
+                Faith Communities
+            </h3>
+
+            <p>
+                Churches and faith-based organizations seeking education
+                in listening, leadership, communication, and conflict.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <h3>
+                Businesses &amp; Professionals
+            </h3>
+
+            <p>
+                Businesses, law firms, employers, healthcare organizations,
+                professional associations, and organizational leaders.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <h3>
+                Mediators &amp; Educators
+            </h3>
+
+            <p>
+                Mediators, facilitators, teachers, trainers, researchers,
+                conflict professionals, and community educators.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <h3>
+                Peacebuilding Initiatives
+            </h3>
+
+            <p>
+                Movements and organizations working to reduce violence,
+                strengthen neighborhoods, and support community dialogue.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="section-heading">
+
+        <h2>
+            Ways to Collaborate
+        </h2>
+
+        <hr class="gold-rule">
+
+    </div>
+
+    <div class="two-column">
+
+        <div class="panel">
+
+            <h3>
+                Program Collaboration
+            </h3>
+
+            <ul class="opportunity-list">
+                <li>Host a Conflict Literacy Workshop</li>
+                <li>Develop youth programming</li>
+                <li>Collaborate on a public presentation</li>
+                <li>Organize a community conversation</li>
+                <li>Develop educational resources</li>
+                <li>Support research or evaluation</li>
+            </ul>
+
+        </div>
+
+        <div class="panel">
+
+            <h3>
+                Community Infrastructure
+            </h3>
+
+            <ul class="opportunity-list">
+                <li>Become a referral partner</li>
+                <li>Share professional expertise</li>
+                <li>Provide meeting or event space</li>
+                <li>Support public outreach</li>
+                <li>Contribute technology or materials</li>
+                <li>Help identify community needs</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="sponsorship"
+    class="content-section page-container"
+>
+
+    <div class="sponsor-section">
+
+        <h2>
+            Sponsorship &amp; Community Investment
+        </h2>
+
+        <p>
+            Sponsorship can help make workshops, youth programming,
+            educational materials, public events, and conflict-support
+            resources accessible to communities that might not otherwise
+            have access.
+        </p>
+
+        <div class="sponsor-grid">
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Sponsor a Workshop
+                </h3>
+
+                <p>
+                    Underwrite free or reduced-cost programming for a school,
+                    nonprofit, church, neighborhood, or community group.
+                </p>
+
+            </article>
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Support Youth Programming
+                </h3>
+
+                <p>
+                    Help bring conflict-literacy education to students,
+                    youth organizations, and emerging leaders.
+                </p>
+
+            </article>
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Support the Conflict Support Line
+                </h3>
+
+                <p>
+                    Contribute to outreach, telephone infrastructure,
+                    referral development, and public access.
+                </p>
+
+            </article>
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Fund Educational Resources
+                </h3>
+
+                <p>
+                    Support guides, handouts, videos, research summaries,
+                    workshop materials, and public education.
+                </p>
+
+            </article>
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Sponsor Community Events
+                </h3>
+
+                <p>
+                    Help support forums, public conversations, presentations,
+                    workshops, and peacebuilding activities.
+                </p>
+
+            </article>
+
+            <article class="sponsor-card">
+
+                <h3>
+                    Provide In-Kind Support
+                </h3>
+
+                <p>
+                    Contribute printing, technology, venues, transportation,
+                    refreshments, media, or professional services.
+                </p>
+
+            </article>
+
+        </div>
+
+        <div class="button-row">
+
+            <a
+                href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Sponsorship%20Inquiry"
+                class="button"
+            >
+                Discuss Sponsorship
+            </a>
+
+            <a
+                href="/mediation-stewardship/stay-connected/"
+                class="button secondary"
+            >
+                Express Interest
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="section-heading">
+
+        <h2>
+            Current Partners &amp; Collaborators
+        </h2>
+
+        <hr class="gold-rule">
+
+    </div>
+
+    <div class="partner-placeholder">
+
+        <h3>
+            Partnership Directory in Development
+        </h3>
+
+        <p>
+            As formal relationships develop, this section will recognize
+            participating schools, community organizations, sponsors,
+            referral partners, professional collaborators, and
+            peacebuilding initiatives.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="section-heading">
+
+        <h2>
+            How Partnership Begins
+        </h2>
+
+        <hr class="gold-rule">
+
+    </div>
+
+    <div class="steps">
+
+        <article class="step">
+
+            <h3>
+                Share Your Interest
+            </h3>
+
+            <p>
+                Identify your organization, community, area of interest,
+                available resources, or proposed collaboration.
+            </p>
+
+        </article>
+
+        <article class="step">
+
+            <h3>
+                Explore Alignment
+            </h3>
+
+            <p>
+                We discuss shared goals, community needs, responsibilities,
+                possible programming, and the appropriate relationship.
+            </p>
+
+        </article>
+
+        <article class="step">
+
+            <h3>
+                Define the Collaboration
+            </h3>
+
+            <p>
+                Appropriate next steps, expectations, scheduling,
+                sponsorship, referrals, or project responsibilities
+                are documented before work begins.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="contact-panel">
+
+        <h2>
+            Build With the Mediation Stewardship Project
+        </h2>
+
+        <p>
+            Explore a partnership, sponsor public programming, become a
+            referral resource, contribute professional expertise, or help
+            bring conflict literacy into your community.
+        </p>
+
+        <div class="button-row">
+
+            <a
+                href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Partnership%20Inquiry"
+                class="button"
+            >
+                Explore a Partnership
+            </a>
+
+            <a
+                href="mailto:harringtonmediation@yahoo.com?subject=Mediation%20Stewardship%20Sponsorship%20Inquiry"
+                class="button"
+            >
+                Discuss Sponsorship
+            </a>
+
+            <a
+                href="/mediation-stewardship/"
+                class="button"
+            >
+                Return to Project Home
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>
+        <strong>
+            Mediation Stewardship Project
+        </strong>
+    </p>
+
+    <p>
+        Partners &amp; Sponsors
+    </p>
+
+    <p>
+        An educational and community initiative founded by
+        Harrington Mediation.
+    </p>
+
+    <p>
+        Understanding Precedes Resolution.
+    </p>
+
+    <p>
+        Robert Harrington Jr.
+        &nbsp;|&nbsp;
+        443-680-5576
+        &nbsp;|&nbsp;
+        <a href="mailto:harringtonmediation@yahoo.com">
+            harringtonmediation@yahoo.com
+        </a>
+    </p>
+
+</footer>
+
+<script>
+
+    const menuToggle =
+        document.getElementById("menu-toggle");
+
+    const projectMenu =
+        document.getElementById("project-menu");
+
+    if (menuToggle && projectMenu) {
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    projectMenu.classList.toggle("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
+
+            }
+        );
+
+    }
+
+</script>
+
+</body>
+
+</html>
