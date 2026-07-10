@@ -472,7 +472,42 @@
         }
     }
 
+.stewardship-feature {
+    display: grid;
+    grid-template-columns: minmax(180px, 320px) 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.stewardship-logo {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.stewardship-content h3 {
+    margin-top: 0;
+    color: #17324d;
+    font-size: 1.6rem;
+}
+
+.stewardship-content p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+    .stewardship-feature {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .stewardship-logo {
+        max-width: 260px;
+    }
+}    
 </style>
+    
 </head>
 
 <body id="home">
@@ -501,6 +536,7 @@
     <a href="/mediation-services/#fees-scheduling">Fees</a>
     <a href="/client-portal/">Client Portal</a>
     <a href="/learning-library/">Learning</a>
+    <a href="/mediation-stewardship/">Stewardship Project</a>
     <a href="#contact">Contact</a>
 </nav>
     
@@ -551,6 +587,55 @@
 
 </section>
 
+    <section id="mediation-stewardship">
+
+    <h2>Featured Initiative</h2>
+
+    <div class="panel stewardship-feature">
+
+        <img
+            src="mediation-stewardship/mediation-stewardship-project-logo.png"
+            alt="Mediation Stewardship Project logo"
+            class="stewardship-logo"
+        >
+
+        <div class="stewardship-content">
+
+            <h3>Mediation Stewardship Project</h3>
+
+            <p>
+                The Mediation Stewardship Project is a public education
+                initiative working to make conflict literacy, active
+                listening, constructive communication, and
+                mediation-informed skills more accessible in everyday life.
+            </p>
+
+            <p>
+                Through workshops, youth programming, educational resources,
+                community partnerships, and the Conflict Support Line, the
+                project seeks to help people navigate disagreement before
+                conflict becomes crisis.
+            </p>
+
+            <p class="philosophy-line">
+                Conflict skills are life skills.
+            </p>
+
+            <p>
+                <a
+                    href="/mediation-stewardship/"
+                    class="request-button"
+                >
+                    Explore the Mediation Stewardship Project →
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+    
 <section id="philosophy">
 
     <h2>Mediation Philosophy</h2>
