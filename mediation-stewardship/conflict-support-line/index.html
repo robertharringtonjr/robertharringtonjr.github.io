@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="The Conflict Support Line provides free, brief, non-emergency conflict support, conversation preparation, information, and referrals through the Mediation Stewardship Project."
+    >
+
+    <title>
+        Conflict Support Line | Mediation Stewardship Project
+    </title>
+
+    <style>
+
+        :root {
+            --navy: #17324d;
+            --deep-navy: #0f2438;
+            --green: #3f654f;
+            --gold: #9a8255;
+            --soft-gold: #d7c9ad;
+            --cream: #f7f3eb;
+            --paper: #ffffff;
+            --soft-panel: #f8f6f1;
+            --warning: #8b3f36;
+            --warning-soft: #fff4f1;
+            --ink: #292929;
+            --muted: #625f58;
+            --line: #ddd5c7;
+            --shadow: 0 10px 28px rgba(23, 50, 77, 0.09);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: var(--green);
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--gold);
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        .page-container {
+            width: min(1080px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 20px;
+            z-index: 9999;
+            padding: 12px 18px;
+            border-radius: 6px;
+            background: var(--deep-navy);
+            color: var(--paper);
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 20px;
+        }
+
+        /* PROJECT NAVIGATION */
+
+        .project-navigation {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 5px 18px rgba(23, 50, 77, 0.06);
+        }
+
+        .navigation-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 14px 0;
+        }
+
+        .project-home {
+            color: var(--navy);
+            font-weight: bold;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .menu-toggle {
+            display: none;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 999px;
+            background: var(--gold);
+            color: var(--paper);
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .project-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 6px;
+        }
+
+        .project-menu a {
+            padding: 8px 10px;
+            border-radius: 999px;
+            color: var(--navy);
+            font-size: 0.88rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-menu a:hover,
+        .project-menu a:focus,
+        .project-menu a[aria-current="page"] {
+            background: var(--cream);
+            color: var(--green);
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 68px 0;
+            border-bottom: 5px solid var(--gold);
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(15, 36, 56, 0.98),
+                    rgba(63, 101, 79, 0.95)
+                );
+            color: var(--paper);
+        }
+
+        .hero-inner {
+            text-align: center;
+        }
+
+        .project-logo {
+            width: min(330px, 80vw);
+            margin: 0 auto 24px;
+            border-radius: 12px;
+        }
+
+        .eyebrow {
+            margin: 0 0 10px;
+            color: #f0dfba;
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: clamp(2.4rem, 6vw, 4.6rem);
+            line-height: 1.08;
+        }
+
+        .hero-subtitle {
+            max-width: 790px;
+            margin: 20px auto 0;
+            font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+        }
+
+        .availability-line {
+            max-width: 760px;
+            margin: 22px auto 0;
+            padding: 14px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            font-weight: bold;
+        }
+
+        .hero-actions,
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 21px;
+            border: 2px solid var(--gold);
+            border-radius: 999px;
+            background: var(--gold);
+            color: var(--paper);
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .button:hover,
+        .button:focus {
+            border-color: var(--paper);
+            background: var(--paper);
+            color: var(--deep-navy);
+        }
+
+        .button.secondary {
+            border-color: rgba(255, 255, 255, 0.78);
+            background: transparent;
+        }
+
+        /* CONTENT */
+
+        main {
+            padding-top: 18px;
+        }
+
+        .content-section {
+            margin: 62px auto;
+        }
+
+        .section-heading {
+            max-width: 820px;
+            margin: 0 auto 28px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            color: var(--navy);
+            font-size: clamp(1.8rem, 4vw, 2.55rem);
+            line-height: 1.2;
+        }
+
+        .section-heading p {
+            margin: 14px 0 0;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .gold-rule {
+            width: 82px;
+            height: 3px;
+            margin: 18px auto 0;
+            border: none;
+            background: var(--gold);
+        }
+
+        .panel {
+            padding: 30px;
+            border: 1px solid var(--soft-gold);
+            border-radius: 14px;
+            background: var(--soft-panel);
+            box-shadow: var(--shadow);
+        }
+
+        .panel p:first-child {
+            margin-top: 0;
+        }
+
+        .panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            padding: 25px;
+            border: 1px solid var(--line);
+            border-top: 4px solid var(--green);
+            border-radius: 12px;
+            background: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: var(--navy);
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .support-list {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .support-list li {
+            margin-bottom: 10px;
+        }
+
+        /* CALL PROCESS */
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            counter-reset: support-step;
+        }
+
+        .step {
+            padding: 28px 22px 22px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--soft-panel);
+        }
+
+        .step::before {
+            counter-increment: support-step;
+            content: counter(support-step);
+            display: grid;
+            width: 38px;
+            height: 38px;
+            margin-bottom: 14px;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--paper);
+            font-weight: bold;
+        }
+
+        .step h3 {
+            margin: 0 0 8px;
+            color: var(--navy);
+        }
+
+        .step p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        /* SERVICE TRANSITION */
+
+        .service-panel {
+            padding: 34px;
+            border-radius: 15px;
+            background: var(--deep-navy);
+            color: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+        .service-panel h2 {
+            margin-top: 0;
+            color: var(--paper);
+        }
+
+        .service-panel p {
+            color: rgba(255, 255, 255, 0.84);
+        }
+
+        /* SAFETY */
+
+        .emergency-panel {
+            padding: 30px;
+            border: 2px solid var(--warning);
+            border-radius: 14px;
+            background: var(--warning-soft);
+        }
+
+        .emergency-panel h2 {
+            margin-top: 0;
+            color: var(--warning);
+        }
+
+        .emergency-panel strong {
+            color: var(--warning);
+        }
+
+        /* DEVELOPMENT */
+
+        .development-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .development-card {
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+        .development-card h3 {
+            margin: 0 0 10px;
+            color: var(--navy);
+        }
+
+        .development-card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        /* FINAL CTA */
+
+        .call-panel {
+            padding: 38px;
+            border: 1px solid var(--soft-gold);
+            border-radius: 16px;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .call-panel h2 {
+            margin: 0;
+            color: var(--navy);
+        }
+
+        .call-panel p {
+            max-width: 760px;
+            margin: 14px auto 0;
+            color: var(--muted);
+        }
+
+        .phone-number {
+            display: block;
+            margin: 20px 0 0;
+            color: var(--navy);
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .call-panel .button {
+            border-color: var(--green);
+            background: var(--green);
+        }
+
+        .call-panel .button:hover,
+        .call-panel .button:focus {
+            border-color: var(--navy);
+            background: var(--navy);
+            color: var(--paper);
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 70px;
+            padding: 38px 20px;
+            border-top: 5px solid var(--gold);
+            background: var(--deep-navy);
+            color: rgba(255, 255, 255, 0.82);
+            text-align: center;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        footer a {
+            color: #f0dfba;
+        }
+
+        @media (max-width: 900px) {
+
+            .card-grid,
+            .steps,
+            .development-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .menu-toggle {
+                display: inline-block;
+            }
+
+            .navigation-inner {
+                flex-wrap: wrap;
+            }
+
+            .project-menu {
+                display: none;
+                width: 100%;
+                padding: 12px;
+                border: 1px solid var(--line);
+                border-radius: 12px;
+                background: var(--paper);
+                box-shadow: var(--shadow);
+            }
+
+            .project-menu.open {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .page-container {
+                width: min(100% - 30px, 1080px);
+            }
+
+            .navigation-inner {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .project-home {
+                text-align: center;
+            }
+
+            .menu-toggle {
+                width: 100%;
+            }
+
+            .project-menu.open,
+            .card-grid,
+            .two-column,
+            .steps,
+            .development-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 52px 0;
+            }
+
+            .hero-actions,
+            .button-row {
+                flex-direction: column;
+                align-items: stretch;
+                max-width: 350px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .panel,
+            .service-panel,
+            .emergency-panel,
+            .call-panel {
+                padding: 24px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">
+    Skip to Main Content
+</a>
+
+<nav
+    class="project-navigation"
+    aria-label="Mediation Stewardship Project navigation"
+>
+
+    <div class="page-container navigation-inner">
+
+        <a
+            href="/mediation-stewardship/"
+            class="project-home"
+        >
+            Project Home
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="project-menu"
+        >
+            Explore the Project
+        </button>
+
+        <div
+            class="project-menu"
+            id="project-menu"
+        >
+
+            <a href="/mediation-stewardship/mission/">
+                Mission
+            </a>
+
+            <a href="/mediation-stewardship/conflict-literacy-workshops/">
+                Conflict Literacy Workshops
+            </a>
+
+            <a href="/mediation-stewardship/youth-initiative/">
+                Youth Initiative
+            </a>
+
+            <a
+                href="/mediation-stewardship/conflict-support-line/"
+                aria-current="page"
+            >
+                Conflict Support Line
+            </a>
+
+            <a href="/mediation-stewardship/resources/">
+                Resources
+            </a>
+
+            <a href="/mediation-stewardship/events/">
+                Events
+            </a>
+
+            <a href="/mediation-stewardship/partners/">
+                Partners
+            </a>
+
+            <a href="/mediation-stewardship/support/">
+                Support
+            </a>
+
+            <a href="/mediation-stewardship/stay-connected/">
+                Stay Connected
+            </a>
+
+            <a href="/client-portal/">
+                Client Portal
+            </a>
+
+            <a href="/">
+                Harrington Mediation
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<header class="hero">
+
+    <div class="page-container hero-inner">
+
+        <img
+            src="../mediation-stewardship-project-logo.png"
+            alt="Mediation Stewardship Project logo"
+            class="project-logo"
+        >
+
+        <p class="eyebrow">
+            Mediation Stewardship Project
+        </p>
+
+        <h1>
+            Conflict Support Line
+        </h1>
+
+        <p class="hero-subtitle">
+            Free, brief, non-emergency support for people trying to
+            understand conflict, prepare for a difficult conversation,
+            or identify a constructive next step.
+        </p>
+
+        <p class="availability-line">
+            Calls are accepted 24 hours a day. If your call is not answered,
+            please leave a voicemail. Calls are generally returned within
+            one to two hours.
+        </p>
+
+        <div class="hero-actions">
+
+            <a
+                href="tel:+14436805576"
+                class="button"
+            >
+                Call 443-680-5576
+            </a>
+
+            <a
+                href="#how-it-works"
+                class="button secondary"
+            >
+                How the Line Works
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main id="main-content">
+
+<section class="content-section page-container">
+
+    <div class="section-heading">
+
+        <h2>
+            What Is the Conflict Support Line?
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p>
+            Conflict can become overwhelming before a person knows what
+            service they need or what conversation should happen next.
+        </p>
+
+    </div>
+
+    <div class="panel">
+
+        <p>
+            The Conflict Support Line provides a direct point of access for
+            people experiencing interpersonal conflict. The initial call may
+            include listening, clarification, brief communication support,
+            preparation for a difficult conversation, or information about
+            available conflict-resolution options.
+        </p>
+
+        <p>
+            Initial support is offered without charge and generally lasts
+            approximately 15–30 minutes. The purpose is not necessarily to
+            resolve the entire conflict during one call. The purpose is to
+            help the caller slow the situation down, gain clarity, and
+            identify a responsible next step.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="section-heading">
+
+        <h2>
+            When You May Call
+        </h2>
+
+        <hr class="gold-rule">
+
+    </div>
+
+    <div class="card-grid">
+
+        <article class="card">
+
+            <h3>
+                Difficult Conversations
+            </h3>
+
+            <p>
+                You need help preparing what to say, how to say it, or how
+                to approach a sensitive conversation constructively.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <h3>
+                Interpersonal Conflict
+            </h3>
+
+            <p>
+                You are experiencing tension with a family member, friend,
+                neighbor, coworker, or another person in your community.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <h3>
+                Communication Breakdown
+            </h3>
+
+            <p>
+                Conversations repeatedly become defensive, unproductive,
+                confusing, or emotionally charged.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <h3>
+                Co-Parenting Communication
+            </h3>
+
+            <p>
+                You need brief support identifying a constructive way to
+                communicate about a parenting concern.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <h3>
+                Workplace Concerns
+            </h3>
+
+            <p>
+                You are preparing to address a disagreement, expectation,
+                boundary, or professional relationship.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <h3>
+                Exploring Next Steps
+            </h3>
+
+            <p>
+                You are uncertain whether mediation, conflict coaching,
+                another service, or an outside referral may be appropriate.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section
+    id="how-it-works"
+    class="content-section page-container"
+>
+
+    <div class="section-heading">
+
+        <h2>
+            How the Line Works
+        </h2>
+
+        <hr class="gold-rule">
+
+    </div>
+
+    <div class="steps">
+
+        <article class="step">
+
+            <h3>
+                Call the Line
+            </h3>
+
+            <p>
+                Call at any hour. If the call is not answered, leave your
+                name, telephone number, and a brief reason for calling.
+            </p>
+
+        </article>
+
+        <article class="step">
+
+            <h3>
+                Receive Brief Support
+            </h3>
+
+            <p>
+                Calls are generally returned within one to two hours.
+                The initial support conversation may last approximately
+                15–30 minutes.
+            </p>
+
+        </article>
+
+        <article class="step">
+
+            <h3>
+                Identify a Next Step
+            </h3>
+
+            <p>
+                You may receive brief guidance, conversation preparation,
+                service information, a referral, or scheduling options for
+                continued support.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="section-heading">
+
+        <h2>
+            What Brief Support May Include
+        </h2>
+
+        <hr class="gold-rule">
+
+    </div>
+
+    <div class="two-column">
+
+        <div class="panel">
+
+            <h3>
+                During the Call
+            </h3>
+
+            <ul class="support-list">
+                <li>Listening and conflict clarification</li>
+                <li>Identifying the immediate concern</li>
+                <li>Preparing for a difficult conversation</li>
+                <li>Brief communication guidance</li>
+                <li>Exploring interests, needs, and priorities</li>
+                <li>Considering constructive next steps</li>
+            </ul>
+
+        </div>
+
+        <div class="panel">
+
+            <h3>
+                Information and Referrals
+            </h3>
+
+            <ul class="support-list">
+                <li>Information about conflict coaching</li>
+                <li>Information about mediation</li>
+                <li>Scheduling a more comprehensive session</li>
+                <li>Referral to an outside provider or resource</li>
+                <li>Identifying when another service is more appropriate</li>
+                <li>Project and community resource navigation</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="service-panel">
+
+        <h2>
+            Free Initial Support and Extended Services
+        </h2>
+
+        <p>
+            The initial Conflict Support Line conversation is offered
+            without charge and generally lasts 15–30 minutes.
+        </p>
+
+        <p>
+            Callers who need continuing or more comprehensive assistance
+            may choose to schedule Harrington Mediation Conflict Coaching,
+            begin a mediation inquiry, or receive a referral to another
+            appropriate resource.
+        </p>
+
+        <p>
+            Conflict coaching and mediation are separate professional
+            services. Any fee, intake requirement, scheduling process, or
+            service agreement will be explained before a paid service begins.
+            Calling the Support Line does not obligate anyone to purchase
+            another service.
+        </p>
+
+        <div class="button-row">
+
+            <a
+                href="/Conflict-coaching/"
+                class="button"
+            >
+                Explore Conflict Coaching
+            </a>
+
+            <a
+                href="/mediation-services/"
+                class="button secondary"
+            >
+                Explore Mediation
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="emergency-panel">
+
+        <h2>
+            Important Non-Emergency Notice
+        </h2>
+
+        <p>
+            The Conflict Support Line is <strong>not</strong> an emergency
+            response service, crisis hotline, suicide hotline, domestic
+            violence service, law-enforcement service, legal-advice service,
+            therapy service, or mental-health treatment provider.
+        </p>
+
+        <p>
+            The line cannot guarantee immediate contact, personal safety,
+            legal protection, intervention with another person, or resolution
+            of a conflict.
+        </p>
+
+        <p>
+            <strong>
+                If anyone is in immediate danger or requires emergency
+                assistance, call 911 or contact the appropriate emergency
+                or crisis service. Do not wait for a return call from the
+                Conflict Support Line.
+            </strong>
+        </p>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="section-heading">
+
+        <h2>
+            Help Strengthen the Support Line
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p>
+            The Conflict Support Line is part of a developing public-access
+            initiative. Community participation can help expand its reach,
+            referral capacity, and long-term sustainability.
+        </p>
+
+    </div>
+
+    <div class="development-grid">
+
+        <article class="development-card">
+
+            <h3>
+                Sponsors
+            </h3>
+
+            <p>
+                Support free public access, telephone infrastructure,
+                educational materials, outreach, and future program growth.
+            </p>
+
+        </article>
+
+        <article class="development-card">
+
+            <h3>
+                Referral Partners
+            </h3>
+
+            <p>
+                Help create reliable pathways to community, legal, mental
+                health, family, housing, and other specialized resources.
+            </p>
+
+        </article>
+
+        <article class="development-card">
+
+            <h3>
+                Community Organizations
+            </h3>
+
+            <p>
+                Share the line, host educational programming, identify
+                community needs, and collaborate on public awareness.
+            </p>
+
+        </article>
+
+        <article class="development-card">
+
+            <h3>
+                Mediators and Volunteers
+            </h3>
+
+            <p>
+                Express interest in future trained-volunteer, outreach,
+                education, or program-support opportunities.
+            </p>
+
+        </article>
+
+        <article class="development-card">
+
+            <h3>
+                Professional Resources
+            </h3>
+
+            <p>
+                Contribute expertise, referral information, technology,
+                evaluation support, or program-development assistance.
+            </p>
+
+        </article>
+
+        <article class="development-card">
+
+            <h3>
+                Project Updates
+            </h3>
+
+            <p>
+                Receive information about development, partnerships,
+                volunteer opportunities, and future service expansion.
+            </p>
+
+        </article>
+
+    </div>
+
+    <div class="button-row">
+
+        <a
+            href="/mediation-stewardship/support/"
+            class="button"
+        >
+            Support the Initiative
+        </a>
+
+        <a
+            href="/mediation-stewardship/partners/"
+            class="button"
+        >
+            Explore Partnership
+        </a>
+
+        <a
+            href="/mediation-stewardship/stay-connected/"
+            class="button"
+        >
+            Receive Updates
+        </a>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="call-panel">
+
+        <h2>
+            Call the Conflict Support Line
+        </h2>
+
+        <p>
+            Calls are accepted 24 hours a day. If your call is not answered,
+            leave a voicemail with your name, telephone number, and a brief
+            reason for calling. Calls are generally returned within one to
+            two hours.
+        </p>
+
+        <a
+            href="tel:+14436805576"
+            class="phone-number"
+        >
+            443-680-5576
+        </a>
+
+        <div class="button-row">
+
+            <a
+                href="tel:+14436805576"
+                class="button"
+            >
+                Call Now
+            </a>
+
+            <a
+                href="/mediation-stewardship/"
+                class="button"
+            >
+                Return to Project Home
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>
+        <strong>
+            Mediation Stewardship Project
+        </strong>
+    </p>
+
+    <p>
+        Conflict Support Line
+    </p>
+
+    <p>
+        Free brief support. Non-emergency service.
+    </p>
+
+    <p>
+        Understanding Precedes Resolution.
+    </p>
+
+    <p>
+        443-680-5576
+        &nbsp;|&nbsp;
+        <a href="mailto:harringtonmediation@yahoo.com">
+            harringtonmediation@yahoo.com
+        </a>
+    </p>
+
+</footer>
+
+<script>
+
+    const menuToggle =
+        document.getElementById("menu-toggle");
+
+    const projectMenu =
+        document.getElementById("project-menu");
+
+    if (menuToggle && projectMenu) {
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    projectMenu.classList.toggle("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
+
+            }
+        );
+
+    }
+
+</script>
+
+</body>
+
+</html>
