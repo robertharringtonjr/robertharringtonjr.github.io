@@ -448,6 +448,82 @@
             background: var(--navy);
             color: var(--paper);
         }
+        #project-inquiry-form {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        #project-inquiry-form label {
+            display: block;
+            margin: 20px 0 8px;
+            color: var(--navy);
+            font-weight: bold;
+        }
+
+        #project-inquiry-form label:first-of-type {
+            margin-top: 0;
+        }
+
+        #project-inquiry-form input,
+        #project-inquiry-form textarea {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        #project-inquiry-form textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        #project-inquiry-form input:focus,
+        #project-inquiry-form textarea:focus {
+            border-color: var(--gold);
+            outline: 3px solid rgba(154, 130, 85, 0.2);
+            outline-offset: 2px;
+        }
+
+        #project-inquiry-form input::placeholder,
+        #project-inquiry-form textarea::placeholder {
+            color: var(--muted);
+            opacity: 0.85;
+        }
+
+        #project-inquiry-form .button-row {
+            margin-top: 24px;
+        }
+
+        #project-inquiry-form button.button {
+            border-color: var(--green);
+            background: var(--green);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #project-inquiry-form button.button:hover,
+        #project-inquiry-form button.button:focus {
+            border-color: var(--navy);
+            background: var(--navy);
+            color: var(--paper);
+        }
+
+        #project-form-success {
+            padding: 16px 18px;
+            border: 1px solid var(--soft-gold);
+            border-left: 4px solid var(--green);
+            border-radius: 8px;
+            background: var(--cream);
+            color: var(--navy);
+            font-weight: bold;
+            text-align: center;
+        }        
 
         footer {
             margin-top: 72px;
@@ -560,6 +636,8 @@
                 padding: 24px;
             }
         }
+
+        
     </style>
 </head>
 
@@ -662,7 +740,7 @@
             </a>
 
             <a
-                href="/mediation-stewardship/stay-connected/"
+                href="/mediation-stewardship/#project-inquiry"
                 class="project-nav-link"
             >
                 Stay Connected
@@ -714,24 +792,24 @@
         <div class="hero-actions">
 
             <a
-                href="/mediation-stewardship/mission/"
+               href="/mediation-stewardship/#mission"
                 class="button"
             >
                 Learn the Mission
             </a>
 
             <a
-                href="/mediation-stewardship/workshops/"
+                href="/mediation-stewardship/conflict-literacy-workshops/"
                 class="button secondary"
             >
                 Bring a Workshop
             </a>
 
             <a
-                href="/mediation-stewardship/stay-connected/"
+                href="/mediation-stewardship/#project-inquiry"
                 class="button secondary"
             >
-                Join the Initiative
+                Stay Connected
             </a>
 
         </div>
@@ -773,7 +851,7 @@
 
 </section>
 
-<section id="mission" class="content-section">
+<section id="mission" class="content-section page-container">
 
     <div class="section-heading">
 
@@ -844,9 +922,9 @@
         <hr class="gold-rule">
 
         <p>
-            The Mediation Stewardship Project will grow through distinct
-            branches. Each branch has one clear purpose and its own
-            dedicated page.
+            Explore the core areas of the Mediation Stewardship Project,
+            including its mission, educational programming, youth work,
+            conflict support, learning resources, and partnership opportunities.
         </p>
 
     </div>
@@ -864,7 +942,7 @@
                 literacy framework, and the idea of the hidden mediator.
             </p>
 
-            <a href="/mediation-stewardship/mission/">
+            <a href="/mediation-stewardship/#mission">
                 Explore the Mission →
             </a>
 
@@ -873,7 +951,7 @@
         <article class="branch-card">
 
             <h3>
-                Community Workshops
+                Conflict Literacy Workshops
             </h3>
 
             <p>
@@ -881,7 +959,7 @@
                 churches, community groups, and professional organizations.
             </p>
 
-            <a href="/mediation-stewardship/workshops/">
+            <a href="/mediation-stewardship/conflict-literacy-workshops/">
                 Explore Workshops →
             </a>
 
@@ -898,7 +976,7 @@
                 schools, high schools, colleges, and youth organizations.
             </p>
 
-            <a href="/mediation-stewardship/youth/">
+            <a href="/mediation-stewardship/youth-initiative/">
                 Explore the Youth Initiative →
             </a>
 
@@ -912,11 +990,11 @@
 
             <p>
                 A developing non-emergency resource for people who need help
-                preparing for difficult conversations or finding an
+                preparing for difficult conversations or identifying an
                 appropriate next step.
             </p>
 
-            <a href="/mediation-stewardship/conflict-support/">
+            <a href="/mediation-stewardship/conflict-support-line/">
                 Learn About the Support Line →
             </a>
 
@@ -925,7 +1003,7 @@
         <article class="branch-card">
 
             <h3>
-                Educational Resources
+                Learning &amp; Resources
             </h3>
 
             <p>
@@ -933,8 +1011,8 @@
                 reflections that support continued learning.
             </p>
 
-            <a href="/mediation-stewardship/resources/">
-                Explore Resources →
+            <a href="/mediation-stewardship/learning-and-resources/">
+                Explore Learning &amp; Resources →
             </a>
 
         </article>
@@ -942,67 +1020,17 @@
         <article class="branch-card">
 
             <h3>
-                Events
-            </h3>
-
-            <p>
-                Workshops, presentations, public forums, youth programming,
-                and collaborative community events.
-            </p>
-
-            <a href="/mediation-stewardship/events/">
-                View Events →
-            </a>
-
-        </article>
-
-        <article class="branch-card">
-
-            <h3>
-                Community Partners
+                Partners &amp; Sponsors
             </h3>
 
             <p>
                 Opportunities for schools, nonprofits, churches, businesses,
-                civic leaders, and peacebuilding organizations to collaborate.
+                civic leaders, peacebuilding organizations, and sponsors to
+                collaborate with and support the project.
             </p>
 
-            <a href="/mediation-stewardship/partners/">
-                Partner With the Project →
-            </a>
-
-        </article>
-
-        <article class="branch-card">
-
-            <h3>
-                Sponsors &amp; Support
-            </h3>
-
-            <p>
-                Help expand workshops, youth programming, educational
-                resources, events, and future conflict-support services.
-            </p>
-
-            <a href="/mediation-stewardship/support/">
-                Support the Project →
-            </a>
-
-        </article>
-
-        <article class="branch-card">
-
-            <h3>
-                Stay Connected
-            </h3>
-
-            <p>
-                Receive updates, share an idea, request a workshop, volunteer,
-                or express interest in future project development.
-            </p>
-
-            <a href="/mediation-stewardship/stay-connected/">
-                Stay Connected →
+            <a href="/mediation-stewardship/partners-and-sponsors/">
+                Explore Partnerships &amp; Support →
             </a>
 
         </article>
@@ -1015,11 +1043,18 @@
 
     <div class="peace-feature">
 
-        <img
-            src="baltimore-peace-movement-logo.png"
-            alt="Baltimore Peace Movement logo"
-            class="peace-logo"
-        >
+       <a
+    href="https://baltimorepeacemovement.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visit the Baltimore Peace Movement website"
+>
+    <img
+        src="baltimore-peace-movement-logo.png"
+        alt="Baltimore Peace Movement logo"
+        class="peace-logo"
+    >
+</a>
 
         <div>
 
@@ -1040,7 +1075,18 @@
                 programming alongside community peacebuilding efforts,
                 including the Baltimore Peace Movement.
             </p>
+<div class="button-row">
 
+    <a
+        href="https://baltimorepeacemovement.com/"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Visit Baltimore Peace Movement
+    </a>
+
+</div>            
         </div>
 
     </div>
@@ -1064,21 +1110,21 @@
         <div class="button-row">
 
             <a
-                href="/mediation-stewardship/workshops/"
+                href="/mediation-stewardship/conflict-literacy-workshops/"
                 class="button"
             >
                 Request a Workshop
             </a>
 
             <a
-                href="/mediation-stewardship/partners/"
+                href="/mediation-stewardship/partners-and-sponsors/"
                 class="button"
             >
                 Become a Partner
             </a>
 
             <a
-                href="/mediation-stewardship/stay-connected/"
+                href="/mediation-stewardship/#project-inquiry"
                 class="button"
             >
                 Stay Connected
@@ -1089,7 +1135,104 @@
     </div>
 
 </section>
+<section
+    id="project-inquiry"
+    class="content-section page-container"
+>
 
+    <div class="section-heading">
+
+        <h2>
+            Stay Connected With the Project
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p>
+            Interested in bringing a workshop, exploring a partnership,
+            learning more about the Mediation Stewardship Project, or simply
+            staying informed as the initiative grows? We'd love to hear from
+            you.
+        </p>
+
+    </div>
+
+    <div class="panel">
+
+        <form
+            id="project-inquiry-form"
+            action="https://formspree.io/f/xrenzgqk"
+            method="POST"
+        >
+
+            <label for="project-name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="project-name"
+                name="name"
+                required
+            >
+
+            <label for="project-email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="project-email"
+                name="email"
+                required
+            >
+
+            <label for="project-phone">
+                Phone Number (Optional)
+            </label>
+
+            <input
+                type="tel"
+                id="project-phone"
+                name="phone"
+            >
+
+            <label for="project-message">
+                Message
+            </label>
+
+            <textarea
+                id="project-message"
+                name="message"
+                rows="8"
+                required
+                placeholder="Ask a question about the project, request a workshop, explore a partnership, express interest in youth programming, share an idea, or simply let us know you'd like to stay connected."
+            ></textarea>
+
+            <div class="button-row">
+
+                <button
+                    type="submit"
+                    class="button"
+                >
+                    Connect With the Project
+                </button>
+
+            </div>
+
+            <p
+                id="project-form-success"
+                style="display:none; margin-top:20px;"
+            >
+                Thank you for connecting with the Mediation Stewardship Project.
+                Your message has been received, and we appreciate your interest.
+            </p>
+
+        </form>
+
+    </div>
+
+</section>    
 </main>
 
 <footer>
@@ -1161,7 +1304,77 @@
         }
     });
 </script>
+<script>
+const projectInquiryForm =
+    document.getElementById("project-inquiry-form");
 
+const projectFormSuccess =
+    document.getElementById("project-form-success");
+
+if (projectInquiryForm) {
+
+    projectInquiryForm.addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+            const formData =
+                new FormData(projectInquiryForm);
+
+            try {
+
+                const response =
+                    await fetch(
+                        projectInquiryForm.action,
+                        {
+                            method: "POST",
+                            body: formData,
+                            headers: {
+                                "Accept": "application/json"
+                            }
+                        }
+                    );
+
+                if (response.ok) {
+
+                    projectInquiryForm.reset();
+
+                    if (projectFormSuccess) {
+
+                        projectFormSuccess.style.display =
+                            "block";
+
+                        projectFormSuccess.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    }
+
+                } else {
+
+                    alert(
+                        "There was a problem submitting your message. Please try again."
+                    );
+
+                }
+
+            } catch (error) {
+
+                alert(
+                    "Unable to submit your message at this time. Please try again later."
+                );
+
+            }
+
+        }
+    );
+
+}
+</script>
+
+    
 </body>
 
 </html>
