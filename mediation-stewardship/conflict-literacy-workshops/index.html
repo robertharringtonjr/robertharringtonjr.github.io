@@ -524,7 +524,49 @@
     font-weight: bold;
     text-align: center;
 }
-        
+        /* ==========================
+   Workshop Topic Checkboxes
+   ========================== */
+
+.workshop-topic-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 24px;
+    margin: 12px 0 24px;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+}
+
+.workshop-topic-options legend {
+    padding: 0 8px;
+    color: var(--navy);
+    font-weight: bold;
+}
+
+#workshop-inquiry-form .workshop-topic-options label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0;
+    color: var(--ink);
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+#workshop-inquiry-form .workshop-topic-options input[type="checkbox"] {
+    flex: 0 0 auto;
+    width: auto;
+    margin: 4px 0 0;
+    padding: 0;
+}
+
+@media (max-width: 700px) {
+    .workshop-topic-options {
+        grid-template-columns: 1fr;
+    }
+}        
         /* FOOTER */
 
         footer {
