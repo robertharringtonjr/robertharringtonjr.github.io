@@ -440,7 +440,91 @@
             background: var(--navy);
             color: var(--paper);
         }
+/* ==========================
+   Workshop Inquiry Form
+   ========================== */
 
+#workshop-inquiry-form {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+#workshop-inquiry-form label {
+    display: block;
+    margin: 20px 0 8px;
+    color: var(--navy);
+    font-weight: bold;
+}
+
+#workshop-inquiry-form label:first-of-type {
+    margin-top: 0;
+}
+
+#workshop-inquiry-form input,
+#workshop-inquiry-form select,
+#workshop-inquiry-form textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#workshop-inquiry-form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+#workshop-inquiry-form input:focus,
+#workshop-inquiry-form select:focus,
+#workshop-inquiry-form textarea:focus {
+    border-color: var(--gold);
+    outline: 3px solid rgba(154, 130, 85, 0.20);
+    outline-offset: 2px;
+}
+
+#workshop-inquiry-form input::placeholder,
+#workshop-inquiry-form textarea::placeholder {
+    color: var(--muted);
+    opacity: 0.85;
+}
+
+#workshop-inquiry-form .button-row {
+    margin-top: 24px;
+}
+
+#workshop-inquiry-form button.button {
+    border-color: var(--green);
+    background: var(--green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#workshop-inquiry-form button.button:hover,
+#workshop-inquiry-form button.button:focus {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: var(--paper);
+}
+
+#workshop-form-success {
+    display: none;
+    margin-top: 20px;
+    padding: 16px 18px;
+    border: 1px solid var(--soft-gold);
+    border-left: 4px solid var(--green);
+    border-radius: 8px;
+    background: var(--cream);
+    color: var(--navy);
+    font-weight: bold;
+    text-align: center;
+}
+        
         /* FOOTER */
 
         footer {
@@ -582,7 +666,7 @@
         >
 
             <a
-                href="/mediation-stewardship/mission/"
+               href="/mediation-stewardship/#mission"
                 class="project-nav-link"
             >
                 Mission
@@ -624,7 +708,7 @@
             </a>
 
             <a
-                href="/mediation-stewardship/stay-connected/"
+                href="/mediation-stewardship/#project-inquiry"
                 class="project-nav-link"
             >
                 Stay Connected
@@ -678,7 +762,7 @@
                 Explore Workshop Topics
             </a>
 
-            <a href="#request-workshop" class="button secondary">
+            <a href="/mediation-stewardship/conflict-literacy-workshops/#workshop-inquiry"
                 Request a Workshop
             </a>
 
@@ -726,7 +810,50 @@
     </div>
 
 </section>
+<section
+    id="workshop-topics"
+    class="content-section page-container"
+>
 
+    <div class="section-heading">
+
+        <h2>
+            Workshop Topics
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p>
+            Workshop content may combine several topics or focus deeply on
+            one area depending on the host organization’s needs.
+        </p>
+
+    </div>
+
+    <div class="panel">
+
+        <ul class="topic-list">
+
+            <li>Active listening</li>
+            <li>Preparing for difficult conversations</li>
+            <li>Assertive versus aggressive communication</li>
+            <li>Understanding conflict styles</li>
+            <li>Perspective-taking</li>
+            <li>Negotiation in everyday life</li>
+            <li>Interests beneath positions</li>
+            <li>Emotional regulation during disagreement</li>
+            <li>Reflective listening and reframing</li>
+            <li>Collaborative problem-solving</li>
+            <li>Repair, accountability, and apology</li>
+            <li>Recognizing when mediation may help</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+    
 <section class="content-section page-container">
 
     <div class="section-heading">
@@ -823,48 +950,6 @@
 
 </section>
 
-<section
-    id="workshop-topics"
-    class="content-section page-container"
->
-
-    <div class="section-heading">
-
-        <h2>
-            Workshop Topics
-        </h2>
-
-        <hr class="gold-rule">
-
-        <p>
-            Workshop content may combine several topics or focus deeply on
-            one area depending on the host organization’s needs.
-        </p>
-
-    </div>
-
-    <div class="panel">
-
-        <ul class="topic-list">
-
-            <li>Active listening</li>
-            <li>Preparing for difficult conversations</li>
-            <li>Assertive versus aggressive communication</li>
-            <li>Understanding conflict styles</li>
-            <li>Perspective-taking</li>
-            <li>Negotiation in everyday life</li>
-            <li>Interests beneath positions</li>
-            <li>Emotional regulation during disagreement</li>
-            <li>Reflective listening and reframing</li>
-            <li>Collaborative problem-solving</li>
-            <li>Repair, accountability, and apology</li>
-            <li>Recognizing when mediation may help</li>
-
-        </ul>
-
-    </div>
-
-</section>
 
 <section class="content-section page-container">
 
@@ -1010,7 +1095,7 @@
             </a>
 
             <a
-                href="/mediation-stewardship/support/"
+                href="/mediation-stewardship/partners-and-sponsors/"
                 class="button secondary"
             >
                 Explore Sponsorship
@@ -1106,7 +1191,7 @@
             </a>
 
             <a
-                href="/mediation-stewardship/stay-connected/"
+                href="/mediation-stewardship/#project-inquiry"
                 class="button"
             >
                 Stay Connected
@@ -1124,7 +1209,177 @@
     </div>
 
 </section>
+<section
+    id="workshop-inquiry"
+    class="content-section page-container"
+>
 
+    <div class="action-panel">
+
+        <h2>
+            Request a Conflict Literacy Workshop
+        </h2>
+
+        <p>
+            Whether you're exploring a workshop for a school, nonprofit,
+            business, church, government agency, or community organization,
+            we'd be happy to learn more about your goals. Complete the form
+            below to request a workshop, ask questions, or begin the
+            conversation.
+        </p>
+
+        <form
+            id="workshop-inquiry-form"
+            action="https://formspree.io/f/xrenzgqk"
+            method="POST"
+        >
+
+            <label for="workshop-name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="workshop-name"
+                name="name"
+                required
+            >
+
+            <label for="organization">
+                Organization (Optional)
+            </label>
+
+            <input
+                type="text"
+                id="organization"
+                name="organization"
+            >
+
+            <label for="workshop-email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="workshop-email"
+                name="email"
+                required
+            >
+
+            <label for="workshop-phone">
+                Phone Number (Optional)
+            </label>
+
+            <input
+                type="tel"
+                id="workshop-phone"
+                name="phone"
+            >
+
+            <label for="workshop-topic">
+                Workshop Topic of Interest
+            </label>
+
+         <select
+    id="workshop-topic"
+    name="topic"
+    required
+>
+    <option value="">
+        Select a workshop topic
+    </option>
+
+    <option value="Active listening">
+        Active listening
+    </option>
+
+    <option value="Preparing for difficult conversations">
+        Preparing for difficult conversations
+    </option>
+
+    <option value="Assertive versus aggressive communication">
+        Assertive versus aggressive communication
+    </option>
+
+    <option value="Understanding conflict styles">
+        Understanding conflict styles
+    </option>
+
+    <option value="Perspective-taking">
+        Perspective-taking
+    </option>
+
+    <option value="Negotiation in everyday life">
+        Negotiation in everyday life
+    </option>
+
+    <option value="Interests beneath positions">
+        Interests beneath positions
+    </option>
+
+    <option value="Emotional regulation during disagreement">
+        Emotional regulation during disagreement
+    </option>
+
+    <option value="Reflective listening and reframing">
+        Reflective listening and reframing
+    </option>
+
+    <option value="Collaborative problem-solving">
+        Collaborative problem-solving
+    </option>
+
+    <option value="Repair, accountability, and apology">
+        Repair, accountability, and apology
+    </option>
+
+    <option value="Recognizing when mediation may help">
+        Recognizing when mediation may help
+    </option>
+
+    <option value="Customized or multi-topic workshop">
+        Customized or multi-topic workshop
+    </option>
+
+</select>
+
+            <label for="workshop-message">
+                Additional Information
+            </label>
+
+            <textarea
+                id="workshop-message"
+                name="message"
+                placeholder="Tell us about your organization, the audience, the workshop you're interested in, preferred dates, or ask any questions you may have."
+                required
+            ></textarea>
+
+            <div class="button-row">
+
+                <button
+                    type="submit"
+                    class="button"
+                >
+                    Submit Workshop Inquiry
+                </button>
+
+            </div>
+
+            <p
+                id="workshop-form-success"
+                hidden
+            >
+                Thank you for your workshop inquiry. Your message has been
+                submitted successfully, and we will respond as soon as
+                possible.
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+    
 </main>
 
 <footer>
@@ -1199,6 +1454,75 @@
             link.removeAttribute("aria-current");
         }
     });
+<script>
+const workshopInquiryForm =
+    document.getElementById("workshop-inquiry-form");
+
+const workshopFormSuccess =
+    document.getElementById("workshop-form-success");
+
+if (workshopInquiryForm) {
+
+    workshopInquiryForm.addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+            const formData =
+                new FormData(workshopInquiryForm);
+
+            try {
+
+                const response =
+                    await fetch(
+                        workshopInquiryForm.action,
+                        {
+                            method: "POST",
+                            body: formData,
+                            headers: {
+                                "Accept": "application/json"
+                            }
+                        }
+                    );
+
+                if (response.ok) {
+
+                    workshopInquiryForm.reset();
+
+                    if (workshopFormSuccess) {
+
+                        workshopFormSuccess.hidden = false;
+                        workshopFormSuccess.style.display = "block";
+
+                        workshopFormSuccess.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    }
+
+                } else {
+
+                    alert(
+                        "There was a problem submitting your workshop inquiry. Please try again."
+                    );
+
+                }
+
+            } catch (error) {
+
+                alert(
+                    "Unable to submit your workshop inquiry at this time. Please try again later."
+                );
+
+            }
+
+        }
+    );
+
+}
+</script>    
 </script>
 
 </body>
