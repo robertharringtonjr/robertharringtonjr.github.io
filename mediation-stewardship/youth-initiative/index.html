@@ -459,7 +459,91 @@
             background: var(--navy);
             color: var(--paper);
         }
+/* ==========================
+   Youth Inquiry Form
+========================== */
 
+#youth-program-form {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+#youth-program-form label {
+    display: block;
+    margin: 20px 0 8px;
+    color: var(--navy);
+    font-weight: bold;
+}
+
+#youth-program-form label:first-of-type {
+    margin-top: 0;
+}
+
+#youth-program-form input,
+#youth-program-form select,
+#youth-program-form textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#youth-program-form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+#youth-program-form input:focus,
+#youth-program-form select:focus,
+#youth-program-form textarea:focus {
+    border-color: var(--gold);
+    outline: 3px solid rgba(154,130,85,.20);
+    outline-offset: 2px;
+}
+
+#youth-program-form input::placeholder,
+#youth-program-form textarea::placeholder {
+    color: var(--muted);
+    opacity: .85;
+}
+
+#youth-program-form .button-row {
+    margin-top: 24px;
+}
+
+#youth-program-form button.button {
+    border-color: var(--green);
+    background: var(--green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#youth-program-form button.button:hover,
+#youth-program-form button.button:focus {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: var(--paper);
+}
+
+#youth-form-success {
+    display: none;
+    margin-top: 20px;
+    padding: 16px 18px;
+    border: 1px solid var(--soft-gold);
+    border-left: 4px solid var(--green);
+    border-radius: 8px;
+    background: var(--cream);
+    color: var(--navy);
+    font-weight: bold;
+    text-align: center;
+}
+        
         /* FOOTER */
 
         footer {
@@ -648,7 +732,7 @@
                 href="/mediation-stewardship/stay-connected/"
                 class="project-nav-link"
             >
-                Stay Connected
+                Get Involved
             </a>
 
             <a href="/client-portal/">
@@ -698,7 +782,7 @@
                 Explore the Initiative
             </a>
 
-            <a href="#request-program" class="button secondary">
+           <a href="#youth-program-inquiry" class="button secondary">
                 Discuss Youth Programming
             </a>
 
@@ -793,6 +877,50 @@
 
 </section>
 
+    <section
+    id="request-program"
+    class="content-section page-container"
+>
+
+    <div class="request-panel">
+
+        <h2>
+            Bring Conflict Literacy to Young People
+        </h2>
+
+        <p>
+            Explore programming for a middle school, high school, college,
+            youth organization, leadership program, or community initiative.
+        </p>
+
+        <div class="button-row">
+
+            <a
+               <a href="#youth-program-inquiry" 
+            >
+                Discuss Youth Programming
+            </a>
+
+            <a
+                href="/mediation-stewardship/conflict-literacy-workshops/"
+                class="button"
+            >
+                Explore Workshops
+            </a>
+
+            <a
+                href="/mediation-stewardship/"
+                class="button"
+            >
+                Return to Project Home
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+    
 <section class="content-section page-container">
 
     <div class="section-heading">
@@ -1084,51 +1212,185 @@
 
 </section>
 
+
 <section
-    id="request-program"
+    id="youth-program-inquiry"
     class="content-section page-container"
 >
 
-    <div class="request-panel">
+    <div class="section-heading">
 
         <h2>
-            Bring Conflict Literacy to Young People
+            Request a Youth Conflict Literacy Program
         </h2>
 
+        <hr class="gold-rule">
+
         <p>
-            Explore programming for a middle school, high school, college,
-            youth organization, leadership program, or community initiative.
+            Whether you're exploring programming for a middle school, high school,
+            college, youth organization, leadership initiative, or community program,
+            we'd be happy to learn more about your goals. Complete the form below to
+            request programming, ask questions, or begin the conversation.
         </p>
-
-        <div class="button-row">
-
-            <a
-                href="mailto:harringtonmediation@yahoo.com?subject=Youth%20Conflict%20Literacy%20Program%20Inquiry"
-                class="button"
-            >
-                Discuss Youth Programming
-            </a>
-
-            <a
-                href="/mediation-stewardship/conflict-literacy-workshops/"
-                class="button"
-            >
-                Explore Workshops
-            </a>
-
-            <a
-                href="/mediation-stewardship/"
-                class="button"
-            >
-                Return to Project Home
-            </a>
-
-        </div>
 
     </div>
 
-</section>
+    <div id="youth-form-success" hidden>
+        Thank you for your inquiry. We will review your request and respond as soon as possible.
+    </div>
 
+    <form
+        id="youth-program-form"
+        action="https://formspree.io/f/xrenzgqk"
+        method="POST"
+    >
+<input
+    type="hidden"
+    name="Inquiry Source"
+    value="Youth Conflict Literacy Initiative"
+>
+        <label for="youth-name">
+            Full Name
+        </label>
+
+        <input
+            type="text"
+            id="youth-name"
+            name="name"
+            required
+        >
+
+        <label for="youth-organization">
+            School / Organization (Optional)
+        </label>
+
+        <input
+            type="text"
+            id="youth-organization"
+            name="organization"
+        >
+
+        <label for="youth-email">
+            Email Address
+        </label>
+
+        <input
+            type="email"
+            id="youth-email"
+            name="email"
+            required
+        >
+
+        <label for="youth-phone">
+            Phone Number (Optional)
+        </label>
+
+        <input
+            type="tel"
+            id="youth-phone"
+            name="phone"
+        >
+
+        <label for="youth-age-group">
+            Primary Age Group
+        </label>
+
+        <select
+            id="youth-age-group"
+            name="age-group"
+            required
+        >
+            <option value="">
+                Select an age group
+            </option>
+            <option>
+                Middle School
+            </option>
+            <option>
+                High School
+            </option>
+            <option>
+                College / University
+            </option>
+            <option>
+                Mixed Ages
+            </option>
+            <option>
+                Community Youth Program
+            </option>
+        </select>
+
+        <label for="youth-audience">
+            Estimated Audience Size
+        </label>
+
+        <input
+            type="text"
+            id="youth-audience"
+            name="audience-size"
+            placeholder="Example: 25 students"
+        >
+
+        <label for="youth-format">
+            Preferred Program Format
+        </label>
+
+        <select
+            id="youth-format"
+            name="program-format"
+        >
+            <option value="">
+                Select a format
+            </option>
+            <option>
+                School Assembly
+            </option>
+            <option>
+                Classroom Workshop
+            </option>
+            <option>
+                Student Leadership Seminar
+            </option>
+            <option>
+                After-School Program
+            </option>
+            <option>
+                College Presentation
+            </option>
+            <option>
+                Multi-Session Series
+            </option>
+            <option>
+                Not Sure Yet
+            </option>
+        </select>
+
+        <label for="youth-message">
+            Additional Information
+        </label>
+
+        <textarea
+            id="youth-message"
+            name="message"
+            placeholder="Tell us about your school or organization, your goals, preferred dates, audience, or any questions you may have."
+            required
+        ></textarea>
+
+        <div class="button-row">
+
+            <button
+                type="submit"
+                class="button"
+            >
+                Submit Youth Program Inquiry
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+    
 </main>
 
 <footer>
@@ -1202,6 +1464,75 @@
         } else {
             link.removeAttribute("aria-current");
         }
+        const youthProgramForm =
+    document.getElementById("youth-program-form");
+
+const youthFormSuccess =
+    document.getElementById("youth-form-success");
+
+if (youthProgramForm) {
+
+    youthProgramForm.addEventListener(
+        "submit",
+
+        async function (event) {
+
+            event.preventDefault();
+
+            const formData =
+                new FormData(youthProgramForm);
+
+            try {
+
+                const response =
+                    await fetch(
+                        youthProgramForm.action,
+                        {
+                            method: "POST",
+                            body: formData,
+                            headers: {
+                                Accept: "application/json"
+                            }
+                        }
+                    );
+
+                if (response.ok) {
+
+                    youthProgramForm.reset();
+
+                    if (youthFormSuccess) {
+
+                        youthFormSuccess.hidden = false;
+                        youthFormSuccess.style.display = "block";
+
+                        youthFormSuccess.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    }
+
+                } else {
+
+                    alert(
+                        "There was a problem submitting your youth program inquiry. Please try again."
+                    );
+
+                }
+
+            } catch (error) {
+
+                alert(
+                    "Unable to submit your inquiry at this time. Please try again later."
+                );
+
+            }
+
+        }
+
+    );
+
+}
     });
 </script>
 </body>
