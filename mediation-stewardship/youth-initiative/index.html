@@ -235,10 +235,18 @@
             color: var(--deep-navy);
         }
 
-        .button.secondary {
-            border-color: rgba(255, 255, 255, 0.78);
-            background: transparent;
-        }
+       .button.secondary {
+    border-color: rgba(255, 255, 255, 0.78);
+    background: transparent;
+    color: var(--paper);
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+    border-color: var(--paper);
+    background: var(--paper);
+    color: var(--deep-navy);
+}
 
         /* CONTENT */
 
