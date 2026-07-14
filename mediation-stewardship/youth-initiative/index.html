@@ -95,7 +95,7 @@
 
         /* PROJECT NAVIGATION */
 
-        .project-navigation {
+.project-navigation-inner {
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -104,7 +104,7 @@
             box-shadow: 0 5px 18px rgba(23, 50, 77, 0.06);
         }
 
-        .navigation-inner {
+      .project-navigation-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -670,7 +670,7 @@
     aria-label="Mediation Stewardship Project navigation"
 >
 
-    <div class="page-container navigation-inner">
+    <div class="page-container project-navigation-inner">
 
         <a
             href="/mediation-stewardship/"
@@ -695,7 +695,7 @@
         >
 
             <a
-                href="/mediation-stewardship/mission/"
+              href="/mediation-stewardship/#mission"
                 class="project-nav-link"
             >
                 Mission
@@ -737,7 +737,7 @@
             </a>
 
             <a
-                href="/mediation-stewardship/stay-connected/"
+                href="/mediation-stewardship/#project-inquiry"
                 class="project-nav-link"
             >
                 Get Involved
@@ -904,12 +904,11 @@
         <div class="button-row">
 
             <a
-               <a href="#youth-program-inquiry" 
-            >
-                Discuss Youth Programming
-            </a>
-
-            <a
+    href="#youth-program-inquiry"
+    class="button"
+>
+    Discuss Youth Programming
+</a>
                 href="/mediation-stewardship/conflict-literacy-workshops/"
                 class="button"
             >
@@ -1472,7 +1471,9 @@
         } else {
             link.removeAttribute("aria-current");
         }
-        const youthProgramForm =
+       });
+    
+    const youthProgramForm =
     document.getElementById("youth-program-form");
 
 const youthFormSuccess =
