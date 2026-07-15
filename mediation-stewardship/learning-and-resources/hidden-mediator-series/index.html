@@ -2,12 +2,1085 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <title>The Hidden Mediator Series</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore The Hidden Mediator Series from the Mediation Stewardship Project—short, scenario-based articles revealing mediation-informed skills already present in everyday life."
+    >
+
+    <title>
+        The Hidden Mediator Series | Mediation Stewardship Project
+    </title>
+
+    <style>
+
+        :root {
+            --navy: #17324d;
+            --deep-navy: #0f2438;
+            --green: #3f654f;
+            --gold: #9a8255;
+            --soft-gold: #d7c9ad;
+            --cream: #f7f3eb;
+            --paper: #ffffff;
+            --soft-panel: #f8f6f1;
+            --ink: #292929;
+            --muted: #625f58;
+            --line: #ddd5c7;
+            --shadow: 0 10px 28px rgba(23, 50, 77, 0.09);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: var(--green);
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--gold);
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        .page-container {
+            width: min(1080px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 20px;
+            z-index: 9999;
+            padding: 12px 18px;
+            border-radius: 6px;
+            background: var(--deep-navy);
+            color: var(--paper);
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 20px;
+        }
+
+        /* PROJECT NAVIGATION */
+
+        .project-navigation {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 5px 18px rgba(23, 50, 77, 0.06);
+        }
+
+        .navigation-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 14px 0;
+        }
+
+        .project-home {
+            color: var(--navy);
+            font-weight: bold;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .menu-toggle {
+            display: none;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 999px;
+            background: var(--gold);
+            color: var(--paper);
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .project-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 6px;
+        }
+
+        .project-menu a {
+            padding: 8px 10px;
+            border-radius: 999px;
+            color: var(--navy);
+            font-size: 0.88rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-menu a:hover,
+        .project-menu a:focus,
+        .project-menu a[aria-current="page"] {
+            background: var(--cream);
+            color: var(--green);
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 68px 0;
+            border-bottom: 5px solid var(--gold);
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(15, 36, 56, 0.98),
+                    rgba(63, 101, 79, 0.95)
+                );
+            color: var(--paper);
+        }
+
+        .hero-inner {
+            text-align: center;
+        }
+
+        .project-logo {
+            width: min(330px, 80vw);
+            margin: 0 auto 24px;
+            border-radius: 12px;
+        }
+
+        .eyebrow {
+            margin: 0 0 10px;
+            color: #f0dfba;
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: clamp(2.3rem, 6vw, 4.5rem);
+            line-height: 1.08;
+        }
+
+        .hero-subtitle {
+            max-width: 790px;
+            margin: 20px auto 0;
+            font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+        }
+
+        .hero-tagline {
+            margin: 18px 0 0;
+            color: #f0dfba;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .hero-actions,
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 21px;
+            border: 2px solid var(--gold);
+            border-radius: 999px;
+            background: var(--gold);
+            color: var(--paper);
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .button:hover,
+        .button:focus {
+            border-color: var(--paper);
+            background: var(--paper);
+            color: var(--deep-navy);
+        }
+
+        .button.secondary {
+            border-color: rgba(255, 255, 255, 0.78);
+            background: transparent;
+        }
+
+        /* CONTENT */
+
+        main {
+            padding-top: 18px;
+        }
+
+        .content-section {
+            margin: 62px auto;
+        }
+
+        .section-heading {
+            max-width: 820px;
+            margin: 0 auto 28px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            color: var(--navy);
+            font-size: clamp(1.8rem, 4vw, 2.55rem);
+            line-height: 1.2;
+        }
+
+        .section-heading p {
+            margin: 14px 0 0;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .gold-rule {
+            width: 82px;
+            height: 3px;
+            margin: 18px auto 0;
+            border: none;
+            background: var(--gold);
+        }
+
+        .intro-panel {
+            padding: 32px;
+            border: 1px solid var(--soft-gold);
+            border-radius: 14px;
+            background: var(--soft-panel);
+            box-shadow: var(--shadow);
+        }
+
+        .intro-panel p:first-child {
+            margin-top: 0;
+        }
+
+        .intro-panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* SERIES CARDS */
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .article-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 390px;
+            padding: 26px;
+            border: 1px solid var(--line);
+            border-top: 4px solid var(--green);
+            border-radius: 14px;
+            background: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+        .article-number {
+            margin: 0 0 10px;
+            color: var(--gold);
+            font-size: 0.84rem;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .article-card h3 {
+            margin: 0 0 12px;
+            color: var(--navy);
+            font-size: 1.35rem;
+            line-height: 1.25;
+        }
+
+        .article-card p {
+            margin: 0 0 18px;
+            color: var(--muted);
+        }
+
+        .article-meta {
+            margin-top: auto;
+            padding-top: 8px;
+            color: var(--green);
+            font-size: 0.92rem;
+            font-weight: bold;
+        }
+
+        .article-card .button {
+            width: 100%;
+            margin-top: 16px;
+            border-color: var(--green);
+            background: var(--green);
+        }
+
+        .article-card .button:hover,
+        .article-card .button:focus {
+            border-color: var(--navy);
+            background: var(--navy);
+            color: var(--paper);
+        }
+
+        /* IDENTITY PANEL */
+
+        .identity-panel {
+            padding: 38px;
+            border-left: 5px solid var(--gold);
+            border-radius: 14px;
+            background: var(--cream);
+        }
+
+        .identity-panel h2 {
+            margin-top: 0;
+            color: var(--navy);
+        }
+
+        .identity-panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* CTA */
+
+        .request-panel {
+            padding: 38px;
+            border: 1px solid var(--soft-gold);
+            border-radius: 16px;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .request-panel h2 {
+            margin: 0;
+            color: var(--navy);
+        }
+
+        .request-panel p {
+            max-width: 760px;
+            margin: 14px auto 0;
+            color: var(--muted);
+        }
+
+        .request-panel .button {
+            border-color: var(--green);
+            background: var(--green);
+        }
+
+        .request-panel .button:hover,
+        .request-panel .button:focus {
+            border-color: var(--navy);
+            background: var(--navy);
+            color: var(--paper);
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 70px;
+            padding: 38px 20px;
+            border-top: 5px solid var(--gold);
+            background: var(--deep-navy);
+            color: rgba(255, 255, 255, 0.82);
+            text-align: center;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        footer a {
+            color: #f0dfba;
+        }
+
+        @media (max-width: 900px) {
+
+            .article-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .menu-toggle {
+                display: inline-block;
+            }
+
+            .navigation-inner {
+                flex-wrap: wrap;
+            }
+
+            .project-menu {
+                display: none;
+                width: 100%;
+                padding: 12px;
+                border: 1px solid var(--line);
+                border-radius: 12px;
+                background: var(--paper);
+                box-shadow: var(--shadow);
+            }
+
+            .project-menu.open {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .page-container {
+                width: min(100% - 30px, 1080px);
+            }
+
+            .navigation-inner {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .project-home {
+                text-align: center;
+            }
+
+            .menu-toggle {
+                width: 100%;
+            }
+
+            .project-menu.open,
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 52px 0;
+            }
+
+            .hero-actions,
+            .button-row {
+                flex-direction: column;
+                align-items: stretch;
+                max-width: 350px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .intro-panel,
+            .identity-panel,
+            .request-panel {
+                padding: 24px;
+            }
+        }
+
+    </style>
+
 </head>
 
 <body>
-    <h1>The Hidden Mediator Series</h1>
+
+<a href="#main-content" class="skip-link">
+    Skip to Main Content
+</a>
+
+<nav
+    class="project-navigation"
+    aria-label="Mediation Stewardship Project navigation"
+>
+
+    <div class="page-container navigation-inner">
+
+        <a
+            href="/mediation-stewardship/"
+            class="project-home project-nav-link"
+        >
+            Project Home
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="project-menu"
+        >
+            Explore the Project
+        </button>
+
+        <div
+            class="project-menu"
+            id="project-menu"
+        >
+
+            <a
+                href="/mediation-stewardship/mission/"
+                class="project-nav-link"
+            >
+                Mission
+            </a>
+
+            <a
+                href="/mediation-stewardship/conflict-literacy-workshops/"
+                class="project-nav-link"
+            >
+                Conflict Literacy Workshops
+            </a>
+
+            <a
+                href="/mediation-stewardship/youth-initiative/"
+                class="project-nav-link"
+            >
+                Youth Initiative
+            </a>
+
+            <a
+                href="/mediation-stewardship/conflict-support-line/"
+                class="project-nav-link"
+            >
+                Conflict Support Line
+            </a>
+
+            <a
+                href="/mediation-stewardship/learning-and-resources/"
+                class="project-nav-link"
+                aria-current="page"
+            >
+                Learning &amp; Resources
+            </a>
+
+            <a
+                href="/mediation-stewardship/partners-and-sponsors/"
+                class="project-nav-link"
+            >
+                Partners &amp; Sponsors
+            </a>
+
+            <a
+                href="/mediation-stewardship/#project-inquiry"
+                class="project-nav-link"
+            >
+                Stay Connected
+            </a>
+
+            <a href="/client-portal/">
+                Client Portal
+            </a>
+
+            <a href="/">
+                Harrington Mediation
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<header class="hero">
+
+    <div class="page-container hero-inner">
+
+        <img
+            src="../../mediation-stewardship-project-logo.png"
+            alt="Mediation Stewardship Project logo"
+            class="project-logo"
+        >
+
+        <p class="eyebrow">
+            Resource Catalog
+        </p>
+
+        <h1>
+            The Hidden Mediator Series
+        </h1>
+
+        <p class="hero-subtitle">
+            Short, scenario-based articles revealing the mediation-informed
+            skills ordinary people already use in everyday life.
+        </p>
+
+        <p class="hero-tagline">
+            Mediation skills are often present before they are named.
+        </p>
+
+        <div class="hero-actions">
+
+            <a
+                href="#articles"
+                class="button"
+            >
+                Explore the Series
+            </a>
+
+            <a
+                href="/mediation-stewardship/learning-and-resources/"
+                class="button secondary"
+            >
+                Return to Resource Catalog
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main id="main-content">
+
+<section class="content-section page-container">
+
+    <div class="section-heading">
+
+        <h2>
+            Recognizing Mediation in Everyday Life
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p>
+            Each article begins with a familiar situation and reveals the
+            mediation-informed behavior quietly taking place within it.
+        </p>
+
+    </div>
+
+    <div class="intro-panel">
+
+        <p>
+            People often practice mediation-informed skills without calling
+            themselves mediators. They create room for others to speak,
+            clarify difficult messages, slow tense conversations, ask useful
+            questions, and help people make their own decisions.
+        </p>
+
+        <p>
+            The Hidden Mediator Series is designed to help visitors recognize
+            these ordinary behaviors and consider where similar skills may
+            already appear in their own families, workplaces, friendships,
+            organizations, and communities.
+        </p>
+
+        <p>
+            These short resources are reflective rather than instructional.
+            They complement—but do not replace—formal mediation education,
+            facilitated workshops, professional mediation, or conflict
+            coaching.
+        </p>
+
+    </div>
+
+</section>
+
+<section
+    id="articles"
+    class="content-section page-container"
+>
+
+    <div class="section-heading">
+
+        <h2>
+            Explore the Hidden Mediator Series
+        </h2>
+
+        <hr class="gold-rule">
+
+        <p>
+            Select an article below to open its PDF publication.
+        </p>
+
+    </div>
+
+    <div class="article-grid">
+
+        <article class="article-card">
+
+            <p class="article-number">
+                Article 001
+            </p>
+
+            <h3>
+                The Person Who Helps Everyone Feel Heard
+            </h3>
+
+            <p>
+                Recognize the person who creates conversational space,
+                acknowledges different voices, and helps prevent one person
+                from dominating a difficult discussion.
+            </p>
+
+            <p class="article-meta">
+                Estimated Reading Time: 3–4 minutes
+            </p>
+
+            <a
+                href="001-the-person-who-helps-everyone-feel-heard.pdf"
+                class="button"
+                target="_blank"
+                rel="noopener"
+            >
+                Read Article PDF
+            </a>
+
+        </article>
+
+        <article class="article-card">
+
+            <p class="article-number">
+                Article 002
+            </p>
+
+            <h3>
+                Translating What Someone Really Means
+            </h3>
+
+            <p>
+                Explore how ordinary people help others understand one
+                another by restating emotionally charged or difficult
+                messages more clearly.
+            </p>
+
+            <p class="article-meta">
+                Estimated Reading Time: 3–4 minutes
+            </p>
+
+            <a
+                href="002-translating-what-someone-really-means.pdf"
+                class="button"
+                target="_blank"
+                rel="noopener"
+            >
+                Read Article PDF
+            </a>
+
+        </article>
+
+        <article class="article-card">
+
+            <p class="article-number">
+                Article 003
+            </p>
+
+            <h3>
+                The Pause That Changes the Conversation
+            </h3>
+
+            <p>
+                See how one person's decision to slow the pace, create a
+                pause, or suggest returning later can change the direction
+                of a tense interaction.
+            </p>
+
+            <p class="article-meta">
+                Estimated Reading Time: 3–4 minutes
+            </p>
+
+            <a
+                href="003-the-pause-that-changes-the-conversation.pdf"
+                class="button"
+                target="_blank"
+                rel="noopener"
+            >
+                Read Article PDF
+            </a>
+
+        </article>
+
+        <article class="article-card">
+
+            <p class="article-number">
+                Article 004
+            </p>
+
+            <h3>
+                Finding the Shared Goal
+            </h3>
+
+            <p>
+                Discover how people help groups move beyond competing
+                solutions by remembering the larger purpose they are
+                ultimately trying to accomplish together.
+            </p>
+
+            <p class="article-meta">
+                Estimated Reading Time: 3–4 minutes
+            </p>
+
+            <a
+                href="004-finding-the-shared-goal.pdf"
+                class="button"
+                target="_blank"
+                rel="noopener"
+            >
+                Read Article PDF
+            </a>
+
+        </article>
+
+        <article class="article-card">
+
+            <p class="article-number">
+                Article 005
+            </p>
+
+            <h3>
+                Helping Without Taking Over
+            </h3>
+
+            <p>
+                Examine the everyday discipline of supporting people in
+                conflict without deciding the outcome or taking ownership
+                of the problem away from them.
+            </p>
+
+            <p class="article-meta">
+                Estimated Reading Time: 3–4 minutes
+            </p>
+
+            <a
+                href="005-helping-without-taking-over.pdf"
+                class="button"
+                target="_blank"
+                rel="noopener"
+            >
+                Read Article PDF
+            </a>
+
+        </article>
+
+        <article class="article-card">
+
+            <p class="article-number">
+                Article 006
+            </p>
+
+            <h3>
+                The Quiet Question That Opens the Conversation
+            </h3>
+
+            <p>
+                Learn how one neutral, thoughtful, or clarifying question
+                can help people move beyond a stuck conversation without
+                directing them toward a predetermined answer.
+            </p>
+
+            <p class="article-meta">
+                Estimated Reading Time: 3–4 minutes
+            </p>
+
+            <a
+                href="006-the-quiet-question-that-opens-the-conversation.pdf"
+                class="button"
+                target="_blank"
+                rel="noopener"
+            >
+                Read Article PDF
+            </a>
+
+        </article>
+
+        <article class="article-card">
+
+            <p class="article-number">
+                Article 007
+            </p>
+
+            <h3>
+                Knowing When Not to Intervene
+            </h3>
+
+            <p>
+                Consider when stepping back, respecting boundaries, and
+                allowing others to navigate disagreement may be more helpful
+                than entering the conflict uninvited.
+            </p>
+
+            <p class="article-meta">
+                Estimated Reading Time: 3–4 minutes
+            </p>
+
+            <a
+                href="007-knowing-when-not-to-intervene.pdf"
+                class="button"
+                target="_blank"
+                rel="noopener"
+            >
+                Read Article PDF
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="identity-panel">
+
+        <h2>
+            The Hidden Mediator Is Not a Formal Mediator
+        </h2>
+
+        <p>
+            The phrase <em>hidden mediator</em> describes ordinary people
+            demonstrating mediation-informed behaviors in everyday life. It
+            does not mean that every helpful person is trained, neutral, or
+            qualified to mediate formal disputes.
+        </p>
+
+        <p>
+            Informal support has limits. Safety concerns, coercion, legal
+            questions, significant power imbalances, or complex disputes may
+            require assistance from a qualified mediator, conflict coach,
+            attorney, mental-health professional, crisis service, or another
+            appropriate provider.
+        </p>
+
+        <p>
+            Recognizing mediation-informed behavior should strengthen sound
+            judgment—not encourage people to intervene in every conflict.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="content-section page-container">
+
+    <div class="request-panel">
+
+        <h2>
+            Continue Exploring the Project
+        </h2>
+
+        <p>
+            Visit the complete Resource Catalog, explore the foundational
+            Conflict-Literacy Articles, or learn through guided Conflict
+            Literacy Workshops.
+        </p>
+
+        <div class="button-row">
+
+            <a
+                href="/mediation-stewardship/learning-and-resources/"
+                class="button"
+            >
+                Resource Catalog
+            </a>
+
+            <a
+                href="/mediation-stewardship/learning-and-resources/conflict-literacy-articles/"
+                class="button"
+            >
+                Conflict-Literacy Articles
+            </a>
+
+            <a
+                href="/mediation-stewardship/conflict-literacy-workshops/"
+                class="button"
+            >
+                Explore Workshops
+            </a>
+
+            <a
+                href="/mediation-stewardship/"
+                class="button"
+            >
+                Project Home
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>
+        <strong>
+            Mediation Stewardship Project
+        </strong>
+    </p>
+
+    <p>
+        The Hidden Mediator Series
+    </p>
+
+    <p>
+        An educational and community initiative founded by
+        Harrington Mediation.
+    </p>
+
+    <p>
+        Understanding Precedes Resolution.
+    </p>
+
+    <p>
+        Robert Harrington Jr.
+        &nbsp;|&nbsp;
+        443-680-5576
+        &nbsp;|&nbsp;
+        <a href="mailto:harringtonmediation@yahoo.com">
+            harringtonmediation@yahoo.com
+        </a>
+    </p>
+
+</footer>
+
+<script>
+    const menuToggle =
+        document.getElementById("menu-toggle");
+
+    const projectMenu =
+        document.getElementById("project-menu");
+
+    if (menuToggle && projectMenu) {
+        menuToggle.addEventListener("click", function () {
+            const isOpen =
+                projectMenu.classList.toggle("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+        });
+    }
+</script>
+
 </body>
 
 </html>
