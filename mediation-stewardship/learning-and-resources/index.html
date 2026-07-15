@@ -156,89 +156,72 @@
 
         /* HERO */
 
-        .hero {
-            padding: 68px 0;
-            border-bottom: 5px solid var(--gold);
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(15, 36, 56, 0.98),
-                    rgba(63, 101, 79, 0.95)
-                );
-            color: var(--paper);
-        }
+        <header class="collection-hero">
 
-        .hero-inner {
-            text-align: center;
-        }
+    <div class="page-container collection-hero-inner">
 
-        .project-logo {
-            width: min(330px, 80vw);
-            margin: 0 auto 24px;
-            border-radius: 12px;
-        }
+        <nav
+            class="collection-breadcrumb"
+            aria-label="Breadcrumb"
+        >
+            <a href="/mediation-stewardship/">
+                Project Home
+            </a>
 
-        .eyebrow {
-            margin: 0 0 10px;
-            color: #f0dfba;
-            font-size: 0.9rem;
-            font-weight: bold;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
+            <span aria-hidden="true">/</span>
 
-        h1 {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: clamp(2.3rem, 6vw, 4.5rem);
-            line-height: 1.08;
-        }
+            <a href="/mediation-stewardship/learning-and-resources/">
+                Resource Catalog
+            </a>
 
-        .hero-subtitle {
-            max-width: 790px;
-            margin: 20px auto 0;
-            font-size: clamp(1.05rem, 2.3vw, 1.3rem);
-        }
+            <span aria-hidden="true">/</span>
 
-        .hero-tagline {
-            margin: 18px 0 0;
-            color: #f0dfba;
-            font-weight: bold;
-            font-style: italic;
-        }
+            <span>
+                Conflict-Literacy Articles
+            </span>
+        </nav>
 
-        .hero-actions,
-        .button-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 26px;
-        }
+        <p class="collection-label">
+            Resource Collection
+        </p>
 
-        .button {
-            display: inline-block;
-            padding: 12px 21px;
-            border: 2px solid var(--gold);
-            border-radius: 999px;
-            background: var(--gold);
-            color: var(--paper);
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-        }
+        <h1>
+            Conflict-Literacy Articles
+        </h1>
 
-        .button:hover,
-        .button:focus {
-            border-color: var(--paper);
-            background: var(--paper);
-            color: var(--deep-navy);
-        }
+        <p class="collection-summary">
+            Seven concise articles introducing foundational conflict
+            concepts that visitors can understand and begin applying
+            immediately.
+        </p>
 
-        .button.secondary {
-            border-color: rgba(255, 255, 255, 0.78);
-            background: transparent;
-        }
+        <div class="collection-meta">
+            <span>7 Articles</span>
+            <span>PDF Collection</span>
+            <span>3–5 Minute Reads</span>
+        </div>
+
+        <div class="hero-actions">
+
+            <a
+                href="#articles"
+                class="button"
+            >
+                Browse the Articles
+            </a>
+
+            <a
+                href="/mediation-stewardship/learning-and-resources/"
+                class="button secondary"
+            >
+                Return to Resource Catalog
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
 
         /* CONTENT */
 
